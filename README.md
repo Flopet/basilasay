@@ -1,6 +1,7 @@
-## Project Overview
+# Project Overview
 
-This is a Next.js 16 application built with React 19.
+This is a Next.js 16 web application built with React 19 to showcase my resume and any past or current projects.
+It's also great practice for developing my networking and web dev skills.
 
 ## Development Commands
 
