@@ -23,9 +23,7 @@ export const metadata: Metadata = {
 export default function RootLayout({children} : Readonly<{children: React.ReactNode}>) {
   return (
     <html lang="en">
-      <body
-        className={`font-[Zalando_Sans_SemiExpanded] antialiased`}
-      >
+      <body>
         {children}
       </body>
     </html>

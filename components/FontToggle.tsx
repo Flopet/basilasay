@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import "./FontToggle.css";
 
 export function FontToggle() {
   const [useCustomFont, setUseCustomFont] = useState(true);
@@ -19,7 +20,7 @@ export function FontToggle() {
   return (
     <button
       onClick={toggleFont}
-      className="fixed bottom-4 right-4 z-50 px-4 py-2 bg-border-strong text-white rounded-lg shadow-lg hover:opacity-80 transition-opacity"
+      className="font-toggle-button"
     >
       {useCustomFont ? "Using Custom Font" : "Using Arial"}
     </button>

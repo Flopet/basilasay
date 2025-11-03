@@ -1,10 +1,6 @@
-# CLAUDE.md
-
-This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
-
 ## Project Overview
 
-This is a Next.js 16 application built with React 19, TypeScript, and Tailwind CSS v4. The project uses the Next.js App Router architecture (not Pages Router).
+This is a Next.js 16 application built with React 19.
 
 ## Development Commands
 
@@ -27,7 +23,7 @@ This is a Next.js 16 application built with React 19, TypeScript, and Tailwind C
   - Left column (33% width): Cover image that fills entire sidebar, sticky on scroll
   - Right column (67% width): Scrollable content with all portfolio sections
   - Responsive: Stacks vertically on mobile/tablet
-- **Cover Image**: `public/BasilAndKaitlyn.png` fills the left aside using Next.js Image with `fill` prop and `object-cover`
+- **Cover Image**: `public/BasilAndKaitlyn.png` fills the left side using Next.js Image with `fill` prop and `object-cover`
 - **Sections**: Hero, Experience, Projects, Education, Contact
 
 ### Styling

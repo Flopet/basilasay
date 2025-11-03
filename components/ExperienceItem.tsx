@@ -1,3 +1,5 @@
+import "./ExperienceItem.css";
+
 interface ExperienceItemProps {
   title: string;
   company: string;
@@ -12,12 +14,12 @@ export function ExperienceItem({
   description,
 }: ExperienceItemProps) {
   return (
-    <div className="border-l-2 border-border-strong pl-4">
-      <h3 className="text-xl font-semibold text-foreground">{title}</h3>
-      <p className="text-foreground-muted">
+    <div className="experience-item">
+      <h3 className="experience-item__title">{title}</h3>
+      <p className="experience-item__meta">
         {company} • {dateRange}
       </p>
-      <p className="mt-2 text-foreground">{description}</p>
+      <p className="experience-item__description">{description}</p>
     </div>
   );
 }

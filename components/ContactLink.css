@@ -1,0 +1,10 @@
+.contact-link {
+  color: var(--foreground);
+  font-weight: 500;
+  text-decoration: underline;
+  transition: color 0.2s;
+}
+
+.contact-link:hover {
+  color: var(--foreground-muted);
+}

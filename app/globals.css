@@ -1,5 +1,4 @@
-@import "tailwindcss";
-
+/* CSS Variables */
 :root {
   /* Base colors - Light mode (aged paper aesthetic) */
   --background: #f5f1e8;           /* Eggshell/aged paper */
@@ -12,43 +11,78 @@
   --border: #8b2635;               /* Rose red border */
   --border-strong: #5a1822;        /* Darker blood red border */
   --card-bg: #ffffff;              /* Clean white for cards */
-  --shadow: rgba(26, 26, 26, 100); /* Subtle shadow */
+  --shadow: rgba(26, 26, 26, 1);   /* Shadow at 100% opacity */
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-
-  /* Extend Tailwind with custom colors */
-  --color-background-subtle: var(--background-subtle);
-  --color-foreground-muted: var(--foreground-muted);
-  --color-foreground-light: var(--foreground-light);
-  --color-border: var(--border);
-  --color-border-strong: var(--border-strong);
-  --color-card-bg: var(--card-bg);
+/* Basic Reset */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-.inner-shadow {
-    box-shadow: inset 0 0 20px 8px var(--shadow);
+html {
+  -webkit-text-size-adjust: 100%;
+  line-height: 1.5;
 }
 
 body {
-    background: var(--background);
-    color: var(--foreground);
-    font-weight: 400;
-    font-style: normal;
-    font-size: 16px;
-    line-height: 1.5;
-    letter-spacing: 0.02em;
-    text-rendering: optimizeLegibility;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    -webkit-text-size-adjust: 100%;
-
+  background: var(--background);
+  color: var(--foreground);
+  font-family: 'Zalando Sans SemiExpanded', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  min-height: 100vh;
 }
 
 hr {
-    border: 1px solid var(--border-strong);
-    width: 50%;
-    margin: 1rem 0;
+  border: 1px solid var(--border-strong);
+  width: 50%;
+  margin: 1rem 0;
+}
+
+/* Custom shadow class for cover image */
+.inner-shadow {
+  box-shadow: inset 0 0 20px 8px var(--shadow);
+}
+
+/* Typography Utilities */
+.text-foreground {
+  color: var(--foreground);
+}
+
+.text-foreground-muted {
+  color: var(--foreground-muted);
+}
+
+.text-foreground-light {
+  color: var(--foreground-light);
+}
+
+/* Background Utilities */
+.bg-background {
+  background-color: var(--background);
+}
+
+.bg-background-subtle {
+  background-color: var(--background-subtle);
+}
+
+.bg-card-bg {
+  background-color: var(--card-bg);
+}
+
+/* Border Utilities */
+.border-border {
+  border-color: var(--border);
+}
+
+.border-border-strong {
+  border-color: var(--border-strong);
 }
