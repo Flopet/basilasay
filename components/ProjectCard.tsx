@@ -1,3 +1,5 @@
+import "./ProjectCard.css";
+
 interface ProjectCardProps {
   title: string;
   description: string;
@@ -12,16 +14,13 @@ export function ProjectCard({
   technologies,
 }: ProjectCardProps) {
   return (
-    <div className="rounded-lg border border-border bg-card-bg p-6 hover:border-border-strong transition-colors shadow-sm" style={{ boxShadow: '0 2px 8px var(--shadow)' }}>
-      <h3 className="text-xl font-semibold text-foreground mb-2">{title}</h3>
-      <p className="text-foreground mb-4">{description}</p>
+    <div className="project-card">
+      <h3 className="project-card__title">{title}</h3>
+      <p className="project-card__description">{description}</p>
       {technologies && technologies.length > 0 && (
-        <div className="flex flex-wrap gap-2 mb-4">
+        <div className="project-card__tags">
           {technologies.map((tech) => (
-            <span
-              key={tech}
-              className="text-sm px-2 py-1 rounded bg-background-subtle text-foreground-muted"
-            >
+            <span key={tech} className="project-card__tag">
               {tech}
             </span>
           ))}
@@ -30,7 +29,7 @@ export function ProjectCard({
       {link && (
         <a
           href={link}
-          className="text-foreground font-medium hover:text-foreground-muted transition-colors underline"
+          className="project-card__link"
           target="_blank"
           rel="noopener noreferrer"
         >

@@ -1,3 +1,5 @@
+import "./ContactLink.css";
+
 interface ContactLinkProps {
   href: string;
   label: string;
@@ -8,7 +10,7 @@ export function ContactLink({ href, label, external = false }: ContactLinkProps)
   return (
     <a
       href={href}
-      className="text-foreground font-medium hover:text-foreground-muted transition-colors underline"
+      className="contact-link"
       target={external ? "_blank" : undefined}
       rel={external ? "noopener noreferrer" : undefined}
     >

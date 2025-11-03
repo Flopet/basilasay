@@ -1,3 +1,5 @@
+import "./EducationItem.css";
+
 interface EducationItemProps {
   degree: string;
   institution: string;
@@ -13,12 +15,12 @@ export function EducationItem({
 }: EducationItemProps) {
   return (
     <div>
-      <h3 className="text-xl font-semibold text-foreground">{degree}</h3>
-      <p className="text-foreground-muted">
+      <h3 className="education-item__degree">{degree}</h3>
+      <p className="education-item__meta">
         {institution} • {year}
       </p>
       {details && (
-        <p className="mt-2 text-foreground">{details}</p>
+        <p className="education-item__details">{details}</p>
       )}
     </div>
   );

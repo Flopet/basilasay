@@ -1,0 +1,19 @@
+.experience-item {
+  border-left: 2px solid var(--border-strong);
+  padding-left: 1rem;
+}
+
+.experience-item__title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--foreground);
+}
+
+.experience-item__meta {
+  color: var(--foreground-muted);
+}
+
+.experience-item__description {
+  margin-top: 0.5rem;
+  color: var(--foreground);
+}
