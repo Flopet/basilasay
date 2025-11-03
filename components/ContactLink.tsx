@@ -8,7 +8,7 @@ export function ContactLink({ href, label, external = false }: ContactLinkProps)
   return (
     <a
       href={href}
-      className="text-foreground hover:underline"
+      className="text-foreground font-medium hover:text-foreground-muted transition-colors underline"
       target={external ? "_blank" : undefined}
       rel={external ? "noopener noreferrer" : undefined}
     >

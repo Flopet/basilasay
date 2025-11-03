@@ -12,15 +12,15 @@ export function ProjectCard({
   technologies,
 }: ProjectCardProps) {
   return (
-    <div className="rounded-lg border border-zinc-200 dark:border-zinc-800 p-6 hover:border-zinc-300 dark:hover:border-zinc-700 transition-colors">
+    <div className="rounded-lg border border-border bg-card-bg p-6 hover:border-border-strong transition-colors shadow-sm" style={{ boxShadow: '0 2px 8px var(--shadow)' }}>
       <h3 className="text-xl font-semibold text-foreground mb-2">{title}</h3>
-      <p className="text-zinc-700 dark:text-zinc-300 mb-4">{description}</p>
+      <p className="text-foreground mb-4">{description}</p>
       {technologies && technologies.length > 0 && (
         <div className="flex flex-wrap gap-2 mb-4">
           {technologies.map((tech) => (
             <span
               key={tech}
-              className="text-sm px-2 py-1 rounded bg-zinc-100 dark:bg-zinc-800 text-zinc-700 dark:text-zinc-300"
+              className="text-sm px-2 py-1 rounded bg-background-subtle text-foreground-muted"
             >
               {tech}
             </span>
@@ -30,7 +30,7 @@ export function ProjectCard({
       {link && (
         <a
           href={link}
-          className="text-foreground font-medium hover:underline"
+          className="text-foreground font-medium hover:text-foreground-muted transition-colors underline"
           target="_blank"
           rel="noopener noreferrer"
         >

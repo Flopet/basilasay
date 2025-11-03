@@ -1,31 +1,30 @@
+import React from "react";
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import {config} from "@/app/CONFIG";
+import {Zalando_Sans_SemiExpanded} from "next/font/google";
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+
+
+// Zalando Sans SemiExpanded for headers
+// ** Ignore unused constant warning **
+const headerFont = Zalando_Sans_SemiExpanded({
+  variable: "--header-font",
+  weight: ["400", "600", "700"],
   subsets: ["latin"],
 });
 
 export const metadata: Metadata = {
-  title: "Your Name - Portfolio",
-  description: "Personal portfolio and resume showcasing projects, experience, and skills.",
+  title: config.site_title,
+  description: config.site_description,
 };
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+export default function RootLayout({children} : Readonly<{children: React.ReactNode}>) {
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`font-[Zalando_Sans_SemiExpanded] antialiased`}
       >
         {children}
       </body>

@@ -14,11 +14,11 @@ export function EducationItem({
   return (
     <div>
       <h3 className="text-xl font-semibold text-foreground">{degree}</h3>
-      <p className="text-zinc-600 dark:text-zinc-400">
+      <p className="text-foreground-muted">
         {institution} • {year}
       </p>
       {details && (
-        <p className="mt-2 text-zinc-700 dark:text-zinc-300">{details}</p>
+        <p className="mt-2 text-foreground">{details}</p>
       )}
     </div>
   );
