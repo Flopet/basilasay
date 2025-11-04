@@ -77,7 +77,7 @@ All reusable components are in the `components/` directory:
 
 ### Data Structure
 
-Portfolio content is centralized in `lib/data.ts`:
+Portfolio content is centralized in `lib/config.ts`:
 
 ```typescript
 personalInfo: { name, title, company, bio }

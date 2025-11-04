@@ -5,14 +5,14 @@ import { EducationItem } from "@/components/EducationItem";
 import { ContactLink } from "@/components/ContactLink";
 import "./page.css";
 
-// Import data from lib/data.ts
+// Import data from lib/config.ts
 import {
   personalInfo,
   experience,
   projects,
   education,
   contacts,
-} from "@/lib/data";
+} from "@/lib/config";
 
 export default function Home() {
   return (
@@ -22,7 +22,7 @@ export default function Home() {
             {/* Left Column - Cover Image (33% on large screens) */}
             <aside className="cover-aside">
                 <Image
-                    src="/BasilAndKaitlyn.png"
+                    src={personalInfo.coverImage}
                     alt="Basil and Kaitlyn"
                     className="cover-image"
                     fill

@@ -1,6 +1,6 @@
 import React from "react";
 import type { Metadata } from "next";
-import {config} from "@/lib/config";
+import {siteMetadata} from "@/lib/config";
 import {Zalando_Sans_SemiExpanded} from "next/font/google";
 import "./globals.css";
 
@@ -9,6 +9,7 @@ import "./globals.css";
 
 // Zalando Sans SemiExpanded for headers
 // ** Ignore unused constant warning **
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 const headerFont = Zalando_Sans_SemiExpanded({
   variable: "--header-font",
   weight: ["400", "600", "700"],
@@ -16,8 +17,8 @@ const headerFont = Zalando_Sans_SemiExpanded({
 });
 
 export const metadata: Metadata = {
-  title: config.site_title,
-  description: config.site_description,
+  title: siteMetadata.title,
+  description: siteMetadata.description,
 };
 
 export default function RootLayout({children} : Readonly<{children: React.ReactNode}>) {
