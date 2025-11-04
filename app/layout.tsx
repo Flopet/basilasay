@@ -1,6 +1,6 @@
 import React from "react";
 import type { Metadata } from "next";
-import {config} from "@/app/CONFIG";
+import {config} from "@/lib/config";
 import {Zalando_Sans_SemiExpanded} from "next/font/google";
 import "./globals.css";
 

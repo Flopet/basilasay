@@ -17,40 +17,40 @@ import {
 export default function Home() {
   return (
     <div className="page-container">
+        <div className="layout-container">
 
-      <div className="layout-container">
-        {/* Left Column - Cover Image (33% on large screens) */}
-        <aside className="cover-aside">
-          <Image
-            src="/BasilAndKaitlyn.png"
-            alt="Basil and Kaitlyn"
-            fill
-            className="cover-image"
-            priority
-          />
-          {/* Shadow overlay */}
-          <div className="shadow-overlay inner-shadow"></div>
-        </aside>
+            {/* Left Column - Cover Image (33% on large screens) */}
+            <aside className="cover-aside">
+                <Image
+                    src="/BasilAndKaitlyn.png"
+                    alt="Basil and Kaitlyn"
+                    className="cover-image"
+                    fill
+                    priority
+                />
+            {/* Shadow overlay */}
+            <div className="shadow-overlay inner-shadow"></div>
+            </aside>
 
-        {/* Right Column - Content (67% on large screens) */}
-        <main className="main-content">
-          {/* Hero Section */}
-          <section className="section">
-            <h1 className="hero-title">
-              {personalInfo.name}
-            </h1>
-            <p className="hero-subtitle">
-              {personalInfo.title} | {personalInfo.company}
-            </p>
-              <hr />
-            <p className="hero-bio">
-              {personalInfo.bio}
-            </p>
-          </section>
+            {/* Right Column - Content (67% on large screens) */}
+            <main className="main-content">
+                {/* Hero Section */}
+                <section className="section">
+                    <h1 className="hero-title">
+                    {personalInfo.name}
+                    </h1>
+                    <p className="hero-subtitle">
+                    {personalInfo.title} | {personalInfo.company}
+                    </p>
+                    <hr />
+                    <p className="hero-bio">
+                      {personalInfo.bio}
+                    </p>
+                </section>
 
-          {/* Experience Section */}
-          <section className="section">
-            <h2 className="section-heading">Experience</h2>
+            {/* Experience Section */}
+            <section className="section">
+                <h2 className="section-heading">Experience</h2>
             <div className="experience-list">
               {experience.map((experience, index) => (
                 <ExperienceItem

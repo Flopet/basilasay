@@ -20,7 +20,7 @@ This is a Next.js 16 application built with React 19, TypeScript, and Tailwind C
 - `app/layout.tsx` - Root layout with Zalando Sans SemiExpanded font configuration and global styles
 - `app/page.tsx` - Home page component with two-column layout
 - `app/globals.css` - Global styles with Tailwind CSS v4 inline theme configuration
-- `app/CONFIG.tsx` - Configuration file for site settings (WIP)
+- `app/config.ts` - Configuration file for site settings (WIP)
 
 ### Page Layout
 - **Two-column design**:
