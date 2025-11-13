@@ -4,6 +4,7 @@ import { ProjectCard } from "@/components/ProjectCard";
 import { EducationItem } from "@/components/EducationItem";
 import { ContactLink } from "@/components/ContactLink";
 import "./page.css";
+import "./page.mobile.css";
 
 // Import data from lib/config.ts
 import {
@@ -48,21 +49,21 @@ export default function Home() {
                     </p>
                 </section>
 
-            {/* Experience Section */}
-            <section className="section">
-                <h2 className="section-heading">Experience</h2>
-            <div className="experience-list">
-              {experience.map((experience, index) => (
-                <ExperienceItem
-                  key={index}
-                  title={experience.title}
-                  company={experience.company}
-                  dateRange={experience.dateRange}
-                  description={experience.description}
-                />
-              ))}
-            </div>
-          </section>
+                {/* Experience Section */}
+                <section className="section">
+                    <h2 className="section-heading">Experience</h2>
+                <div className="experience-list">
+                  {experience.map((experience, index) => (
+                    <ExperienceItem
+                      key={index}
+                      title={experience.title}
+                      company={experience.company}
+                      dateRange={experience.dateRange}
+                      description={experience.description}
+                    />
+                  ))}
+                </div>
+              </section>
 
           {/* Projects Section */}
           <section className="section">

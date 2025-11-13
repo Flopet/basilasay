@@ -1,6 +1,6 @@
 .project-card {
   border-radius: 0.5rem;
-  border: 1px solid var(--border);
+  border: 2px solid var(--border);
   background-color: var(--card-bg);
   padding: 1.5rem;
   transition: border-color 0.2s;
@@ -13,7 +13,7 @@
 
 .project-card__title {
   font-size: 1.25rem;
-  font-weight: 600;
+  font-weight: bolder;
   color: var(--foreground);
   margin-bottom: 0.5rem;
 }
