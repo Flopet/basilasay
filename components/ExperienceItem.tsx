@@ -1,4 +1,4 @@
-import "./ExperienceItem.css";
+import "./css/ExperienceItem.css";
 
 interface ExperienceItemProps {
   title: string;

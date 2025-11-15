@@ -1,42 +1,54 @@
+/* ========================================
+   Tablet Styles (768px - 1024px)
+   ======================================== */
+
 @media (max-width: 1024px) {
+  /* Stack layout vertically */
   .layout-container {
     flex-direction: column;
   }
 
+  /* Convert sidebar to circular avatar in top-right */
   .cover-aside {
-    overflow: hidden;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
     width: 10rem;
     height: 10rem;
     border-radius: 50%;
-    top: 1rem;
-    right: 1rem;
-    position: absolute;
+    overflow: hidden;
   }
 
+  /* Content takes full width */
   .main-content {
     width: 100%;
-    padding-left: 3rem;
-    padding-right: 3rem;
-    padding-top: 4rem;
+    padding: var(--content-padding-y) var(--content-padding-x);
   }
 
+  /* Wider divider on tablets */
   hr {
     width: 75%;
     min-width: 0;
   }
 
+  /* Single column project grid */
   .projects-grid {
-    grid-template-columns: repeat(1, 1fr);
+    grid-template-columns: 1fr;
   }
 }
 
+/* ========================================
+   Mobile Styles (< 640px)
+   ======================================== */
+
 @media (max-width: 640px) {
+  /* Hide cover image on mobile */
   .cover-aside {
     display: none;
   }
 
+  /* Reduce padding on mobile */
   .main-content {
-    padding-left: 2rem;
-    padding-right: 2rem;
+    padding: var(--content-padding-y) 2rem;
   }
 }

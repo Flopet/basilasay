@@ -1,20 +1,24 @@
-/* Page Container */
+/* ========================================
+   Layout Structure
+   ======================================== */
+
 .page-container {
   min-height: 100vh;
   position: relative;
   z-index: 1;
 }
 
-/* Two-column layout */
 .layout-container {
   display: flex;
-  flex-direction: row;
   min-height: 100vh;
 }
 
-/* Left Column - Cover Image */
+/* ========================================
+   Left Column - Cover Image (Sidebar)
+   ======================================== */
+
 .cover-aside {
-  width: 33.333333%;
+  width: var(--sidebar-width);
   position: sticky;
   top: 0;
   height: 100vh;
@@ -30,13 +34,19 @@
   pointer-events: none;
 }
 
-/* Right Column - Content */
+.inner-shadow {
+  box-shadow: inset 0 0 20px 8px var(--shadow);
+}
+
+/* ========================================
+   Right Column - Main Content
+   ======================================== */
 
 .main-content {
-  width: 66.666667%;
-  padding-left: 3rem;
-  padding-right: 3rem;
-  padding-top: 4rem;
+  width: var(--content-width);
+  padding: var(--content-padding-y) var(--content-padding-x) var(--content-padding-y);
+  background: radial-gradient(ellipse at center, var(--background) 0%, var(--background-subtle) 100%);
+  min-height: 100vh;
 }
 
 hr {
@@ -45,12 +55,25 @@ hr {
   margin: 1rem 0;
 }
 
-/* Sections */
+/* ========================================
+   Sections
+   ======================================== */
+
 .section {
-  margin-bottom: 4rem;
+  margin-bottom: var(--section-spacing);
 }
 
-/* Hero Section */
+.section-heading {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--foreground);
+  margin-bottom: var(--grid-gap);
+}
+
+/* ========================================
+   Hero Section
+   ======================================== */
+
 .hero-title {
   font-size: 3rem;
   font-weight: 700;
@@ -73,36 +96,40 @@ hr {
   color: var(--foreground);
 }
 
-/* Section Headings */
-.section-heading {
-  font-size: 1.5rem;
-  font-weight: 700;
-  color: var(--foreground);
-  margin-bottom: 1.5rem;
-}
+/* ========================================
+   Experience Section
+   ======================================== */
 
-/* Experience Section */
 .experience-list {
   display: flex;
   flex-direction: column;
   gap: 2rem;
 }
 
-/* Projects Section */
+/* ========================================
+   Projects Section
+   ======================================== */
+
 .projects-grid {
   display: grid;
-  gap: 1.5rem;
+  gap: var(--grid-gap);
   grid-template-columns: repeat(2, 1fr);
 }
 
-/* Education Section */
+/* ========================================
+   Education Section
+   ======================================== */
+
 .education-list {
   display: flex;
   flex-direction: column;
   gap: 1rem;
 }
 
-/* Contact Section */
+/* ========================================
+   Contact Section
+   ======================================== */
+
 .contact-links {
   display: flex;
   flex-wrap: wrap;

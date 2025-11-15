@@ -1,4 +1,4 @@
-import "./EducationItem.css";
+import "./css/EducationItem.css";
 
 interface EducationItemProps {
   degree: string;

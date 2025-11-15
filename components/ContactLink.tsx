@@ -1,4 +1,4 @@
-import "./ContactLink.css";
+import "./css/ContactLink.css";
 
 interface ContactLinkProps {
   href: string;

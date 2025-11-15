@@ -2,7 +2,7 @@
 :root {
   /* Base colors - Light mode (aged paper aesthetic) */
   --background: #f5f1e8;           /* Eggshell/aged paper */
-  --background-subtle: #ebe5d6;    /* Slightly darker aged paper */
+  --background-subtle: #d9d0ba;    /* Darker aged paper for gradient */
   --foreground: #1a1a1a;           /* Near black for text */
   --foreground-muted: #4a4a4a;     /* Medium grey for secondary text */
   --foreground-light: #6b6b6b;     /* Light grey for subtle elements */
@@ -12,6 +12,14 @@
   --border-strong: #5a1822;        /* Darker blood red border */
   --card-bg: #ffffff;              /* Clean white for cards */
   --shadow: rgba(26, 26, 26, 1);   /* Shadow at 100% opacity */
+
+  /* Layout dimensions */
+  --sidebar-width: 33.333333%;     /* Left sidebar (1/3 of viewport) */
+  --content-width: 66.666667%;     /* Main content (2/3 of viewport) */
+  --content-padding-x: 3rem;       /* Horizontal content padding */
+  --content-padding-y: 4rem;       /* Vertical content padding */
+  --section-spacing: 4rem;         /* Space between sections */
+  --grid-gap: 1.5rem;              /* Gap for grids and lists */
 }
 
 /* Basic Reset */
@@ -27,7 +35,6 @@ html {
 }
 
 body {
-  background: var(--background);
   color: var(--foreground);
   font-family: 'Zalando Sans SemiExpanded', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
   font-weight: bold;
@@ -35,7 +42,6 @@ body {
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  min-height: 100vh;
 }
 
 h1{
@@ -47,11 +53,6 @@ footer {
     bottom: 0;
     right: 1rem;
     font-family: 'ubuntu mono', monospace;
-}
-
-/* Custom shadow class for cover image */
-.inner-shadow {
-  box-shadow: inset 0 0 20px 8px var(--shadow);
 }
 
 /* Typography Utilities */
