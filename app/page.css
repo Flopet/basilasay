@@ -4,8 +4,6 @@
 
 .page-container {
   min-height: 100vh;
-  position: relative;
-  z-index: 1;
 }
 
 .layout-container {
@@ -23,21 +21,21 @@
   position: sticky;
   top: 0;
   height: 100vh;
+  overflow: hidden;
 }
 
 .cover-image {
   object-fit: cover;
+  transition: transform 0.2s ease-in-out, filter 0.2s ease-in-out;
 }
 
 .shadow-overlay {
   position: absolute;
   inset: 0;
   pointer-events: none;
+  box-shadow: inset -20px 0 20px -10px var(--shadow);
 }
 
-.inner-shadow {
-  box-shadow: inset 0 0 20px 8px var(--shadow);
-}
 
 /* ========================================
    Right Column - Main Content
@@ -49,15 +47,17 @@
   background: radial-gradient(ellipse at center, var(--background) 0%, var(--background-subtle) 100%);
   overflow-y: auto;
   height: 100vh;
+  position: relative;
+  z-index: 1;
+  border-left: 5px solid var(--border-strong);
 
   /* Scrollbar styling */
   --sb-track-color: transparent;
-  --sb-thumb-color: #848484;
-  --sb-size: 14px;
+  --sb-thumb-color:  var(--border-strong);
 }
 
 .main-content::-webkit-scrollbar {
-  width: var(--sb-size);
+  width: 24px;
 }
 
 .main-content::-webkit-scrollbar-track {
@@ -66,13 +66,13 @@
 }
 
 .main-content::-webkit-scrollbar-thumb {
-  background: var(--border-strong);
+  background: var(--sb-thumb-color);
   border-radius: 3px;
 }
 
 @supports not selector(::-webkit-scrollbar) {
   .main-content {
-    scrollbar-color: var(--border-strong) transparent;
+    scrollbar-color: var(--sb-thumb-color) transparent;
   }
 }
 
@@ -127,6 +127,7 @@ hr {
   border-left: 5px solid var(--border-strong);
   border-top: 2px solid var(--border-strong);
   padding-left: 1rem;
+  padding-top: 0.5rem;
 }
 
 /* ========================================

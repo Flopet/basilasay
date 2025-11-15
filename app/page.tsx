@@ -30,7 +30,7 @@ export default function Home() {
                     priority
                 />
             {/* Shadow overlay */}
-            <div className="shadow-overlay inner-shadow"></div>
+            <div className="shadow-overlay"></div>
             </aside>
 
             {/* Right Column - Content (67% on large screens) */}
@@ -51,6 +51,7 @@ export default function Home() {
                 {/* Experience Section */}
                 <section className="section">
                     <h2 className="section-heading">Experience</h2>
+
                 <div className="experience-list">
                   {experience.map((experience, index) => (
                     <ExperienceItem

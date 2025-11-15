@@ -20,12 +20,6 @@ export const experience = [
     dateRange: "February 2024 - Present",
     description: "Layer 1 technician for Meta's data centers in Henrico Virginia. Responsible for troubleshooting and repairing cabling and optic related issues within a timely manner.",
   },
-    {
-        title: "Data Center Technician",
-        company: "Meta",
-        dateRange: "February 2024 - Present",
-        description: "Layer 1 technician for Meta's data centers in Henrico Virginia. Responsible for troubleshooting and repairing cabling and optic related issues within a timely manner.",
-    },
   // Add more experience items here
 ];
 
