@@ -30,7 +30,7 @@ export default function Home() {
                     priority
                 />
             {/* Shadow overlay */}
-            <div className="shadow-overlay inner-shadow"></div>
+            <div className="shadow-overlay"></div>
             </aside>
 
             {/* Right Column - Content (67% on large screens) */}
