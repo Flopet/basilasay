@@ -43,7 +43,6 @@ export default function Home() {
                     <p className="hero-subtitle">
                     {personalInfo.title} | {personalInfo.company}
                     </p>
-                    <hr />
                     <p className="hero-bio">
                       {personalInfo.bio}
                     </p>

@@ -20,14 +20,20 @@ export const experience = [
     dateRange: "February 2024 - Present",
     description: "Layer 1 technician for Meta's data centers in Henrico Virginia. Responsible for troubleshooting and repairing cabling and optic related issues within a timely manner.",
   },
+    {
+        title: "Data Center Technician",
+        company: "Meta",
+        dateRange: "February 2024 - Present",
+        description: "Layer 1 technician for Meta's data centers in Henrico Virginia. Responsible for troubleshooting and repairing cabling and optic related issues within a timely manner.",
+    },
   // Add more experience items here
 ];
 
 export const projects = [
   {
     title: "This Website!",
-    description: "Used to demonstrate my skills and experience, practice web development, and showcase my projects.",
-    link: "https://www.basilasay.com",
+    description: "Used to demonstrate my skills and experience, practice web development, and showcase my accomplishments.",
+    link: "https://github.com/Flopet/basilasay",
     tags: ["Next.JS", "React.JS", "JavaScript", "TypeScript", "HTML", "CSS"],
   },
   // Add more projects here
@@ -40,6 +46,12 @@ export const education = [
     year: "2024",
     details: "", // Optional: add details like GPA, honors, etc.
   },
+    {
+    degree: "CompTIA Network+",
+    institution: "",
+    year: "2025",
+    details: "",
+    }
   // Add more education items here
 ];
 
