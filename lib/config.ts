@@ -30,6 +30,12 @@ export const projects = [
     link: "https://github.com/Flopet/basilasay",
     tags: ["Next.JS", "React.JS", "JavaScript", "TypeScript", "HTML", "CSS"],
   },
+  {
+    title: "Something Else",
+    description: "A project I worked on in the past.",
+    link: "https://github.com/Flopet/something-else",
+    tags: ["Python", "Django", "SQL"],
+  }
   // Add more projects here
 ];
 

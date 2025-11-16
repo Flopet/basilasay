@@ -75,7 +75,7 @@ export default function Home() {
                   title={project.title}
                   description={project.description}
                   link={project.link}
-                  technologies={project.tags}
+                  tags={project.tags}
                 />
               ))}
             </div>

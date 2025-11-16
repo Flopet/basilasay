@@ -6,20 +6,24 @@
   /* Stack layout vertically */
   .layout-container {
     flex-direction: column;
+    height: auto;
+    overflow: visible;
+  }
+
+  .page-container {
+    position: relative;
   }
 
   /* Convert sidebar to circular avatar in top-right */
   .cover-aside {
     position: absolute;
     top: 1rem;
-    right: 1rem;
+    left: 1rem;
     width: 10rem;
     height: 10rem;
     border-radius: 50%;
     z-index: 2;
     transition: none;
-    border: 3px solid var(--border-strong);
-
   }
 
   .shadow-overlay {
@@ -30,9 +34,31 @@
   /* Content takes full width */
   .main-content {
     width: 100%;
+    height: auto;
+    overflow-y: visible;
     padding: var(--content-padding-y) var(--content-padding-x);
   }
 
+  .hero-title, .hero-subtitle {
+    text-align: center;
+  }
+
+  .hero-subtitle{
+    padding-bottom: 1.5rem;
+  }
+
+  .hero-bio, .experience-list, .education-list{
+    padding-left: 0;
+    border-left: none;
+  }
+
+  .hero-bio {
+    text-align: center;
+  }
+
+  .experience-list, .education-list {
+    padding-left: 1rem;
+  }
   /* Wider divider on tablets */
   hr {
     width: 75%;
@@ -58,10 +84,5 @@
   /* Reduce padding on mobile */
   .main-content {
     padding: var(--content-padding-y) 2rem;
-  }
-
-  .hero-bio, .experience-list, .education-list{
-    padding-left: 0;
-    border-left: none;
   }
 }

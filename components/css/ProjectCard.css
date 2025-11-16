@@ -1,4 +1,9 @@
+/* ========================================
+   Card Container
+======================================== */
+
 .project-card {
+  position: relative;
   border-radius: 0.5rem;
   border: 2px solid var(--border);
   background-color: var(--background);
@@ -11,8 +16,12 @@
   border-color: var(--border-strong);
 }
 
+/* ========================================
+   Card Content
+======================================== */
+
 .project-card__title {
-  font-size: 1.25rem;
+  font-size: 1.5rem;
   font-weight: bolder;
   color: var(--foreground);
   margin-bottom: 0.5rem;
@@ -22,6 +31,10 @@
   color: var(--foreground);
   margin-bottom: 1rem;
 }
+
+/* ========================================
+   Tags Section
+======================================== */
 
 .project-card__tags {
   display: flex;
@@ -38,11 +51,18 @@
   color: var(--foreground-muted);
 }
 
-.project-card__link {
+/* ========================================
+   Card Link
+======================================== */
+
+a.project-card__link {
   color: var(--foreground);
   font-weight: 500;
   text-decoration: underline;
   transition: color 0.2s;
+  position: absolute;
+  bottom: 1rem;
+  left: 1rem;
 }
 
 .project-card__link:hover {
