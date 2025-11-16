@@ -3,8 +3,9 @@
 }
 
 .experience-item__title {
+  font-family: var(--heading-font), sans-serif;
   font-size: 1.25rem;
-  font-weight: 600;
+  font-weight: 700;
   color: var(--foreground);
 }
 
