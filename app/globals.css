@@ -1,21 +1,29 @@
 /* ========================
-  Global CSS Variables
+  Global CSS Variables - Aged Paper Theme with Red Accents
 ======================== */
 :root {
-  /* Base colors - Light mode (aged paper aesthetic) */
-  --background: #f5f1e8;           /* Eggshell/aged paper */
-  --background-subtle: #d9d0ba;    /* Darker aged paper for gradient */
-  --foreground: #1a1a1a;           /* Near black for text */
-  --foreground-muted: #4a4a4a;     /* Medium grey for secondary text */
-  --foreground-light: #6b6b6b;     /* Light grey for subtle elements */
+  /* Aged paper background palette */
+  --background: #f5f1e8;           /* Warm eggshell/aged paper */
+  --background-elevated: #faf7f0;   /* Lighter elevated surfaces */
+  --background-subtle: #ebe5d6;     /* Darker aged paper tone */
+  --foreground: #2a2a2a;           /* Dark charcoal for text */
+  --foreground-muted: #5a5a5a;     /* Medium grey for secondary text */
+  --foreground-dim: #7a7a7a;       /* Lighter grey for tertiary text */
 
-/* ========================
-  UI colors
-======================== */
-  --border: #8b2635;               /* Rose red border */
-  --border-strong: #5a1822;        /* Darker blood red border */
-  --card-bg: #ffffff;              /* Clean white for cards */
-  --shadow: rgba(26, 26, 26, 1);   /* Shadow at 100% opacity */
+  /* Accent colors - Red palette */
+  --accent-primary: #c41e3a;       /* Crimson red - primary actions */
+  --accent-primary-hover: #a01729; /* Darker crimson hover state */
+  --accent-secondary: #8b2635;     /* Burgundy red - highlights */
+  --accent-success: #10b981;       /* Green - success states */
+
+  /* UI colors */
+  --border: #d4ccb8;               /* Subtle border */
+  --border-strong: #b8a995;        /* Stronger border for emphasis */
+  --card-bg: #fdfcfa;              /* Clean white for cards */
+  --card-bg-hover: #f5f1e8;        /* Aged paper on hover */
+  --shadow-sm: rgba(42, 42, 42, 0.08); /* Small shadow */
+  --shadow-md: rgba(42, 42, 42, 0.12); /* Medium shadow */
+  --shadow-lg: rgba(42, 42, 42, 0.16); /* Large shadow */
 
   /* Layout dimensions */
   --sidebar-width: 33.333333%;     /* Left sidebar (1/3 of viewport) */
@@ -25,13 +33,15 @@
   --section-spacing: 4rem;         /* Space between sections */
   --grid-gap: 1.5rem;              /* Gap for grids and lists */
 
-/* ========================
-  Fonts
-======================== */
+  /* Animation timings */
+  --transition-fast: 150ms;        /* Fast transitions */
+  --transition-normal: 250ms;      /* Normal transitions */
+  --transition-slow: 400ms;        /* Slow transitions */
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1); /* Smooth ease-out curve */
 
+  /* Fonts */
   --body-font: 'Zalando Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
   --heading-font: 'Zalando Sans SemiExpanded', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-
 }
 
 /* ========================
@@ -50,15 +60,16 @@
 
 html {
   -webkit-text-size-adjust: 100%;
-  line-height: 1.5;
-  background-color: black;
+  line-height: 1.6;
+  background-color: var(--background);
+  scroll-behavior: smooth;
 }
 
 body {
   color: var(--foreground);
   font-family: var(--body-font), sans-serif;
-  font-weight: bold;
-  letter-spacing: 0.02em;
+  font-weight: 400;
+  letter-spacing: -0.01em;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -66,7 +77,25 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--heading-font), sans-serif;
-  font-weight: bold;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+}
+
+/* Links */
+a {
+  color: var(--accent-primary);
+  text-decoration: none;
+  transition: color var(--transition-normal) ease;
+}
+
+a:hover {
+  color: var(--accent-primary-hover);
+}
+
+a:focus-visible {
+  outline: 2px solid var(--accent-primary);
+  outline-offset: 2px;
+  border-radius: 2px;
 }
 
 footer {

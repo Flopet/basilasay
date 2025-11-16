@@ -13,10 +13,13 @@ export function ProjectCard({
   link,
   tags,
 }: ProjectCardProps) {
+  const isExternal = link?.startsWith('http');
+
   return (
     <div className="project-card">
       <h3 className="project-card__title">{title}</h3>
       <p className="project-card__description">{description}</p>
+
       {tags && tags.length > 0 && (
         <div className="project-card__tags">
           {tags.map((tag) => (
@@ -26,14 +29,15 @@ export function ProjectCard({
           ))}
         </div>
       )}
+
       {link && (
         <a
           href={link}
           className="project-card__link"
-          target="_blank"
-          rel="noopener noreferrer"
+          target={isExternal ? "_blank" : undefined}
+          rel={isExternal ? "noopener noreferrer" : undefined}
         >
-          View Project →
+          {isExternal ? "View Project →" : "View Details →"}
         </a>
       )}
     </div>

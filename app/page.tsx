@@ -1,8 +1,9 @@
 import Image from "next/image";
 import { ExperienceItem } from "@/components/ExperienceItem";
 import { ProjectCard } from "@/components/ProjectCard";
-import { EducationItem } from "@/components/EducationItem";
+import { CertificationItem } from "@/components/CertificationItem";
 import { ContactLink } from "@/components/ContactLink";
+import { Skills } from "@/components/Skills";
 import "./page.css";
 import "./page.mobile.css";
 
@@ -11,7 +12,8 @@ import {
   personalInfo,
   experience,
   projects,
-  education,
+  skills,
+  certifications,
   contacts,
 } from "@/lib/config";
 
@@ -24,7 +26,7 @@ export default function Home() {
             <aside className="cover-aside">
                 <Image
                     src={personalInfo.coverImage}
-                    alt="Basil and Kaitlyn"
+                    alt={personalInfo.coverImageAlt}
                     className="cover-image"
                     fill
                     priority
@@ -43,43 +45,40 @@ export default function Home() {
                     <p className="hero-subtitle">
                     {personalInfo.title} | {personalInfo.company}
                     </p>
+                    <p className="hero-elevator">
+                      {personalInfo.elevator}
+                    </p>
                     <p className="hero-bio">
                       {personalInfo.bio}
                     </p>
                 </section>
 
+                {/* Skills Section */}
+                <section className="section">
+                    <h2 className="section-heading">Technical Skills</h2>
+                    <Skills
+                      proficient={skills.proficient}
+                      intermediate={skills.intermediate}
+                      learning={skills.learning}
+                    />
+                </section>
+
                 {/* Experience Section */}
                 <section className="section">
                     <h2 className="section-heading">Experience</h2>
-
                 <div className="experience-list">
-                  {experience.map((experience, index) => (
+                  {experience.map((exp, index) => (
                     <ExperienceItem
                       key={index}
-                      title={experience.title}
-                      company={experience.company}
-                      dateRange={experience.dateRange}
-                      description={experience.description}
+                      title={exp.title}
+                      company={exp.company}
+                      dateRange={exp.dateRange}
+                      description={exp.description}
+                      highlights={exp.highlights}
                     />
                   ))}
                 </div>
               </section>
-
-          {/* Education Section */}
-          <section className="section">
-            <h2 className="section-heading">Education</h2>
-            <div className="education-list">
-              {education.map((edu, index) => (
-                <EducationItem
-                  key={index}
-                  degree={edu.degree}
-                  institution={edu.institution}
-                  year={edu.year}
-                  details={edu.details}
-                />
-              ))}
-            </div>
-          </section>
 
           {/* Projects Section */}
           <section className="section">
@@ -92,6 +91,22 @@ export default function Home() {
                   description={project.description}
                   link={project.link}
                   tags={project.tags}
+                />
+              ))}
+            </div>
+          </section>
+
+          {/* Certifications Section */}
+          <section className="section">
+            <h2 className="section-heading">Certifications</h2>
+            <div className="certifications-list">
+              {certifications.map((cert, index) => (
+                <CertificationItem
+                  key={index}
+                  name={cert.name}
+                  issuer={cert.issuer}
+                  year={cert.year}
+                  description={cert.description}
                 />
               ))}
             </div>

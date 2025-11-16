@@ -1,19 +1,74 @@
 .experience-item {
+  padding: 1.5rem;
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--accent-primary);
+  border-radius: 0.5rem;
+  transition: all var(--transition-normal) ease;
+}
 
+.experience-item:hover {
+  background: var(--card-bg-hover);
+  border-color: var(--border-strong);
+  transform: translateX(4px);
+}
+
+.experience-item__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-bottom: 0.5rem;
 }
 
 .experience-item__title {
   font-family: var(--heading-font), sans-serif;
   font-size: 1.25rem;
-  font-weight: 700;
+  font-weight: 600;
   color: var(--foreground);
+  margin: 0;
 }
 
-.experience-item__meta {
-  color: var(--foreground-muted);
+.experience-item__date {
+  font-size: 0.875rem;
+  color: var(--foreground-dim);
+  font-weight: 500;
+  flex-shrink: 0;
+}
+
+.experience-item__company {
+  font-size: 1rem;
+  color: var(--accent-primary);
+  margin-bottom: 0.75rem;
+  font-weight: 500;
 }
 
 .experience-item__description {
-  margin-top: 0.5rem;
-  color: var(--foreground);
+  margin-bottom: 1rem;
+  color: var(--foreground-muted);
+  line-height: 1.6;
+  font-size: 0.9375rem;
+}
+
+.experience-item__highlights {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.experience-item__highlights li {
+  position: relative;
+  padding-left: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: var(--foreground-muted);
+  font-size: 0.875rem;
+  line-height: 1.5;
+}
+
+.experience-item__highlights li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: var(--accent-success);
+  font-weight: 600;
 }
