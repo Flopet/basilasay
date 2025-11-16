@@ -65,22 +65,6 @@ export default function Home() {
                 </div>
               </section>
 
-          {/* Projects Section */}
-          <section className="section">
-            <h2 className="section-heading">Projects</h2>
-            <div className="projects-grid">
-              {projects.map((project, index) => (
-                <ProjectCard
-                  key={index}
-                  title={project.title}
-                  description={project.description}
-                  link={project.link}
-                  tags={project.tags}
-                />
-              ))}
-            </div>
-          </section>
-
           {/* Education Section */}
           <section className="section">
             <h2 className="section-heading">Education</h2>
@@ -92,6 +76,22 @@ export default function Home() {
                   institution={edu.institution}
                   year={edu.year}
                   details={edu.details}
+                />
+              ))}
+            </div>
+          </section>
+
+          {/* Projects Section */}
+          <section className="section">
+            <h2 className="section-heading">Projects</h2>
+            <div className="projects-grid">
+              {projects.map((project, index) => (
+                <ProjectCard
+                  key={index}
+                  title={project.title}
+                  description={project.description}
+                  link={project.link}
+                  tags={project.tags}
                 />
               ))}
             </div>

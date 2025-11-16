@@ -2,19 +2,20 @@ import React from "react";
 import type { Metadata } from "next";
 import {siteMetadata} from "@/lib/config";
 import {Zalando_Sans_SemiExpanded} from "next/font/google";
-import {Ubuntu_Mono} from "next/font/google";
+import {Zalando_Sans} from "next/font/google";
 import "./globals.css";
 
 // Zalando Sans SemiExpanded for headers
 // ** Ignore unused constant warning **
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
-const headerFont = Zalando_Sans_SemiExpanded({
-  variable: "--header-font",
+const headingFont = Zalando_Sans_SemiExpanded({
+  variable: "--heading-font",
   weight: ["400", "600", "700"],
   subsets: ["latin"],
 });
 
-const bodyFont = Ubuntu_Mono({
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+const bodyFont = Zalando_Sans({
   variable: "--body-font",
   weight: ["400", "700"],
   subsets: ["latin"]
