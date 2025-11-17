@@ -54,10 +54,11 @@
   /* Scrollbar styling */
   --sb-track-color: transparent;
   --sb-thumb-color:  var(--border-strong);
+
 }
 
 .main-content::-webkit-scrollbar {
-  width: 24px;
+  width: 13px;
 }
 
 .main-content::-webkit-scrollbar-track {
@@ -67,7 +68,9 @@
 
 .main-content::-webkit-scrollbar-thumb {
   background: var(--sb-thumb-color);
-  border-radius: 3px;
+  border-radius: 5px;
+  border-right: 5px solid transparent;
+  background-clip: padding-box;
 }
 
 @supports not selector(::-webkit-scrollbar) {
