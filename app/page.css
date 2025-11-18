@@ -133,7 +133,7 @@ hr {
 }
 
 .hero-bio {
-  max-width: 45rem;
+  max-width: 55rem;
   font-size: 1.125rem;
   line-height: 1.75;
   color: var(--foreground);
@@ -147,7 +147,7 @@ hr {
   display: flex;
   flex-direction: column;
   gap: 2rem;
-  max-width: 45rem;
+  max-width: 55rem;
 }
 
 /* ========================================
@@ -170,7 +170,7 @@ hr {
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  max-width: 45rem;
+  max-width: 55rem;
 }
 
 /* ========================================

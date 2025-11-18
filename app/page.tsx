@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { ExperienceItem } from "@/components/ExperienceItem";
 import { ProjectCard } from "@/components/ProjectCard";
-import { EducationItem } from "@/components/EducationItem";
+import { CertItem } from "@/components/CertItem";
 import { ContactLink } from "@/components/ContactLink";
 import "./page.css";
 import "./page.mobile.css";
@@ -60,6 +60,7 @@ export default function Home() {
                       company={experience.company}
                       dateRange={experience.dateRange}
                       description={experience.description}
+                      highlights={experience.highlights}
                     />
                   ))}
                 </div>
@@ -67,15 +68,16 @@ export default function Home() {
 
           {/* Education Section */}
           <section className="section">
-            <h2 className="section-heading">Education</h2>
+            <h2 className="section-heading">Certifications</h2>
             <div className="education-list">
               {education.map((edu, index) => (
-                <EducationItem
+                <CertItem
                   key={index}
-                  degree={edu.degree}
-                  institution={edu.institution}
+                  certificate={edu.certificate}
+                  issuer={edu.issuer}
                   year={edu.year}
                   details={edu.details}
+                  badge={edu.badge}
                 />
               ))}
             </div>

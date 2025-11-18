@@ -74,7 +74,7 @@ All reusable components are in the `components/` directory:
 
 - **ExperienceItem**: Displays work experience with left border timeline (uses `--border-strong`)
 - **ProjectCard**: Shows projects with title, description, technology tags, and optional link
-- **EducationItem**: Displays education history
+- **CertItem**: Displays education history
 - **ContactLink**: Styled links for contact information with underline
 - **FontToggle**: Temporary testing component to toggle between custom font and Arial
 

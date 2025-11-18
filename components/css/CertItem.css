@@ -1,0 +1,29 @@
+.cert-item {
+  position: relative;
+}
+
+.cert-item__degree {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--foreground);
+  margin-left: 65px;
+}
+
+.cert-item__meta {
+  color: var(--foreground-muted);
+  margin-left: 65px;
+}
+
+.cert-item__details {
+  margin-top: 0.5rem;
+  color: var(--foreground);
+}
+
+.cert-item__badge {
+  position: absolute;
+  height: 60px;
+  width: 60px;
+  font-size: .5rem;
+  text-align: center;
+  color: var(--border);
+}

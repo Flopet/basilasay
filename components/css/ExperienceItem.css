@@ -15,5 +15,18 @@
 
 .experience-item__description {
   margin-top: 0.5rem;
+  font-size: 1.125rem;
+  line-height: 1.5rem;
   color: var(--foreground);
+}
+
+.experience-item__highlights {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  color: var(--foreground-muted);
+  margin-left: 2rem;
+}
+
+.experience-item__highlights li::marker {
+  color: var(--border-strong);
 }

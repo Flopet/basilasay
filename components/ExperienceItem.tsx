@@ -5,6 +5,7 @@ interface ExperienceItemProps {
   company: string;
   dateRange: string;
   description: string;
+  highlights?: string[];
 }
 
 export function ExperienceItem({
@@ -12,6 +13,7 @@ export function ExperienceItem({
   company,
   dateRange,
   description,
+  highlights = [],
 }: ExperienceItemProps) {
   return (
     <div className="experience-item">
@@ -20,6 +22,16 @@ export function ExperienceItem({
         {company} • {dateRange}
       </p>
       <p className="experience-item__description">{description}</p>
+
+      {/* Ensure highlights are rendered only if they exist */}
+      {highlights && highlights.length > 0 && (
+      <ul className="experience-item__highlights">
+        {highlights.map((highlight, index) => (
+            <li key={index}>{highlight}</li>
+        ))}
+      </ul>
+      )}
+
     </div>
   );
 }

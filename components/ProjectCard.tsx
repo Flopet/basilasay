@@ -26,7 +26,7 @@ export function ProjectCard({
           ))}
         </div>
       )}
-      {link && (
+      {link? (
         <a
           href={link}
           className="project-card__link"
@@ -35,6 +35,16 @@ export function ProjectCard({
         >
           View Project →
         </a>
+      ) : (
+          <a
+           className="project-card__link pointer-events-none"
+           style={{ cursor: "not-allowed", textDecoration: "none", color: "var(--border)"}}
+           target="_blank"
+           rel="noopener noreferrer"
+          >
+            Project Showcase Coming soon!
+          </a>
+
       )}
     </div>
   );
