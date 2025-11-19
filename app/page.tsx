@@ -51,7 +51,6 @@ export default function Home() {
                 {/* Experience Section */}
                 <section className="section">
                     <h2 className="section-heading">Experience</h2>
-
                 <div className="experience-list">
                   {experience.map((experience, index) => (
                     <ExperienceItem
@@ -69,7 +68,7 @@ export default function Home() {
           {/* Education Section */}
           <section className="section">
             <h2 className="section-heading">Certifications</h2>
-            <div className="education-list">
+            <div className="cert-list">
               {education.map((edu, index) => (
                 <CertItem
                   key={index}

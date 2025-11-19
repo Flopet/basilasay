@@ -1,12 +1,18 @@
 .cert-item {
   border: 2px solid var(--border-strong);
   border-radius: 10px;
-  background-color: var(--background-subtle);
+  background-color: var(--background);
   width: fit-content;
   padding: 10px;
   display: flex;
   position: relative;
+  transition: all 300ms ease-in-out;
+  box-shadow: 0 2px 8px var(--shadow);
+}
 
+.cert-item:hover {
+  border-color: var(--border-strong);
+  transform: scale(1.02);
 }
 
 .cert-item__degree {

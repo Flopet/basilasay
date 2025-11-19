@@ -47,7 +47,7 @@
     padding-bottom: 1.5rem;
   }
 
-  .hero-bio, .experience-list, .education-list{
+  .hero-bio, .experience-list, .cert-list{
     padding-left: 0;
     border-left: none;
   }
@@ -56,8 +56,12 @@
     text-align: center;
   }
 
-  .experience-list, .education-list {
+  .experience-list, .cert-list {
     padding-left: 1rem;
+  }
+
+  .cert-item__degree {
+    font-size: 1rem;
   }
   /* Wider divider on tablets */
   hr {

@@ -91,6 +91,7 @@ hr {
 
 .section {
   margin-bottom: var(--section-spacing);
+  justify-content: center;
 }
 
 .section-heading {
@@ -103,7 +104,7 @@ hr {
 
 /* Section Content Borders */
 
-.hero-bio, .experience-list, .education-list {
+.hero-bio, .experience-list, .cert-list {
   border: solid var(--border-strong);
   border-width: 2px 0 0 5px;
   border-top-left-radius: 0.5rem;
@@ -166,9 +167,9 @@ hr {
    Education Section
    ======================================== */
 
-.education-list {
+.cert-list {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   gap: 1rem;
   max-width: 55rem;
 }

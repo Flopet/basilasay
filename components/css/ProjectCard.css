@@ -8,12 +8,13 @@
   border: 2px solid var(--border);
   background-color: var(--background);
   padding: 1.5rem;
-  transition: border-color 0.2s;
   box-shadow: 0 2px 8px var(--shadow);
+  transition: all 300ms ease-in-out;
 }
 
 .project-card:hover {
   border-color: var(--border-strong);
+  transform: scale(1.02);
 }
 
 /* ========================================
