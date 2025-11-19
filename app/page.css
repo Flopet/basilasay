@@ -172,6 +172,10 @@ hr {
   flex-direction: row;
   gap: 1rem;
   max-width: 55rem;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  padding-bottom: 1rem;
+
 }
 
 /* ========================================
