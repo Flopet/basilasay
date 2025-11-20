@@ -75,3 +75,31 @@ footer {
     right: 1rem;
     font-family: 'ubuntu mono', monospace;
 }
+
+.button {
+  transition: box-shadow 150ms ease-in-out,
+              transform 150ms ease-in-out;
+  box-shadow:
+          1px 1px 1px var(--border-strong),
+          2px 2px 1px var(--border-strong),
+          3px 3px 1px var(--border-strong),
+          4px 4px 1px var(--border-strong),
+          5px 5px 1px var(--border-strong);
+}
+
+.button:hover {
+  transform: translate(-1px, -1px);
+  box-shadow:
+          1px 1px 1px var(--border-strong),
+          2px 2px 1px var(--border-strong),
+          3px 3px 1px var(--border-strong),
+          4px 4px 1px var(--border-strong),
+          5px 5px 1px var(--border-strong),
+          6px 6px 1px var(--border-strong);
+}
+
+.button:active {
+  transform: translate(4px, 4px);
+  box-shadow:
+          0 0 1px var(--border-strong);
+}
