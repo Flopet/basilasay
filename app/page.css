@@ -111,6 +111,11 @@ hr {
   padding: 1rem 0 0 2rem;
 }
 
+.projects-grid, .contact-links {
+  border-top: solid var(--border-strong);
+  border-top-width: 2px;
+  padding-top: 1rem;
+}
 /* ========================================
    Hero Section
    ======================================== */
@@ -134,7 +139,6 @@ hr {
 }
 
 .hero-bio {
-  max-width: 55rem;
   font-size: 1.125rem;
   line-height: 1.75;
   color: var(--foreground);
@@ -148,7 +152,6 @@ hr {
   display: flex;
   flex-direction: column;
   gap: 2rem;
-  max-width: 55rem;
 }
 
 /* ========================================
@@ -159,19 +162,16 @@ hr {
   display: grid;
   gap: var(--grid-gap);
   grid-template-columns: repeat(2, 1fr);
-  border-top: 2px solid var(--border-strong);
-  padding-top: 1rem;
 }
 
 /* ========================================
-   Education Section
+   Certification Section
    ======================================== */
 
 .cert-list {
   display: flex;
   flex-direction: row;
   gap: 1rem;
-  max-width: 55rem;
   overflow-x: scroll;
   overflow-y: hidden;
   padding-bottom: 1rem;
@@ -188,6 +188,4 @@ hr {
   gap: 1rem;
   padding-left: 1rem;
   padding-top: 0.5rem;
-  max-width: 45rem;
-  border-top: 2px solid var(--border-strong);
 }
