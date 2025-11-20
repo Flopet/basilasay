@@ -9,9 +9,7 @@ interface ContactLinkProps {
 export function ContactLink({ href, label, external = false }: ContactLinkProps) {
   // Auto-detect email and add mailto: if needed
   const isEmail = label.toLowerCase() === "email";
-  const finalHref = isEmail && !href.startsWith("mailto:")
-    ? `mailto:${href}`
-    : href;
+  const finalHref = isEmail && !href.startsWith("mailto:") ? `mailto:${href}` : href;
 
   return (
     <a

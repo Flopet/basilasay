@@ -3,6 +3,7 @@ import { ExperienceItem } from "@/components/ExperienceItem";
 import { ProjectCard } from "@/components/ProjectCard";
 import { CertItem } from "@/components/CertItem";
 import { ContactLink } from "@/components/ContactLink";
+import { GithubRibbon } from "@/components/GithubRibbon";
 import "./page.css";
 import "./page.mobile.css";
 
@@ -18,8 +19,8 @@ import {
 export default function Home() {
   return (
     <div className="page-container">
+        <GithubRibbon/>
         <div className="layout-container">
-
             {/* Left Column - Cover Image (33% on large screens) */}
             <aside className="cover-aside">
                 <Image
@@ -29,7 +30,7 @@ export default function Home() {
                     fill
                     priority
                 />
-            {/* Shadow overlay */}
+            {/* Left Column Shadow overlay */}
             <div className="shadow-overlay"></div>
             </aside>
 
