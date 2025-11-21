@@ -45,7 +45,7 @@
   }
 
   .hero-subtitle{
-    padding-bottom: 1.5rem;
+    padding-bottom: 0.5rem;
   }
 
   .hero-bio, .experience-list, .cert-list{
@@ -73,6 +73,18 @@
   /* Single column project grid */
   .projects-grid {
     grid-template-columns: 1fr;
+  }
+
+  .download-resume {
+    font-size: 1rem;
+    position: absolute;
+    top: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-bottom: 1rem;
+    white-space: nowrap;
+    z-index: 3;
+
   }
 }
 
