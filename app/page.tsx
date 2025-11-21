@@ -4,8 +4,10 @@ import { ProjectCard } from "@/components/ProjectCard";
 import { CertItem } from "@/components/CertItem";
 import { ContactLink } from "@/components/ContactLink";
 import { GithubRibbon } from "@/components/GithubRibbon";
+import {PrintButton} from "@/components/PrintButton";
 import "./page.css";
 import "./page.mobile.css";
+import "./printout.css"
 
 // Import data from lib/config.ts
 import {
@@ -37,6 +39,7 @@ export default function Home() {
             {/* Right Column - Content (67% on large screens) */}
             <main className="main-content">
                 {/* Hero Section */}
+                <PrintButton/>
                 <section className="section">
                     <h1 className="hero-title">
                     {personalInfo.name}
@@ -47,6 +50,7 @@ export default function Home() {
                     <p className="hero-bio">
                       {personalInfo.bio}
                     </p>
+
                 </section>
 
                 {/* Experience Section */}
@@ -100,7 +104,7 @@ export default function Home() {
           </section>
 
           {/* Contact Section */}
-          <section>
+          <section id="contacts-section">
             <h2 className="section-heading">Contact</h2>
             <div className="contact-links">
               {contacts.map((contact, index) => (

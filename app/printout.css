@@ -1,0 +1,35 @@
+@media print{
+  @page {
+    margin: 0;
+  }
+
+  .cert-item, .project-card {
+    box-shadow: none;
+  }
+
+  footer {
+    display: none;
+  }
+
+  .section {
+    page-break-inside: avoid;
+    break-inside: avoid;
+  }
+
+  .project-card__tag {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  .main-content {
+    border: none;
+  }
+
+  #contacts-section {
+    display: none;
+  }
+
+  .download-resume {
+    display: none;
+  }
+}
