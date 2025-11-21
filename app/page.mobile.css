@@ -17,8 +17,8 @@
   /* Convert sidebar to circular avatar in top-right */
   .cover-aside {
     position: absolute;
-    top: 1rem;
-    left: 1rem;
+    top: 1.5rem;
+    left: 1.5rem;
     width: 10rem;
     height: 10rem;
     border-radius: 50%;
@@ -38,6 +38,8 @@
     overflow-y: visible;
     padding: var(--content-padding-y) var(--content-padding-x);
     border-radius: 1rem;
+    border: none;
+    margin: 0;
   }
 
   .hero-title, .hero-subtitle {
