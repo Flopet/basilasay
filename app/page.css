@@ -22,8 +22,7 @@
   top: 0;
   height: 100vh;
   overflow: hidden;
-  border-radius: 1rem 0 0 1rem;
-  margin: 1rem 0 1rem 1rem;
+  border-radius: 2rem 0 0 2rem;
 }
 
 .cover-image {
@@ -52,8 +51,7 @@
   position: relative;
   z-index: 1;
   border-left: 5px solid var(--border-strong);
-  border-radius: 0 1rem 1rem 0;
-  margin: 1rem 1rem 1rem 0;
+  border-radius: 0 2rem 2rem 0;
 
   /* Scrollbar styling */
   --sb-track-color: transparent;
