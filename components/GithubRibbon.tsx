@@ -12,7 +12,6 @@ export function GithubRibbon() {
   }
 
   return (
-      <div>
       <a href={href}
          className="github-corner"
          target="_blank"
@@ -29,6 +28,5 @@ export function GithubRibbon() {
               fill="currentColor" className="octo-body"/>
         </svg>
       </a>
-      </div>
 )
 }

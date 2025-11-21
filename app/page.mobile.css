@@ -31,6 +31,11 @@
     box-shadow: inset 0 10px 15px var(--shadow);
   }
 
+  .github-corner-svg {
+    top: 0;
+    right: 0;
+  }
+
   /* Content takes full width */
   .main-content {
     width: 100%;
