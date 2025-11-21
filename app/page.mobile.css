@@ -37,6 +37,7 @@
     height: auto;
     overflow-y: visible;
     padding: var(--content-padding-y) var(--content-padding-x);
+    border-radius: 1rem;
   }
 
   .hero-title, .hero-subtitle {
