@@ -3,8 +3,8 @@
   mix-blend-mode: darken;
   color:#ffffff;
   position: absolute;
-  top: 1rem;
-  right: 1rem;
+  top: 0;
+  right: 0;
   border: 0;
   z-index: 100;
 }
