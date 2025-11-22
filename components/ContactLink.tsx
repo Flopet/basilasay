@@ -14,6 +14,7 @@ export function ContactLink({ href, label, external = false }: ContactLinkProps)
   return (
     <a
       href={finalHref}
+      title={href}
       className="contact-link"
       target={external ? "_blank" : undefined}
       rel={external ? "noopener noreferrer" : undefined}

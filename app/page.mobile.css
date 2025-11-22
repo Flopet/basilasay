@@ -51,6 +51,9 @@
     text-align: center;
   }
 
+  .hero-title {
+    margin-top: 1.5rem;
+  }
   .hero-subtitle{
     padding-bottom: 0.5rem;
   }
@@ -85,13 +88,17 @@
   .download-resume {
     font-size: 1rem;
     position: absolute;
+    margin-top: 1rem;
     top: 1rem;
     left: 50%;
     transform: translateX(-50%);
-    margin-bottom: 1rem;
     white-space: nowrap;
     z-index: 3;
 
+  }
+
+  .download-resume:hover, .download-resume:active {
+    transform: translateX(-50%);
   }
 }
 
