@@ -38,7 +38,7 @@ export function ProjectCard({
       ) : (
           <a
            className="project-card__link pointer-events-none"
-           style={{ cursor: "not-allowed", textDecoration: "none", color: "var(--border)"}}
+           style={{ cursor: "not-allowed", color: "var(--border)"}}
            target="_blank"
            rel="noopener noreferrer"
           >

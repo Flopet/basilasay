@@ -52,10 +52,14 @@
   z-index: 1;
   border-left: 5px solid var(--border-strong);
 
-  /* Scrollbar styling */
+  /* Scrollbar variables */
   --sb-track-color: transparent;
   --sb-thumb-color:  var(--border-strong);
 }
+
+/* ========================================
+   Scrollbar Styling
+   ======================================== */
 
 .main-content::-webkit-scrollbar {
   width: 13px;
@@ -75,7 +79,7 @@
 
 @supports not selector(::-webkit-scrollbar) {
   .main-content {
-    scrollbar-color: var(--sb-thumb-color) transparent;
+    scrollbar-color: var(--sb-thumb-color) var(--sb-track-color);
   }
 }
 
