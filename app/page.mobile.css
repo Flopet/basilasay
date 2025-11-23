@@ -88,17 +88,23 @@
   .download-resume {
     font-size: 1rem;
     position: absolute;
-    margin-top: 1rem;
+    margin: 1rem auto auto auto;
+    left: 0;
+    right: 0;
     top: 1rem;
-    left: 50%;
-    transform: translateX(-50%);
     white-space: nowrap;
     z-index: 3;
 
   }
 
   .download-resume:hover, .download-resume:active {
-    transform: translateX(-50%);
+    /*transform: translateX(-50%);*/
+  }
+
+  .download-resume:active {
+    transform: translate(4px, 4px);
+    box-shadow:
+            0 0 1px var(--border-strong);
   }
 }
 
