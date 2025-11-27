@@ -60,6 +60,7 @@
   .hero-bio, .experience-list, .cert-list{
     padding-left: 0;
     border-left: none;
+    border-radius: 0;
   }
 
   .hero-bio {
