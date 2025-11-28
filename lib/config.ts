@@ -8,15 +8,15 @@ export const siteMetadata = {
 export const personalInfo = {
     coverImage: "/BasilAndKaitlyn.png",
     name: "Basil Asay",
-    title: "Data Center Technician",
-    company: "HCLTech on-site at Meta",
+    title: "Technician",
+    company: "HCLTech On-Site at Meta",
     bio: "My journey into IT began at 14, building my first computer and discovering a passion that would define my career. After 10+ years working in retail, medicine, and warehouse environments, I made the leap into IT when Meta gave me my first opportunity in the field. Now I specialize in fiber optic troubleshooting and data center operations, backed by CompTIA A+ and Network+ certifications. I give 110% every day—I'm never late, I prioritize efficiency, I'm detail-oriented, I learn fast, I think outside the box, and I'm a strong leader who thrives on solving complex technical challenges.",
 };
 
 export const experience = [
   {
     title: "Data Center Technician",
-    company: "HCLTech on-site at Meta",
+    company: "HCLTech On-Site at Meta",
     dateRange: "February 2024 - Present",
     description: "Layer 1 technician for Meta's data centers in Henrico, Virginia, specializing in fiber optic troubleshooting and network infrastructure maintenance. Responsible for diagnosing and resolving cabling and optical connectivity issues across the data center campus and even between long-distance sites, ensuring maximum uptime for our critical infrastructure. I work with cutting-edge networking equipment, interpret network switch provision logs, and provide detailed notes for all troubleshooting tickets.",
     highlights: [
