@@ -47,6 +47,12 @@ export const projects = [
     description: "Custom-built server running 9+ self-hosted services including Jellyfin, AudioBookshelf, Home Assistant, and Immich. Features multi-tier storage with 22TB capacity, parity protection, and secure remote access via Tailscale VPN.",
     link: "",
     tags: ["Unraid", "Docker", "Tailscale VPN", "Linux", "Networking", "Hardware"],
+  },
+  {
+    title: "CSV to SQLite Converter",
+    description: "A simple Python-based CLI tool to convert CSV files into SQLite tables and attaching them to a database for easy data analysis and manipulation.",
+    link: "https://github.com/Flopet/csv-sqlite-conv",
+    tags: ["Python", "SQLite", "CLI", "CSV"],
   }
   // Add more projects here
 ];
