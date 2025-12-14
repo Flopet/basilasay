@@ -12,13 +12,17 @@
   }
 
   .section {
-    page-break-inside: avoid;
-    break-inside: avoid;
+    /*page-break-inside: avoid;*/
+    /*break-inside: avoid;*/
   }
 
   .project-card__tag {
     -webkit-print-color-adjust: exact;
     print-color-adjust: exact;
+  }
+
+  #projects-section, #cert-section {
+    display: none;
   }
 
   .main-content {

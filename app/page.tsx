@@ -70,8 +70,8 @@ export default function Home() {
                 </div>
               </section>
 
-          {/* Education Section */}
-          <section className="section">
+          {/* Certifications Section */}
+          <section className="section" id="cert-section">
             <h2 className="section-heading">Certifications</h2>
             <div className="cert-list">
               {education.map((edu, index) => (
@@ -88,7 +88,7 @@ export default function Home() {
           </section>
 
           {/* Projects Section */}
-          <section className="section">
+          <section className="section" id="projects-section">
             <h2 className="section-heading">Projects</h2>
             <div className="projects-grid">
               {projects.map((project, index) => (
