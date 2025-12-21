@@ -20,12 +20,11 @@ export const experience = [
     title: "Data Center Technician",
     company: "TekSystems On-Site at Microsoft",
     dateRange: "November 2025 - Current",
-    description: "As a BreakFix technician, I work with enterprise-grade servers and networking equipment to diagnose and resolve fiber optic connectivity issues and replace faulty server components as needed ensuring maximum uptime for our critical infrastructure.",
+    description: "BreakFix technician responsible for diagnosing and resolving hardware failures, fiber optic connectivity issues, and component replacements across Microsoft's data center infrastructure to ensure OLA compliance and minimize downtime.",
     highlights: [
       "Troubleshoot fiber optic connectivity issues",
-      "Replace faulty server components and cables",
-      "Maintain high uptime across data center infrastructure meeting SLA",
-      "Work with enterprise-grade networking equipment and proprietary monitoring software",
+      "Replace faulty server components including PSU's, GPU's, drives, network interface cards and more",
+      "Respond to critical incidents via ticketing system to maintain maximum uptime",
       "Document technical procedures and solutions in detail for knowledge sharing"
     ]
   },
@@ -33,12 +32,13 @@ export const experience = [
     title: "Data Center Technician",
     company: "HCLTech On-Site at Meta",
     dateRange: "February 2025 - November 2025",
-    description: "Layer 1 technician for Meta's data centers in Henrico, Virginia, specializing in fiber optic troubleshooting and network infrastructure maintenance. Responsible for diagnosing and resolving cabling and optical connectivity issues across the data center campus and even between long-distance sites, ensuring maximum uptime for our critical infrastructure. I work with cutting-edge networking equipment, interpret network switch provision logs, and provide detailed notes for all troubleshooting tickets.",
+    description: "Layer 1 technician specializing in fiber optic troubleshooting and network infrastructure maintenance across Meta's Henrico, VA data center campus. Diagnose and resolve cabling and optical connectivity issues including long-distance fiber runs to ensure maximum uptime and SLA compliance.",
     highlights: [
-      "Primary focus is fiber optic connection troubleshooting and repair",
-      "Maintain high uptime across data center infrastructure meeting SLA",
-      "Work with enterprise-grade networking equipment and proprietary monitoring software",
-      "Document technical procedures and solutions in detail for knowledge sharing"
+      "Diagnose fiber optic failures using VFLs, loopbacks, light detector cards, and optical cleaning tools",
+      "Troubleshoot MPO and LC fiber connectivity across campus and long-distance inter-site links",
+      "Interpret network switch provision logs to isolate Layer 1 vs Layer 2/3 issues",
+      "Use proprietary monitoring software to verify fiber optic signal integrity and performance metrics",
+      "Document troubleshooting procedures and root cause analysis for future reference"
     ]
   },
   // Add more experience items here
