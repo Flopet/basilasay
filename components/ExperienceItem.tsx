@@ -17,7 +17,7 @@ export function ExperienceItem({
 }: ExperienceItemProps) {
   return (
     <div className="experience-item">
-      <h3 className="experience-item__title">{title}</h3>
+      <h3 className="experience-item__title"><u>{title}</u></h3>
       <p className="experience-item__meta">
         {company} • {dateRange}
       </p>
