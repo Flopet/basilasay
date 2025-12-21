@@ -11,9 +11,13 @@
     display: none;
   }
 
-  .section {
-    /*page-break-inside: avoid;*/
-    /*break-inside: avoid;*/
+  /* Break sections between pages */
+  .experience-item {
+    page-break-inside: avoid;
+    break-inside: avoid;
+  }
+  .experience-item:not(:last-child) {
+    border-bottom: none;
   }
 
   .project-card__tag {
@@ -21,8 +25,24 @@
     print-color-adjust: exact;
   }
 
-  #projects-section, #cert-section {
+  #projects-section {
     display: none;
+  }
+
+  /* Show certificates on print with minimalistic styling */
+
+  .cert-item {
+    margin-bottom: 0.5rem;  /* Reduce spacing */
+    padding: 0.25rem 0;     /* Minimal padding */
+  }
+
+  .cert-item__degree {
+    font-size: 1rem;        /* Smaller font */
+    margin-bottom: 0.1rem;
+  }
+
+  .cert-item__meta {
+    font-size: 0.85rem;     /* Smaller metadata */
   }
 
   .main-content {
@@ -36,4 +56,20 @@
   .download-resume {
     display: none;
   }
+
+  /* Show contact info */
+  .print-only-contact {
+    display: block;           /* Show on print */
+    font-size: 0.9rem;       /* Adjust size as needed */
+    color: var(--foreground-muted);
+    text-align: center;
+    margin-bottom: 0.5rem;
+  }
+  .hero-subtitle {
+    margin-bottom: 0;
+  }
+  .hero-title {
+    margin-bottom: 2rem;
+  }
+
 }

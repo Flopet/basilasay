@@ -47,6 +47,10 @@ export default function Home() {
                     <p className="hero-subtitle">
                     {personalInfo.title} | {personalInfo.company}
                     </p>
+                    {/* Print-only contact info */}
+                    <p className="print-only-contact">
+                      {personalInfo.email} | {personalInfo.phone}
+                    </p>
                     <p className="hero-bio">
                       {personalInfo.bio}
                     </p>

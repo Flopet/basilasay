@@ -194,5 +194,14 @@ hr {
   padding-top: 0.5rem;
 }
 
+/* ========================================
+   Print-only Contact Info
+   ======================================== */
+
+.print-only-contact {
+  display: none;
+
+}
+
 
 
