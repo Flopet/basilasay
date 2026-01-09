@@ -4,7 +4,7 @@ import { ProjectCard } from "@/components/ProjectCard";
 import { CertItem } from "@/components/CertItem";
 import { ContactLink } from "@/components/ContactLink";
 import { GithubRibbon } from "@/components/GithubRibbon";
-import {PrintButton} from "@/components/PrintButton";
+import { PrintButton } from "@/components/PrintButton";
 import "./page.css";
 import "./page.mobile.css";
 import "./printout.css"
