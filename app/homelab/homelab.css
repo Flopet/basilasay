@@ -1,0 +1,243 @@
+/* ========================================
+   Homelab Page Styles
+   Matches the main site's design system
+   ======================================== */
+
+/* Page Container */
+.homelab-page {
+  min-height: 100vh;
+  background: radial-gradient(ellipse at center, var(--background) 0%, var(--background-subtle) 100%);
+  color: var(--foreground);
+}
+
+/* Main Container - matches main site's content padding */
+.homelab-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: var(--content-padding-y) var(--content-padding-x);
+}
+
+/* ========================================
+   Section Spacing - matches main site
+   ======================================== */
+
+.homelab-section {
+  margin-bottom: var(--section-spacing); /* 4rem like main site */
+}
+
+.homelab-subsection {
+  margin-bottom: 2rem;
+}
+
+/* ========================================
+   Typography - matches main site
+   ======================================== */
+
+.homelab-hero-title {
+  font-size: 3rem;
+  font-weight: 700;
+  letter-spacing: -0.025em;
+  color: var(--foreground);
+  line-height: 1.2;
+  margin-bottom: 1.5rem;
+}
+
+.homelab-section-heading {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--foreground);
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid var(--border-strong);
+}
+
+.homelab-subsection-heading {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--border-strong);
+  margin-bottom: 1rem;
+  margin-top: 1.5rem;
+}
+
+.homelab-card-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--foreground);
+  margin-bottom: 0.75rem;
+}
+
+.homelab-intro {
+  font-size: 1.125rem;
+  line-height: 1.75;
+  color: var(--foreground);
+  margin-bottom: 1rem;
+}
+
+.homelab-intro p {
+  margin-bottom: 1rem;
+}
+
+.homelab-intro-text {
+  font-size: 1.125rem;
+  line-height: 1.75;
+  color: var(--foreground-muted);
+  margin-bottom: 1.5rem;
+}
+
+.homelab-bold {
+  font-weight: 700;
+  color: var(--foreground);
+}
+
+/* ========================================
+   Cards - matches main site's card style
+   ======================================== */
+
+.homelab-card {
+  background-color: var(--card-bg);
+  border: 2px solid var(--border);
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.homelab-card p {
+  color: var(--foreground-muted);
+  line-height: 1.6;
+  margin: 0;
+}
+
+.homelab-card-group {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+/* ========================================
+   Tables - matches main site aesthetics
+   ======================================== */
+
+.homelab-table-container {
+  background-color: var(--card-bg);
+  border: 2px solid var(--border);
+  border-radius: 0.5rem;
+  overflow: hidden;
+  margin-bottom: 1.5rem;
+}
+
+.homelab-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.homelab-table thead {
+  background-color: var(--background-subtle);
+}
+
+.homelab-table th {
+  text-align: left;
+  padding: 1rem;
+  font-weight: 700;
+  color: var(--foreground);
+  border-bottom: 2px solid var(--border);
+}
+
+.homelab-table td {
+  padding: 1rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.homelab-table td:first-child {
+  font-weight: 700;
+  color: var(--foreground);
+}
+
+.homelab-table td:last-child {
+  color: var(--foreground-muted);
+}
+
+.homelab-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+/* ========================================
+   Lists
+   ======================================== */
+
+.homelab-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  color: var(--foreground-muted);
+}
+
+.homelab-list li {
+  margin-bottom: 0.5rem;
+  line-height: 1.6;
+}
+
+.homelab-list li:last-child {
+  margin-bottom: 0;
+}
+
+/* ========================================
+   Skills Grid - two column layout
+   ======================================== */
+
+.homelab-skills-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--grid-gap); /* 1.5rem like main site */
+}
+
+.homelab-card-full {
+  grid-column: 1 / -1;
+}
+
+/* ========================================
+   Responsive Design
+   ======================================== */
+
+@media (max-width: 768px) {
+  .homelab-container {
+    padding: 2rem 1.5rem;
+  }
+
+  .homelab-hero-title {
+    font-size: 2rem;
+  }
+
+  .homelab-section-heading {
+    font-size: 1.5rem;
+  }
+
+  .homelab-subsection-heading {
+    font-size: 1.25rem;
+  }
+
+  .homelab-skills-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .homelab-table th,
+  .homelab-table td {
+    padding: 0.75rem;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .homelab-container {
+    padding: 1.5rem 1rem;
+  }
+
+  .homelab-hero-title {
+    font-size: 1.75rem;
+  }
+
+  .homelab-table th,
+  .homelab-table td {
+    padding: 0.5rem;
+    font-size: 0.85rem;
+  }
+}

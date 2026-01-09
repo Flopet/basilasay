@@ -60,7 +60,7 @@ export const projects = [
   {
     title: "Production Homelab Server",
     description: "Custom-built server running 9+ self-hosted services including Jellyfin, AudioBookshelf, Home Assistant, and Immich. Features multi-tier storage with 22TB capacity, parity protection, and secure remote access via Tailscale VPN.",
-    link: "",
+    link: "/homelab",
     tags: ["Unraid", "Docker", "Tailscale VPN", "Linux", "Networking", "Hardware"],
   },
   {
