@@ -16,42 +16,44 @@ export function HardwareItem({
     .filter(Boolean)
     .join(" ");
 
-  const content = (
-    <tr className={`hardware-item ${link ? "hardware-item--clickable" : ""}`}>
-      <td className="hardware-item__type">
-        {icon && (
-          <div className="hardware-item__icon">
-            <Image src={icon} alt={componentType} width={24} height={24} />
-          </div>
-        )}
-        <span>{componentType}</span>
-      </td>
-      <td className="hardware-item__spec">{specification}</td>
-    </tr>
-  );
-
   if (link) {
     return (
       <tr className="hardware-item hardware-item--clickable">
         <td className="hardware-item__type">
-          {icon && (
-            <div className="hardware-item__icon">
-              <Image src={icon} alt={componentType} width={24} height={24} />
-            </div>
-          )}
-          <a
-            href={link}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="hardware-item__link"
-          >
-            {componentType}
-          </a>
+          <div className="hardware-item__type-content">
+            {icon && (
+              <div className="hardware-item__icon">
+                <Image src={icon} alt={componentType} width={24} height={24} />
+              </div>
+            )}
+            <a
+              href={link}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hardware-item__link"
+            >
+              {componentType}
+            </a>
+          </div>
         </td>
         <td className="hardware-item__spec">{specification}</td>
       </tr>
     );
   }
 
-  return content;
+  return (
+    <tr className="hardware-item">
+      <td className="hardware-item__type">
+        <div className="hardware-item__type-content">
+          {icon && (
+            <div className="hardware-item__icon">
+              <Image src={icon} alt={componentType} width={24} height={24} />
+            </div>
+          )}
+          <span>{componentType}</span>
+        </div>
+      </td>
+      <td className="hardware-item__spec">{specification}</td>
+    </tr>
+  );
 }

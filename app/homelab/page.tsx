@@ -1,4 +1,12 @@
 import "./homelab.css";
+import { HardwareItem } from "./components/HardwareItem";
+import { ServiceCard } from "./components/ServiceCard";
+import {
+  hardwareComponents,
+  getServicesByCategory,
+  serviceCategories,
+  securityStrategies,
+} from "@/lib/homelab-config";
 
 export default function HomelabPage() {
   return (
@@ -30,7 +38,7 @@ export default function HomelabPage() {
         <section className="homelab-section">
           <h2 className="homelab-section-heading">Hardware Specifications</h2>
 
-          <h3 className="homelab-subsection-heading">Server Build</h3>
+          <h3 className="homelab-subsection-heading">Server Components</h3>
           <div className="homelab-table-container">
             <table className="homelab-table">
               <thead>
@@ -40,50 +48,9 @@ export default function HomelabPage() {
                 </tr>
               </thead>
               <tbody>
-                <tr>
-                  <td>Case</td>
-                  <td>Rosewill Helium Mid-Tower ATX (10x 3.5" + 3x 2.5" drive bays)</td>
-                </tr>
-                <tr>
-                  <td>Motherboard</td>
-                  <td>ASUS TUF B360M-PLUS GAMING S</td>
-                </tr>
-                <tr>
-                  <td>CPU</td>
-                  <td>Intel Core i5-8400 (6-Core @ 2.80GHz)</td>
-                </tr>
-                <tr>
-                  <td>RAM</td>
-                  <td>32GB DDR4-2666MHz</td>
-                </tr>
-                <tr>
-                  <td>GPU</td>
-                  <td>Nvidia GeForce GTX 1060 3GB (for hardware transcoding)</td>
-                </tr>
-                <tr>
-                  <td>OS Drive</td>
-                  <td>128GB USB Flash Drive (Unraid requirement)</td>
-                </tr>
-                <tr>
-                  <td>Cache Drive</td>
-                  <td>512GB NVMe SSD</td>
-                </tr>
-                <tr>
-                  <td>Appdata Drive</td>
-                  <td>128GB 2.5" SSD (container storage)</td>
-                </tr>
-                <tr>
-                  <td>Parity Drive</td>
-                  <td>1x 20TB HDD</td>
-                </tr>
-                <tr>
-                  <td>Data Drives</td>
-                  <td>1x 20TB HDD, 2x 2TB HDD</td>
-                </tr>
-                <tr>
-                  <td>Operating System</td>
-                  <td>Unraid OS</td>
-                </tr>
+                {hardwareComponents.map((component, index) => (
+                  <HardwareItem key={index} {...component} />
+                ))}
               </tbody>
             </table>
           </div>
@@ -97,36 +64,6 @@ export default function HomelabPage() {
               storage protected by parity.
             </p>
           </div>
-
-          <h3 className="homelab-subsection-heading">Additional Equipment</h3>
-          <div className="homelab-table-container">
-            <table className="homelab-table">
-              <thead>
-                <tr>
-                  <th>Item</th>
-                  <th>Model/Details</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>Wireless Access Point</td>
-                  <td>TP-Link EAP610 (WiFi 6, WPA3, PoE+)</td>
-                </tr>
-                <tr>
-                  <td>Router</td>
-                  <td>ISP-provided gateway</td>
-                </tr>
-                <tr>
-                  <td>Remote Management</td>
-                  <td>IP KVM</td>
-                </tr>
-                <tr>
-                  <td>Power Protection</td>
-                  <td>UPS Surge Protector</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
         </section>
 
         {/* Hosted Services */}
@@ -136,109 +73,19 @@ export default function HomelabPage() {
             All services run in Docker containers, managed through Docker Compose with automated backups via Duplicati.
           </p>
 
-          {/* Media & Content */}
-          <div className="homelab-subsection">
-            <h3 className="homelab-subsection-heading">Media & Content</h3>
-            <div className="homelab-card-group">
-              <div className="homelab-card">
-                <h4 className="homelab-card-title">Jellyfin</h4>
-                <p>
-                  Media streaming server for movies, TV shows, and music. Uses the GTX 1060 for
-                  hardware-accelerated transcoding to support multiple simultaneous streams.
-                </p>
+          {serviceCategories.map((category) => {
+            const categoryServices = getServicesByCategory(category);
+            return (
+              <div key={category} className="homelab-subsection">
+                <h3 className="homelab-subsection-heading">{category}</h3>
+                <div className="homelab-card-group">
+                  {categoryServices.map((service, index) => (
+                    <ServiceCard key={index} {...service} />
+                  ))}
+                </div>
               </div>
-              <div className="homelab-card">
-                <h4 className="homelab-card-title">Audiobookshelf</h4>
-                <p>
-                  Audiobook and podcast server with progress tracking and mobile app support.
-                </p>
-              </div>
-              <div className="homelab-card">
-                <h4 className="homelab-card-title">Immich</h4>
-                <p>
-                  Self-hosted photo and video backup solution. A Google Photos alternative that keeps my data under my control.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          {/* Productivity & Collaboration */}
-          <div className="homelab-subsection">
-            <h3 className="homelab-subsection-heading">Productivity & Collaboration</h3>
-            <div className="homelab-card-group">
-              <div className="homelab-card">
-                <h4 className="homelab-card-title">AFFiNE</h4>
-                <p>
-                  Open-source workspace for notes, docs, and project planning.
-                </p>
-              </div>
-              <div className="homelab-card">
-                <h4 className="homelab-card-title">OwnCloud</h4>
-                <p>
-                  Personal cloud storage for file syncing and sharing across devices.
-                </p>
-              </div>
-              <div className="homelab-card">
-                <h4 className="homelab-card-title">Peppermint</h4>
-                <p>
-                  IT ticketing and help desk system. I use this to track family tech support requests,
-                  log server maintenance tasks, and document solutions to problems I've solved. It includes
-                  a built-in knowledge base for storing guides and manuals.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          {/* Infrastructure & Management */}
-          <div className="homelab-subsection">
-            <h3 className="homelab-subsection-heading">Infrastructure & Management</h3>
-            <div className="homelab-card-group">
-              <div className="homelab-card">
-                <h4 className="homelab-card-title">Homarr</h4>
-                <p>
-                  Customizable dashboard that serves as the central hub for all my services. Displays
-                  real-time container status with start/stop/restart controls, plus live server resource monitoring.
-                </p>
-              </div>
-              <div className="homelab-card">
-                <h4 className="homelab-card-title">AMP (Application Management Panel)</h4>
-                <p>
-                  Manages and hosts game servers for friends.
-                </p>
-              </div>
-              <div className="homelab-card">
-                <h4 className="homelab-card-title">Cloudflare Tunnel</h4>
-                <p>
-                  Securely exposes public-facing services to the internet without opening ports on my router.
-                  Each service gets its own custom domain.
-                </p>
-              </div>
-              <div className="homelab-card">
-                <h4 className="homelab-card-title">PostgreSQL & Redis</h4>
-                <p>
-                  Database services that support multiple applications.
-                </p>
-              </div>
-              <div className="homelab-card">
-                <h4 className="homelab-card-title">Duplicati</h4>
-                <p>
-                  Automated backup solution for critical data and configurations.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          {/* Security & Access */}
-          <div className="homelab-subsection">
-            <h3 className="homelab-subsection-heading">Security & Access</h3>
-            <div className="homelab-card">
-              <h4 className="homelab-card-title">Tailscale</h4>
-              <p>
-                Zero-trust mesh VPN for secure remote access to the server and admin panels. All sensitive
-                services stay behind the VPN and aren't exposed publicly.
-              </p>
-            </div>
-          </div>
+            );
+          })}
         </section>
 
         {/* Storage Architecture */}
@@ -317,35 +164,15 @@ export default function HomelabPage() {
             I use a modern approach to security that focuses on secure tunneling and VPN access rather than exposing services directly:
           </p>
           <div className="homelab-card-group">
-            <div className="homelab-card">
-              <h4 className="homelab-card-title">Cloudflare Tunnel</h4>
-              <p>
-                Public-facing services (like Jellyfin, Immich, AFFiNE) are accessible via custom domains
-                that route through Cloudflare's infrastructure. This means no ports are opened on my router,
-                and Cloudflare provides DDoS protection and SSL encryption automatically.
-              </p>
-            </div>
-            <div className="homelab-card">
-              <h4 className="homelab-card-title">Tailscale VPN</h4>
-              <p>
-                All administrative interfaces and sensitive services are only accessible through Tailscale's
-                mesh VPN. This includes server management panels, databases, and configuration tools. Even
-                when I'm remote, I connect through Tailscale before accessing anything sensitive.
-              </p>
-            </div>
-            <div className="homelab-card">
-              <h4 className="homelab-card-title">Separation of Access</h4>
-              <p>
-                Public services get Cloudflare domains for convenience. Private/admin services stay VPN-only.
-                This keeps management interfaces completely isolated from the internet.
-              </p>
-            </div>
-            <div className="homelab-card">
-              <h4 className="homelab-card-title">Docker Network Isolation</h4>
-              <p>
-                Services run in isolated Docker networks with only necessary ports exposed to the host.
-              </p>
-            </div>
+            {securityStrategies.map((strategy, index) => (
+              <div key={index} className="homelab-card">
+                <h4 className="homelab-card-title">{strategy.name}</h4>
+                <p className="homelab-security-short">
+                  <strong>{strategy.shortDescription}</strong>
+                </p>
+                <p>{strategy.longDescription}</p>
+              </div>
+            ))}
           </div>
         </section>
 
