@@ -1,0 +1,55 @@
+import Image from "next/image";
+import "./ServiceCard.css";
+import { Service } from "@/lib/homelab-config";
+
+interface ServiceCardProps extends Service {}
+
+export function ServiceCard({
+  title,
+  description,
+  url,
+  status,
+  icon,
+  tags,
+}: ServiceCardProps) {
+  return (
+    <div className="service-card">
+      <div className="service-card__header">
+        {icon && (
+          <div className="service-card__icon">
+            <Image src={icon} alt={title} width={32} height={32} />
+          </div>
+        )}
+        <h4 className="service-card__title">{title}</h4>
+        {status && (
+          <span className={`service-card__status service-card__status--${status}`}>
+            {status}
+          </span>
+        )}
+      </div>
+
+      <p className="service-card__description">{description}</p>
+
+      {tags && tags.length > 0 && (
+        <div className="service-card__tags">
+          {tags.map((tag) => (
+            <span key={tag} className="service-card__tag">
+              {tag}
+            </span>
+          ))}
+        </div>
+      )}
+
+      {url && (
+        <a
+          href={url}
+          className="service-card__link"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Access Service →
+        </a>
+      )}
+    </div>
+  );
+}
