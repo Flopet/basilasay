@@ -21,11 +21,9 @@ export function HardwareItem({
       <tr className="hardware-item hardware-item--clickable">
         <td className="hardware-item__type">
           <div className="hardware-item__type-content">
-            {icon && (
-              <div className="hardware-item__icon">
-                <Image src={icon} alt={componentType} width={24} height={24} />
-              </div>
-            )}
+            <div className="hardware-item__icon">
+              {icon && <Image src={icon} alt={componentType} width={24} height={24} />}
+            </div>
             <a
               href={link}
               target="_blank"
@@ -45,11 +43,9 @@ export function HardwareItem({
     <tr className="hardware-item">
       <td className="hardware-item__type">
         <div className="hardware-item__type-content">
-          {icon && (
-            <div className="hardware-item__icon">
-              <Image src={icon} alt={componentType} width={24} height={24} />
-            </div>
-          )}
+          <div className="hardware-item__icon">
+            {icon && <Image src={icon} alt={componentType} width={24} height={24} />}
+          </div>
           <span>{componentType}</span>
         </div>
       </td>

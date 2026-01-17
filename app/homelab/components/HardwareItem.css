@@ -1,8 +1,14 @@
-/* Hardware Item Component Styles */
+/* Hardware Item Component Styles - Aged Paper Technical Design */
+
+.hardware-item {
+  transition: background-color 0.2s ease;
+}
 
 .hardware-item__type {
-  font-weight: 700;
-  color: var(--foreground);
+  font-family: 'JetBrains Mono', 'Ubuntu Mono', monospace;
+  font-weight: 600;
+  font-size: 0.9375rem;
+  color: var(--hl-text-primary, #1a1a1a);
 }
 
 .hardware-item__type-content {
@@ -16,28 +22,55 @@
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
+  width: 32px;
+  height: 32px;
+  background: linear-gradient(135deg, var(--hl-accent-primary, #8b2635), var(--hl-accent-strong, #5a1822));
+  border-radius: 4px;
+  border: 1.5px solid var(--hl-accent-strong, #5a1822);
+  padding: 4px;
+  box-shadow: 1px 1px 0 var(--hl-accent-strong, #5a1822);
+}
+
+/* Placeholder when no icon is provided */
+.hardware-item__icon:empty::before {
+  content: '◆';
+  font-size: 0.875rem;
+  color: var(--hl-card-bg, #ffffff);
+  font-weight: 700;
 }
 
 .hardware-item__link {
-  color: var(--foreground);
+  color: var(--hl-text-primary, #1a1a1a);
   text-decoration: none;
   transition: color 0.2s ease;
+  position: relative;
+  font-weight: 600;
+}
+
+.hardware-item__link::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--hl-accent-primary, #8b2635);
+  transition: width 0.3s ease;
 }
 
 .hardware-item__link:hover {
-  color: var(--border);
-  text-decoration: underline;
+  color: var(--hl-accent-primary, #8b2635);
+}
+
+.hardware-item__link:hover::after {
+  width: 100%;
 }
 
 .hardware-item__spec {
-  color: var(--foreground-muted);
+  color: var(--hl-text-secondary, #4a4a4a);
+  font-weight: 500;
 }
 
 .hardware-item--clickable {
   cursor: pointer;
-  transition: background-color 0.2s ease;
-}
-
-.hardware-item--clickable:hover {
-  background-color: var(--background);
 }

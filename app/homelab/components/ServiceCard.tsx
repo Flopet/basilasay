@@ -15,17 +15,17 @@ export function ServiceCard({
   return (
     <div className="service-card">
       <div className="service-card__header">
-        {icon && (
-          <div className="service-card__icon">
-            <Image src={icon} alt={title} width={32} height={32} />
-          </div>
-        )}
-        <h4 className="service-card__title">{title}</h4>
-        {status && (
-          <span className={`service-card__status service-card__status--${status}`}>
-            {status}
-          </span>
-        )}
+        <div className="service-card__icon">
+          {icon && <Image src={icon} alt={title} width={32} height={32} />}
+        </div>
+        <div style={{ flex: 1 }}>
+          <h4 className="service-card__title">{title}</h4>
+          {status && (
+            <span className={`service-card__status service-card__status--${status}`}>
+              {status}
+            </span>
+          )}
+        </div>
       </div>
 
       <p className="service-card__description">{description}</p>

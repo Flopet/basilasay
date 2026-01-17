@@ -1,128 +1,229 @@
 /* ========================================
-   Homelab Page Styles
-   Matches the main site's design system
+   Homelab Page - Technical Infrastructure Design
+   Building on the aged paper aesthetic with technical details
    ======================================== */
 
-/* Page Container */
+/* Import technical monospace font for specs */
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&display=swap');
+
+/* ========================================
+   CSS Variables - Inheriting from main site
+   ======================================== */
+
+.homelab-page {
+  /* Inherit main site colors but add technical variants */
+  --hl-bg-primary: var(--background, #f5f1e8);
+  --hl-bg-subtle: var(--background-subtle, #d9d0ba);
+  --hl-bg-grid: #ebe5d6;
+
+  /* Text colors from main site */
+  --hl-text-primary: var(--foreground, #1a1a1a);
+  --hl-text-secondary: var(--foreground-muted, #4a4a4a);
+  --hl-text-light: var(--foreground-light, #6b6b6b);
+
+  /* Accent colors - rose/blood red from main site */
+  --hl-accent-primary: var(--border, #8b2635);
+  --hl-accent-strong: var(--border-strong, #5a1822);
+  --hl-accent-light: #b8495c;
+
+  /* Status colors */
+  --hl-success: #2d7a4e;
+  --hl-warning: #c97a1f;
+  --hl-info: #4a6b8a;
+
+  /* Card background */
+  --hl-card-bg: var(--card-bg, #ffffff);
+
+  /* Borders and dividers */
+  --hl-border: rgba(139, 38, 53, 0.2);
+  --hl-border-strong: rgba(139, 38, 53, 0.4);
+
+  /* Shadows */
+  --hl-shadow-sm: 0 2px 4px rgba(26, 26, 26, 0.1);
+  --hl-shadow-md: 0 4px 12px rgba(26, 26, 26, 0.15);
+
+  /* 3D effect (inspired by main site buttons) */
+  --hl-shadow-3d:
+    1px 1px 0 var(--hl-accent-strong),
+    2px 2px 0 var(--hl-accent-strong),
+    3px 3px 0 var(--hl-accent-strong);
+
+  --hl-shadow-3d-hover:
+    1px 1px 0 var(--hl-accent-strong),
+    2px 2px 0 var(--hl-accent-strong),
+    3px 3px 0 var(--hl-accent-strong),
+    4px 4px 0 var(--hl-accent-strong);
+
+  /* Spacing */
+  --hl-spacing-xs: 0.5rem;
+  --hl-spacing-sm: 1rem;
+  --hl-spacing-md: 1.5rem;
+  --hl-spacing-lg: 2rem;
+  --hl-spacing-xl: 3rem;
+  --hl-spacing-2xl: 4rem;
+}
+
+/* ========================================
+   Page Container with Technical Grid
+   ======================================== */
+
 .homelab-page {
   min-height: 100vh;
-  background: radial-gradient(ellipse at center, var(--background) 0%, var(--background-subtle) 100%);
-  color: var(--foreground);
+  background-color: var(--hl-bg-primary);
+  color: var(--hl-text-primary);
+  font-family: var(--body-font), 'Zalando Sans', sans-serif;
+  font-weight: 600;
+  letter-spacing: 0.01em;
 }
 
-/* Main Container - matches main site's content padding */
 .homelab-container {
-  max-width: 1200px;
+  max-width: 1400px;
   margin: 0 auto;
-  padding: var(--content-padding-y) var(--content-padding-x);
+  padding: var(--hl-spacing-2xl) var(--hl-spacing-lg);
 }
 
 /* ========================================
-   Section Spacing - matches main site
-   ======================================== */
-
-.homelab-section {
-  margin-bottom: var(--section-spacing); /* 4rem like main site */
-}
-
-.homelab-subsection {
-  margin-bottom: 2rem;
-}
-
-/* ========================================
-   Typography - matches main site
+   Typography System
    ======================================== */
 
 .homelab-hero-title {
-  font-size: 3rem;
+  font-family: var(--heading-font), 'Zalando Sans SemiExpanded', sans-serif;
+  font-size: 3.5rem;
   font-weight: 700;
-  letter-spacing: -0.025em;
-  color: var(--foreground);
+  letter-spacing: 0.02em;
+  color: var(--hl-text-primary);
   line-height: 1.2;
-  margin-bottom: 1.5rem;
+  margin-bottom: var(--hl-spacing-md);
+  position: relative;
+  display: inline-block;
+}
+
+.homelab-hero-title::after {
+  content: '';
+  position: absolute;
+  bottom: -12px;
+  left: 0;
+  width: 100px;
+  height: 4px;
+  background: var(--hl-accent-primary);
+  border-radius: 2px;
 }
 
 .homelab-section-heading {
-  font-size: 1.75rem;
+  font-family: var(--heading-font), 'Zalando Sans SemiExpanded', sans-serif;
+  font-size: 2rem;
   font-weight: 700;
-  color: var(--foreground);
-  margin-bottom: 1.5rem;
-  padding-bottom: 0.5rem;
-  border-bottom: 2px solid var(--border-strong);
+  color: var(--hl-text-primary);
+  margin-bottom: var(--hl-spacing-lg);
+  margin-top: var(--hl-spacing-2xl);
+  letter-spacing: 0.02em;
+  display: flex;
+  align-items: center;
+  gap: var(--hl-spacing-sm);
+}
+
+.homelab-section-heading::before {
+  content: '';
+  width: 4px;
+  height: 28px;
+  background: var(--hl-accent-primary);
+  border-radius: 2px;
+  box-shadow: 2px 0 0 var(--hl-accent-strong);
 }
 
 .homelab-subsection-heading {
+  font-family: var(--heading-font), 'Zalando Sans SemiExpanded', sans-serif;
   font-size: 1.5rem;
   font-weight: 700;
-  color: var(--border-strong);
-  margin-bottom: 1rem;
-  margin-top: 1.5rem;
+  color: var(--hl-accent-primary);
+  margin-bottom: var(--hl-spacing-md);
+  margin-top: var(--hl-spacing-lg);
+  letter-spacing: 0.02em;
 }
 
 .homelab-card-title {
+  font-family: var(--heading-font), 'Zalando Sans SemiExpanded', sans-serif;
   font-size: 1.25rem;
   font-weight: 700;
-  color: var(--foreground);
-  margin-bottom: 0.75rem;
+  color: var(--hl-text-primary);
+  margin-bottom: var(--hl-spacing-sm);
+  letter-spacing: 0.01em;
 }
 
-.homelab-intro {
-  font-size: 1.125rem;
-  line-height: 1.75;
-  color: var(--foreground);
-  margin-bottom: 1rem;
+.homelab-intro,
+.homelab-intro-text {
+  font-size: 1.0625rem;
+  line-height: 1.7;
+  color: var(--hl-text-secondary);
+  margin-bottom: var(--hl-spacing-md);
+  font-weight: 500;
 }
 
 .homelab-intro p {
-  margin-bottom: 1rem;
-}
-
-.homelab-intro-text {
-  font-size: 1.125rem;
-  line-height: 1.75;
-  color: var(--foreground-muted);
-  margin-bottom: 1.5rem;
+  margin-bottom: var(--hl-spacing-md);
 }
 
 .homelab-bold {
   font-weight: 700;
-  color: var(--foreground);
+  color: var(--hl-text-primary);
 }
 
 /* ========================================
-   Cards - matches main site's card style
+   Section Spacing
+   ======================================== */
+
+.homelab-section {
+  margin-bottom: var(--hl-spacing-2xl);
+}
+
+.homelab-subsection {
+  margin-bottom: var(--hl-spacing-xl);
+}
+
+/* ========================================
+   Cards - Technical Card Design with 3D effect
    ======================================== */
 
 .homelab-card {
-  background-color: var(--card-bg);
-  border: 2px solid var(--border);
-  border-radius: 0.5rem;
-  padding: 1.5rem;
-  margin-bottom: 1rem;
+  background: var(--hl-card-bg);
+  border: 2px solid var(--hl-accent-primary);
+  border-radius: 6px;
+  padding: var(--hl-spacing-md);
+  margin-bottom: var(--hl-spacing-md);
+  transition: all 0.2s ease;
+  position: relative;
+  box-shadow: var(--hl-shadow-3d);
+}
+
+.homelab-card:hover {
+  transform: translate(-1px, -1px);
+  box-shadow: var(--hl-shadow-3d-hover);
 }
 
 .homelab-card p {
-  color: var(--foreground-muted);
+  color: var(--hl-text-secondary);
   line-height: 1.6;
   margin: 0;
+  font-weight: 500;
 }
 
 .homelab-card-group {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: var(--hl-spacing-md);
 }
 
 /* ========================================
-   Tables - matches main site aesthetics
+   Hardware Table - Technical Grid
    ======================================== */
 
 .homelab-table-container {
-  background-color: var(--card-bg);
-  border: 2px solid var(--border);
-  border-radius: 0.5rem;
+  background: var(--hl-card-bg);
+  border: 2px solid var(--hl-accent-primary);
+  border-radius: 6px;
   overflow: hidden;
-  margin-bottom: 1.5rem;
+  margin-bottom: var(--hl-spacing-lg);
+  box-shadow: var(--hl-shadow-3d);
 }
 
 .homelab-table {
@@ -131,33 +232,56 @@
 }
 
 .homelab-table thead {
-  background-color: var(--background-subtle);
+  background: linear-gradient(180deg, var(--hl-bg-subtle) 0%, var(--hl-bg-grid) 100%);
+  border-bottom: 2px solid var(--hl-accent-primary);
 }
 
 .homelab-table th {
+  font-family: var(--heading-font), 'Zalando Sans SemiExpanded', sans-serif;
   text-align: left;
-  padding: 1rem;
+  padding: var(--hl-spacing-md);
   font-weight: 700;
-  color: var(--foreground);
-  border-bottom: 2px solid var(--border);
+  font-size: 0.9375rem;
+  color: var(--hl-accent-strong);
+  letter-spacing: 0.02em;
 }
 
 .homelab-table td {
-  padding: 1rem;
-  border-bottom: 1px solid var(--border);
+  padding: var(--hl-spacing-md);
+  border-bottom: 1px solid var(--hl-border);
+  transition: background-color 0.2s ease;
+  font-weight: 500;
+}
+
+.homelab-table tbody tr:hover td {
+  background-color: rgba(139, 38, 53, 0.03);
 }
 
 .homelab-table td:first-child {
-  font-weight: 700;
-  color: var(--foreground);
+  font-family: 'JetBrains Mono', 'Ubuntu Mono', monospace;
+  font-weight: 600;
+  font-size: 0.9375rem;
+  color: var(--hl-text-primary);
 }
 
 .homelab-table td:last-child {
-  color: var(--foreground-muted);
+  color: var(--hl-text-secondary);
 }
 
 .homelab-table tbody tr:last-child td {
   border-bottom: none;
+}
+
+/* Icon placeholder in table */
+.homelab-table .hw-icon {
+  width: 28px;
+  height: 28px;
+  background: linear-gradient(135deg, var(--hl-accent-primary), var(--hl-accent-strong));
+  border-radius: 4px;
+  display: inline-block;
+  margin-right: var(--hl-spacing-xs);
+  vertical-align: middle;
+  box-shadow: 1px 1px 0 var(--hl-accent-strong);
 }
 
 /* ========================================
@@ -168,12 +292,24 @@
   list-style: none;
   padding: 0;
   margin: 0;
-  color: var(--foreground-muted);
+  color: var(--hl-text-secondary);
 }
 
 .homelab-list li {
-  margin-bottom: 0.5rem;
+  margin-bottom: var(--hl-spacing-sm);
   line-height: 1.6;
+  padding-left: var(--hl-spacing-md);
+  position: relative;
+  font-weight: 500;
+}
+
+.homelab-list li::before {
+  content: '▸';
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: var(--hl-accent-primary);
+  font-weight: 700;
 }
 
 .homelab-list li:last-child {
@@ -181,13 +317,13 @@
 }
 
 /* ========================================
-   Skills Grid - two column layout
+   Skills Grid
    ======================================== */
 
 .homelab-skills-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: var(--grid-gap); /* 1.5rem like main site */
+  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+  gap: var(--hl-spacing-md);
 }
 
 .homelab-card-full {
@@ -195,16 +331,137 @@
 }
 
 /* ========================================
+   Status Indicators for Services
+   ======================================== */
+
+.service-status {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: 'JetBrains Mono', 'Ubuntu Mono', monospace;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 4px 10px;
+  border-radius: 4px;
+  border: 1.5px solid currentColor;
+  background: var(--hl-card-bg);
+}
+
+.service-status::before {
+  content: '●';
+  font-size: 0.875rem;
+  animation: pulse 2s ease-in-out infinite;
+}
+
+.service-status.running {
+  color: var(--hl-success);
+  border-color: var(--hl-success);
+}
+
+.service-status.planned {
+  color: var(--hl-warning);
+  border-color: var(--hl-warning);
+}
+
+.service-status.maintenance {
+  color: var(--hl-text-light);
+  border-color: var(--hl-text-light);
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.4; }
+}
+
+/* ========================================
+   Security Strategy Cards
+   ======================================== */
+
+.homelab-security-short {
+  color: var(--hl-accent-primary) !important;
+  font-weight: 700;
+  margin-bottom: var(--hl-spacing-sm) !important;
+  font-size: 0.9375rem;
+}
+
+/* ========================================
+   Icon/Image Placeholders
+   ======================================== */
+
+.icon-placeholder {
+  width: 48px;
+  height: 48px;
+  background: linear-gradient(135deg, var(--hl-accent-primary), var(--hl-accent-strong));
+  border-radius: 6px;
+  border: 2px solid var(--hl-accent-strong);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 1.25rem;
+  color: var(--hl-card-bg);
+  font-weight: 700;
+  margin-bottom: var(--hl-spacing-sm);
+  box-shadow: 2px 2px 0 var(--hl-accent-strong);
+  transition: all 0.2s ease;
+}
+
+.homelab-card:hover .icon-placeholder {
+  transform: translate(-1px, -1px);
+  box-shadow: 3px 3px 0 var(--hl-accent-strong);
+}
+
+/* Large icon variant */
+.icon-placeholder-lg {
+  width: 64px;
+  height: 64px;
+  font-size: 1.75rem;
+}
+
+/* ========================================
+   Technical Details / Specs
+   ======================================== */
+
+.tech-spec {
+  font-family: 'JetBrains Mono', 'Ubuntu Mono', monospace;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: var(--hl-accent-primary);
+  background: rgba(139, 38, 53, 0.08);
+  padding: 3px 8px;
+  border-radius: 3px;
+  border: 1px solid var(--hl-border);
+  display: inline-block;
+  margin: 2px;
+}
+
+/* ========================================
    Responsive Design
    ======================================== */
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   .homelab-container {
-    padding: 2rem 1.5rem;
+    padding: var(--hl-spacing-xl) var(--hl-spacing-md);
   }
 
   .homelab-hero-title {
-    font-size: 2rem;
+    font-size: 3rem;
+  }
+
+  .homelab-section-heading {
+    font-size: 1.75rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .homelab-container {
+    padding: var(--hl-spacing-lg) var(--hl-spacing-md);
+  }
+
+  .homelab-hero-title {
+    font-size: 2.5rem;
   }
 
   .homelab-section-heading {
@@ -215,29 +472,60 @@
     font-size: 1.25rem;
   }
 
+  .homelab-card-group {
+    grid-template-columns: 1fr;
+  }
+
   .homelab-skills-grid {
     grid-template-columns: 1fr;
   }
 
   .homelab-table th,
   .homelab-table td {
-    padding: 0.75rem;
-    font-size: 0.9rem;
+    padding: var(--hl-spacing-sm);
+    font-size: 0.875rem;
   }
 }
 
 @media (max-width: 480px) {
   .homelab-container {
-    padding: 1.5rem 1rem;
+    padding: var(--hl-spacing-md) var(--hl-spacing-sm);
   }
 
   .homelab-hero-title {
-    font-size: 1.75rem;
+    font-size: 2rem;
+  }
+
+  .homelab-section-heading {
+    font-size: 1.25rem;
   }
 
   .homelab-table th,
   .homelab-table td {
-    padding: 0.5rem;
-    font-size: 0.85rem;
+    padding: var(--hl-spacing-xs);
+    font-size: 0.8125rem;
   }
+
+  .homelab-card {
+    padding: var(--hl-spacing-sm);
+  }
+}
+
+/* ========================================
+   Utility Classes
+   ======================================== */
+
+.text-accent {
+  color: var(--hl-accent-primary);
+}
+
+.text-muted {
+  color: var(--hl-text-light);
+}
+
+.gradient-text {
+  background: linear-gradient(90deg, var(--hl-accent-primary), var(--hl-accent-strong));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
