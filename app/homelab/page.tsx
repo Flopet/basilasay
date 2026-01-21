@@ -1,6 +1,7 @@
 import "./homelab.css";
 import { HardwareItem } from "./components/HardwareItem";
 import { ServiceCard } from "./components/ServiceCard";
+import { UnderConstructionRibbon } from "@/components/UnderConstructionRibbon";
 import {
   hardwareComponents,
   getServicesByCategory,
