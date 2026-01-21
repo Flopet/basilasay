@@ -2,6 +2,8 @@ import "./homelab.css";
 import { HardwareItem } from "./components/HardwareItem";
 import { ServiceCard } from "./components/ServiceCard";
 import { UnderConstructionRibbon } from "@/components/UnderConstructionRibbon";
+import {GithubRibbon} from "@/components/GithubRibbon";
+
 import {
   hardwareComponents,
   getServicesByCategory,
@@ -12,13 +14,14 @@ import {
 export default function HomelabPage() {
   return (
     <div className="homelab-page">
+      <GithubRibbon/>
       <UnderConstructionRibbon />
       <div className="homelab-container">
 
         {/* Header Section */}
         <header className="homelab-section">
           <h1 className="homelab-hero-title">
-            My Homelab Server Portfolio
+            Homelab Server Project Showcase
           </h1>
           <div className="homelab-intro">
             <p>
