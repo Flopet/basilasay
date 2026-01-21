@@ -34,7 +34,7 @@ export default function RootLayout({children} : Readonly<{children: React.ReactN
     </head>
         <body>
         {children}
-        <footer>By Basil Asay&copy;</footer>
+        <footer>By: Basil Asay&copy;</footer>
         </body>
 
     </html>
