@@ -1,15 +1,15 @@
 .download-resume {
-  color: var(--foreground);
-  border: solid 3px var(--border-strong);
+  color: var(--text-primary);
+  border: solid 3px var(--accent-red-dark);
   border-radius: 10px;
   position: absolute;
   width: fit-content;
   right: 5rem;
   padding: 0.5rem 1rem;
-  background-color: var(--background);
+  background-color: var(--bg-paper-light);
   font-weight: bold;
   font-size: 1.25rem;
   font-family: var(--heading-font), sans-serif;
 }
 
-.download-resume:visited { color: var(--foreground); }
+.download-resume:visited { color: var(--text-primary); }

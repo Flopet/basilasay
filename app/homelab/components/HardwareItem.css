@@ -8,7 +8,7 @@
   font-family: 'JetBrains Mono', 'Ubuntu Mono', monospace;
   font-weight: 600;
   font-size: 0.9375rem;
-  color: var(--hl-text-primary, #1a1a1a);
+  color: var(--text-primary);
 }
 
 .hardware-item__type-content {
@@ -24,23 +24,23 @@
   flex-shrink: 0;
   width: 32px;
   height: 32px;
-  background: linear-gradient(135deg, var(--hl-accent-primary, #8b2635), var(--hl-accent-strong, #5a1822));
+  background: linear-gradient(135deg, var(--accent-red), var(--accent-red-dark));
   border-radius: 4px;
-  border: 1.5px solid var(--hl-accent-strong, #5a1822);
+  border: 1.5px solid var(--accent-red-dark);
   padding: 4px;
-  box-shadow: 1px 1px 0 var(--hl-accent-strong, #5a1822);
+  box-shadow: 1px 1px 0 var(--accent-red-dark);
 }
 
 /* Placeholder when no icon is provided */
 .hardware-item__icon:empty::before {
   content: '◆';
   font-size: 0.875rem;
-  color: var(--hl-card-bg, #ffffff);
+  color: var(--bg-card-white);
   font-weight: 700;
 }
 
 .hardware-item__link {
-  color: var(--hl-text-primary, #1a1a1a);
+  color: var(--text-primary);
   text-decoration: none;
   transition: color 0.2s ease;
   position: relative;
@@ -54,12 +54,12 @@
   left: 0;
   width: 0;
   height: 2px;
-  background: var(--hl-accent-primary, #8b2635);
+  background: var(--accent-red);
   transition: width 0.3s ease;
 }
 
 .hardware-item__link:hover {
-  color: var(--hl-accent-primary, #8b2635);
+  color: var(--accent-red);
 }
 
 .hardware-item__link:hover::after {
@@ -67,7 +67,7 @@
 }
 
 .hardware-item__spec {
-  color: var(--hl-text-secondary, #4a4a4a);
+  color: var(--text-secondary);
   font-weight: 500;
 }
 

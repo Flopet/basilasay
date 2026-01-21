@@ -5,15 +5,15 @@
 .project-card {
   position: relative;
   border-radius: 0.5rem;
-  border: 2px solid var(--border);
-  background-color: var(--background);
+  border: 2px solid var(--accent-red);
+  background-color: var(--bg-paper-light);
   padding: 1.5rem;
-  box-shadow: 0 2px 8px var(--shadow);
+  box-shadow: 0 2px 8px var(--shadow-color);
   transition: all 300ms ease-in-out;
 }
 
 .project-card:hover {
-  border-color: var(--border-strong);
+  border-color: var(--accent-red-dark);
   transform: scale(1.02);
 }
 
@@ -24,12 +24,12 @@
 .project-card__title {
   font-size: 1.5rem;
   font-weight: bolder;
-  color: var(--foreground);
+  color: var(--text-primary);
   margin-bottom: 0.5rem;
 }
 
 .project-card__description {
-  color: var(--foreground);
+  color: var(--text-primary);
   margin-bottom: 1rem;
 }
 
@@ -48,8 +48,8 @@
   font-size: 0.875rem;
   padding: 0.25rem 0.5rem;
   border-radius: 0.25rem;
-  background-color: var(--background-subtle);
-  color: var(--foreground-muted);
+  background-color: var(--bg-paper-dark);
+  color: var(--text-secondary);
 }
 
 /* ========================================
@@ -57,7 +57,7 @@
 ======================================== */
 
 a.project-card__link {
-  color: var(--foreground);
+  color: var(--text-primary);
   font-weight: 500;
   text-decoration: underline;
   transition: color 0.2s;
@@ -67,5 +67,5 @@ a.project-card__link {
 }
 
 .project-card__link:hover {
-  color: var(--foreground-muted);
+  color: var(--text-secondary);
 }

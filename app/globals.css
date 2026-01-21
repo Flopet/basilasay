@@ -2,20 +2,25 @@
   Global CSS Variables
 ======================== */
 :root {
-  /* Base colors - Light mode (aged paper aesthetic) */
-  --background: #f5f1e8;           /* Eggshell/aged paper */
-  --background-subtle: #d9d0ba;    /* Darker aged paper for gradient */
-  --foreground: #1a1a1a;           /* Near black for text */
-  --foreground-muted: #4a4a4a;     /* Medium grey for secondary text */
-  --foreground-light: #6b6b6b;     /* Light grey for subtle elements */
+  /* Surface colors */
+  --bg-paper-light: #f5f1e8;       /* Cream/eggshell - main backgrounds & portfolio cards */
+  --bg-paper-dark: #d9d0ba;        /* Tan - gradients & accent backgrounds */
+  --bg-card-white: #ffffff;        /* White - homelab cards */
 
-/* ========================
-  UI colors
-======================== */
-  --border: #8b2635;               /* Rose red border */
-  --border-strong: #5a1822;        /* Darker blood red border */
-  --card-bg: #ffffff;              /* Clean white for cards */
-  --shadow: rgba(26, 26, 26, 1);   /* Shadow at 100% opacity */
+  /* Background gradient - CAN ONLY BE USED WITH `background` CSS PROPERTY */
+  --background: radial-gradient(ellipse at center, var(--bg-paper-light) 0%, var(--bg-paper-dark) 100%);
+
+  /* Accent colors */
+  --accent-red: #8b2635;           /* Rose red - primary borders */
+  --accent-red-dark: #5a1822;      /* Blood red - emphasis borders */
+
+  /* Text colors */
+  --text-primary: #1a1a1a;         /* Near black - main text */
+  --text-secondary: #4a4a4a;       /* Medium grey - secondary text */
+  --text-tertiary: #6b6b6b;        /* Light grey - subtle text */
+
+  /* Utility */
+  --shadow-color: rgba(26, 26, 26, 1);  /* Shadow color */
 
   /* Layout dimensions */
   --sidebar-width: 33.333333%;     /* Left sidebar (1/3 of viewport) */
@@ -55,7 +60,7 @@ html {
 }
 
 body {
-  color: var(--foreground);
+  color: var(--text-primary);
   font-family: var(--body-font), sans-serif;
   font-weight: bold;
   letter-spacing: 0.02em;
@@ -88,26 +93,26 @@ footer {
   transition: box-shadow 150ms ease-in-out,
               transform 150ms ease-in-out;
   box-shadow:
-          1px 1px 1px var(--border-strong),
-          2px 2px 1px var(--border-strong),
-          3px 3px 1px var(--border-strong),
-          4px 4px 1px var(--border-strong),
-          5px 5px 1px var(--border-strong);
+          1px 1px 1px var(--accent-red-dark),
+          2px 2px 1px var(--accent-red-dark),
+          3px 3px 1px var(--accent-red-dark),
+          4px 4px 1px var(--accent-red-dark),
+          5px 5px 1px var(--accent-red-dark);
 }
 
 .button:hover {
   transform: translate(-1px, -1px);
   box-shadow:
-          1px 1px 1px var(--border-strong),
-          2px 2px 1px var(--border-strong),
-          3px 3px 1px var(--border-strong),
-          4px 4px 1px var(--border-strong),
-          5px 5px 1px var(--border-strong),
-          6px 6px 1px var(--border-strong);
+          1px 1px 1px var(--accent-red-dark),
+          2px 2px 1px var(--accent-red-dark),
+          3px 3px 1px var(--accent-red-dark),
+          4px 4px 1px var(--accent-red-dark),
+          5px 5px 1px var(--accent-red-dark),
+          6px 6px 1px var(--accent-red-dark);
 }
 
 .button:active {
   transform: translate(4px, 4px);
   box-shadow:
-          0 0 1px var(--border-strong);
+          0 0 1px var(--accent-red-dark);
 }
