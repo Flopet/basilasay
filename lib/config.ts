@@ -12,7 +12,7 @@ export const personalInfo = {
     company: "TekSystems On-Site at Microsoft",
     email: "basilrasay@gmail.com",
     phone: "(804) 519-3329",
-    bio: "My journey into IT began at 14, building my first computer and discovering a passion that would define my career. After 10+ years working in retail, medicine, and warehouse environments, I made the leap into IT when Meta gave me my first opportunity in the field. Now I specialize in fiber optic troubleshooting and data center operations, backed by CompTIA A+ and Network+ certifications. I give 110% every day—I'm never late, I prioritize efficiency, I'm detail-oriented, I learn fast, I think outside the box, and I'm a strong leader who thrives on solving complex technical challenges.",
+    bio: "My journey into IT began at 14, building my first computer and discovering a passion that would define my career. After 10+ years working in retail, medicine, and warehouse environments, I made the leap into IT when Meta gave me my first opportunity in the field. Now I specialize in fiber optic troubleshooting and data center operations, backed by CompTIA A+ and Network+ certifications. I give 110% every day—I'm never late, I prioritize efficient and detailed work, I learn fast, I think outside the box, and I'm a strong leader who thrives on solving complex technical challenges.",
 };
 
 export const experience = [

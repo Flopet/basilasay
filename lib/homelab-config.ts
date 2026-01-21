@@ -60,7 +60,7 @@ export const hardwareComponents: HardwareComponent[] = [
     brand: "Rosewill",
     model: "Helium Mid-Tower ATX",
     additionalDetails: "10x 3.5\" + 3x 2.5\" drive bays",
-    icon: "",
+    icon: "/computer-case.svg",
     link: "",
   },
   {
@@ -68,7 +68,7 @@ export const hardwareComponents: HardwareComponent[] = [
     brand: "ASUS",
     model: "TUF B360M-PLUS GAMING S",
     additionalDetails: "",
-    icon: "",
+    icon: "/motherboard.svg",
     link: "",
   },
   {
@@ -76,7 +76,7 @@ export const hardwareComponents: HardwareComponent[] = [
     brand: "Intel",
     model: "Core i5-8400",
     additionalDetails: "6-Core @ 2.80GHz",
-    icon: "",
+    icon: "/cpu.svg",
     link: "",
   },
   {
@@ -84,7 +84,7 @@ export const hardwareComponents: HardwareComponent[] = [
     brand: "",
     model: "32GB DDR4-2666MHz",
     additionalDetails: "",
-    icon: "",
+    icon: "/ram.svg",
     link: "",
   },
   {
@@ -92,7 +92,7 @@ export const hardwareComponents: HardwareComponent[] = [
     brand: "Nvidia",
     model: "GeForce GTX 1060 3GB",
     additionalDetails: "For hardware transcoding",
-    icon: "",
+    icon: "/gpu.svg",
     link: "",
   },
   {
@@ -100,7 +100,7 @@ export const hardwareComponents: HardwareComponent[] = [
     brand: "TP-Link",
     model: "EAP610",
     additionalDetails: "WiFi 6, WPA3, PoE+",
-    icon: "",
+    icon: "/wifi.svg",
     link: "",
   },
   {
@@ -108,7 +108,7 @@ export const hardwareComponents: HardwareComponent[] = [
     brand: "",
     model: "ISP-provided gateway",
     additionalDetails: "",
-    icon: "",
+    icon: "/router.svg",
     link: "",
   },
   {
@@ -116,7 +116,7 @@ export const hardwareComponents: HardwareComponent[] = [
     brand: "",
     model: "IP KVM",
     additionalDetails: "",
-    icon: "",
+    icon: "/terminal.svg",
     link: "",
   },
   {
@@ -124,7 +124,7 @@ export const hardwareComponents: HardwareComponent[] = [
     brand: "",
     model: "UPS Surge Protector",
     additionalDetails: "",
-    icon: "",
+    icon: "/electric.svg",
     link: "",
   },
 ];
