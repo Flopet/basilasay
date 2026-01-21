@@ -6,7 +6,7 @@ export const siteMetadata = {
 };
 
 export const personalInfo = {
-    coverImage: "/BasilAndKaitlyn.png",
+    coverImage: "/BasilAndKaitlyn.webp",
     name: "Basil Asay",
     title: "DC Technician",
     company: "TekSystems On-Site at Microsoft",

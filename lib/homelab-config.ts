@@ -206,7 +206,7 @@ export const services: Service[] = [
     category: "Media & Content",
     url: "",
     status: "running",
-    icon: "",
+    icon: "/jellyfin.svg",
     tags: ["Media", "Streaming", "Transcoding"],
   },
   {
@@ -216,7 +216,7 @@ export const services: Service[] = [
     category: "Media & Content",
     url: "",
     status: "running",
-    icon: "",
+    icon: "/audiobookshelf.svg",
     tags: ["Media", "Audiobooks", "Podcasts"],
   },
   {
@@ -226,7 +226,7 @@ export const services: Service[] = [
     category: "Media & Content",
     url: "",
     status: "running",
-    icon: "",
+    icon: "/immich.svg",
     tags: ["Photos", "Backup", "Privacy"],
   },
 
@@ -237,7 +237,7 @@ export const services: Service[] = [
     category: "Productivity & Collaboration",
     url: "",
     status: "running",
-    icon: "",
+    icon: "/affine.svg",
     tags: ["Productivity", "Notes", "Collaboration"],
   },
   {
@@ -247,7 +247,7 @@ export const services: Service[] = [
     category: "Productivity & Collaboration",
     url: "",
     status: "running",
-    icon: "",
+    icon: "/owncloud.svg",
     tags: ["Cloud Storage", "File Sync"],
   },
   {
@@ -257,7 +257,7 @@ export const services: Service[] = [
     category: "Productivity & Collaboration",
     url: "",
     status: "running",
-    icon: "",
+    icon: "/peppermint.svg",
     tags: ["Help Desk", "Ticketing", "Documentation"],
   },
 
@@ -269,7 +269,7 @@ export const services: Service[] = [
     category: "Infrastructure & Management",
     url: "",
     status: "running",
-    icon: "",
+    icon: "/homarr.svg",
     tags: ["Dashboard", "Monitoring", "Management"],
   },
   {
@@ -278,7 +278,7 @@ export const services: Service[] = [
     category: "Infrastructure & Management",
     url: "",
     status: "running",
-    icon: "",
+    icon: "/cubecoders-amp.png",
     tags: ["Gaming", "Server Management"],
   },
   {
@@ -288,7 +288,7 @@ export const services: Service[] = [
     category: "Infrastructure & Management",
     url: "",
     status: "running",
-    icon: "",
+    icon: "/cloudflare.svg",
     tags: ["Security", "Networking", "Tunnel"],
   },
   {
@@ -297,7 +297,7 @@ export const services: Service[] = [
     category: "Infrastructure & Management",
     url: "",
     status: "running",
-    icon: "",
+    icon: "/database-server-icon.svg",
     tags: ["Database", "Cache"],
   },
   {
@@ -306,7 +306,7 @@ export const services: Service[] = [
     category: "Infrastructure & Management",
     url: "",
     status: "running",
-    icon: "",
+    icon: "/duplicati.svg",
     tags: ["Backup", "Automation"],
   },
 
@@ -318,7 +318,7 @@ export const services: Service[] = [
     category: "Security & Access",
     url: "",
     status: "running",
-    icon: "",
+    icon: "/tailscale.svg",
     tags: ["VPN", "Security", "Remote Access"],
   },
 ];
