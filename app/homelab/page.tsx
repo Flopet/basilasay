@@ -12,6 +12,7 @@ import {
 export default function HomelabPage() {
   return (
     <div className="homelab-page">
+      <UnderConstructionRibbon />
       <div className="homelab-container">
 
         {/* Header Section */}
