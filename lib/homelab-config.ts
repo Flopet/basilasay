@@ -321,6 +321,16 @@ export const services: Service[] = [
     icon: "/tailscale.svg",
     tags: ["VPN", "Security", "Remote Access"],
   },
+  {
+    title: "Vaultwarden",
+    description:
+      "Password manager that stores encrypted credentials in a local database. Supports two-factor authentication and password generation.",
+    category: "Security & Access",
+    url: "",
+    status: "running",
+    icon: "/vaultwarden.svg",
+    tags: ["Password Manager", "2FA", "Encryption"],
+  }
 ];
 
 // Helper function to get services by category
