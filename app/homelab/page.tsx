@@ -2,7 +2,7 @@ import "./homelab.css";
 import { HardwareItem } from "./components/HardwareItem";
 import { ServiceCard } from "./components/ServiceCard";
 import { UnderConstructionRibbon } from "@/components/UnderConstructionRibbon";
-import {GithubRibbon} from "@/components/GithubRibbon";
+
 
 import {
   hardwareComponents,
@@ -14,7 +14,6 @@ import {
 export default function HomelabPage() {
   return (
     <div className="homelab-page">
-      <GithubRibbon/>
       <UnderConstructionRibbon />
       <div className="homelab-container">
 

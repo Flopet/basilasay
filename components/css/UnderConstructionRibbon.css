@@ -6,6 +6,7 @@
   height: 15rem;
   overflow: hidden;
   z-index: 999;
+  border-top-right-radius: 2rem;
 }
 
 #ribbon {
