@@ -204,7 +204,7 @@ export const services: Service[] = [
     description:
       "Media streaming server for movies, TV shows, and music. Uses the GTX 1060 for hardware-accelerated transcoding to support multiple simultaneous streams.",
     category: "Media & Content",
-    url: "",
+    url: "https://jellyfin.org/",
     status: "running",
     icon: "/jellyfin.svg",
     tags: ["Media", "Streaming", "Transcoding"],
@@ -214,7 +214,7 @@ export const services: Service[] = [
     description:
       "Audiobook and podcast server with progress tracking and mobile app support.",
     category: "Media & Content",
-    url: "",
+    url: "https://www.audiobookshelf.org/",
     status: "running",
     icon: "/audiobookshelf.svg",
     tags: ["Media", "Audiobooks", "Podcasts"],
@@ -224,7 +224,7 @@ export const services: Service[] = [
     description:
       "Self-hosted photo and video backup solution. A Google Photos alternative that keeps my data under my control.",
     category: "Media & Content",
-    url: "",
+    url: "https://immich.app/",
     status: "running",
     icon: "/immich.svg",
     tags: ["Photos", "Backup", "Privacy"],
@@ -235,7 +235,7 @@ export const services: Service[] = [
     title: "AFFiNE",
     description: "Open-source workspace for notes, docs, and project planning.",
     category: "Productivity & Collaboration",
-    url: "",
+    url: "https://affine.pro/",
     status: "running",
     icon: "/affine.svg",
     tags: ["Productivity", "Notes", "Collaboration"],
@@ -243,9 +243,9 @@ export const services: Service[] = [
   {
     title: "OwnCloud",
     description:
-      "Personal cloud storage for file syncing and sharing across devices.",
+      "Personal cloud storage for file backup and sharing across devices.",
     category: "Productivity & Collaboration",
-    url: "",
+    url: "https://owncloud.dev/ocis/#owncloud-infinite-scale",
     status: "running",
     icon: "/owncloud.svg",
     tags: ["Cloud Storage", "File Sync"],
@@ -255,7 +255,7 @@ export const services: Service[] = [
     description:
       "IT ticketing and help desk system. I use this to track family tech support requests, log server maintenance tasks, and document solutions to problems I've solved. It includes a built-in knowledge base for storing guides and manuals.",
     category: "Productivity & Collaboration",
-    url: "",
+    url: "https://peppermint.sh/",
     status: "running",
     icon: "/peppermint.svg",
     tags: ["Help Desk", "Ticketing", "Documentation"],
@@ -267,7 +267,7 @@ export const services: Service[] = [
     description:
       "Customizable dashboard that serves as the central hub for all my services. Displays real-time container status with start/stop/restart controls, plus live server resource monitoring.",
     category: "Infrastructure & Management",
-    url: "",
+    url: "https://homarr.dev/",
     status: "running",
     icon: "/homarr.svg",
     tags: ["Dashboard", "Monitoring", "Management"],
@@ -276,7 +276,7 @@ export const services: Service[] = [
     title: "AMP (Application Management Panel)",
     description: "Manages and hosts game servers for friends.",
     category: "Infrastructure & Management",
-    url: "",
+    url: "https://cubecoders.com/AMP",
     status: "running",
     icon: "/cubecoders-amp.png",
     tags: ["Gaming", "Server Management"],
@@ -286,7 +286,7 @@ export const services: Service[] = [
     description:
       "Securely exposes public-facing services to the internet without opening ports on my router. Each service gets its own custom domain.",
     category: "Infrastructure & Management",
-    url: "",
+    url: "https://developers.cloudflare.com/cloudflare-one/networks/connectors/cloudflare-tunnel/",
     status: "running",
     icon: "/cloudflare.svg",
     tags: ["Security", "Networking", "Tunnel"],
@@ -304,7 +304,7 @@ export const services: Service[] = [
     title: "Duplicati",
     description: "Automated backup solution for critical data and configurations.",
     category: "Infrastructure & Management",
-    url: "",
+    url: "https://duplicati.com/",
     status: "running",
     icon: "/duplicati.svg",
     tags: ["Backup", "Automation"],
@@ -316,7 +316,7 @@ export const services: Service[] = [
     description:
       "Zero-trust mesh VPN for secure remote access to the server and admin panels. All sensitive services stay behind the VPN and aren't exposed publicly.",
     category: "Security & Access",
-    url: "",
+    url: "https://tailscale.com/",
     status: "running",
     icon: "/tailscale.svg",
     tags: ["VPN", "Security", "Remote Access"],
@@ -326,7 +326,7 @@ export const services: Service[] = [
     description:
       "Password manager that stores encrypted credentials in a local database. Supports two-factor authentication and password generation.",
     category: "Security & Access",
-    url: "",
+    url: "https://github.com/dani-garcia/vaultwarden",
     status: "running",
     icon: "/vaultwarden.svg",
     tags: ["Password Manager", "2FA", "Encryption"],
