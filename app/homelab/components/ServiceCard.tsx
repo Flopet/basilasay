@@ -11,7 +11,7 @@ export function ServiceCard({
   tags,
 }: Service) {
   return (
-    <div className="service-card">
+    <div className="service-card button">
       <div className="service-card__header">
         <div className="service-card__icon">
           {icon && <Image src={icon} alt={title} width={32} height={32} />}

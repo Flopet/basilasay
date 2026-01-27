@@ -265,7 +265,8 @@ export const services: Service[] = [
   {
     title: "Homarr",
     description:
-      "Customizable dashboard that serves as the central hub for all my services. Displays real-time container status with start/stop/restart controls, plus live server resource monitoring.",
+      "Customizable dashboard that serves as the central hub for all my services. Displays real-time container status with start/stop/restart controls, plus live server resource monitoring. " +
+        "Customizable dashboard that serves as the central hub for all my services. Displays real-time container status with start/stop/restart controls, plus live server resource monitoring.",
     category: "Infrastructure & Management",
     url: "https://homarr.dev/",
     status: "running",

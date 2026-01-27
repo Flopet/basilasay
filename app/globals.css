@@ -88,29 +88,26 @@ footer {
     3D BUTTON
   ===================================*/
 
-
-
-
 .button {
   transition: box-shadow 150ms ease-in-out,
               transform 150ms ease-in-out;
   box-shadow:
-          1px 1px 1px var(--accent-red-dark),
-          2px 2px 1px var(--accent-red-dark),
-          3px 3px 1px var(--accent-red-dark),
-          4px 4px 1px var(--accent-red-dark),
-          5px 5px 1px var(--accent-red-dark);
+          1px 1px 0 1px var(--accent-red-dark),
+          2px 2px 0 1px var(--accent-red-dark),
+          3px 3px 0 1px var(--accent-red-dark),
+          4px 4px 0 1px var(--accent-red-dark),
+          5px 5px 0 1px var(--accent-red-dark);
 }
 
 .button:hover {
   transform: translate(-1px, -1px);
   box-shadow:
-          1px 1px 1px var(--accent-red-dark),
-          2px 2px 1px var(--accent-red-dark),
-          3px 3px 1px var(--accent-red-dark),
-          4px 4px 1px var(--accent-red-dark),
-          5px 5px 1px var(--accent-red-dark),
-          6px 6px 1px var(--accent-red-dark);
+          1px 1px 0 1px var(--accent-red-dark),
+          2px 2px 0 1px var(--accent-red-dark),
+          3px 3px 0 1px var(--accent-red-dark),
+          4px 4px 0 1px var(--accent-red-dark),
+          5px 5px 0 1px var(--accent-red-dark),
+          6px 6px 0 1px var(--accent-red-dark);
 }
 
 .button:active {
