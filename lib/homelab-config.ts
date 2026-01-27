@@ -28,7 +28,7 @@ export interface Service {
   category: string;
   url: string;
   status?: "running" | "planned" | "maintenance" | "offline";
-  icon?: string;
+  icon: string;
   tags?: string[];
 }
 
@@ -273,7 +273,7 @@ export const services: Service[] = [
     tags: ["Dashboard", "Monitoring", "Management"],
   },
   {
-    title: "AMP (Application Management Panel)",
+    title: "AMP (Application Management Platform)",
     description: "Manages and hosts game servers for friends.",
     category: "Infrastructure & Management",
     url: "https://cubecoders.com/AMP",

@@ -41,7 +41,7 @@ export function ServiceCard({
           target="_blank"
           rel="noopener noreferrer"
         >
-          Access Service →
+          Learn More →
         </a>
       )}
       {status && (
