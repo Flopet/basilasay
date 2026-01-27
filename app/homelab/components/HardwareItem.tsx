@@ -2,8 +2,6 @@ import Image from "next/image";
 import "./HardwareItem.css";
 import { HardwareComponent } from "@/lib/homelab-config";
 
-interface HardwareItemProps extends HardwareComponent {}
-
 export function HardwareItem({
   componentType,
   brand,
@@ -11,7 +9,7 @@ export function HardwareItem({
   additionalDetails,
   icon,
   link,
-}: HardwareItemProps) {
+}: HardwareComponent) {
   const specification = [brand, model, additionalDetails]
     .filter(Boolean)
     .join(" ");

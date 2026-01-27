@@ -1,12 +1,7 @@
 import "./css/ContactLink.css";
+import { Contact } from "@/lib/config";
 
-interface ContactLinkProps {
-  href: string;
-  label: string;
-  external?: boolean;
-}
-
-export function ContactLink({ href, label, external = false }: ContactLinkProps) {
+export function ContactLink({ href, label, external = false }: Contact) {
   // Auto-detect email and add mailto: if needed
   const isEmail = label.toLowerCase() === "email";
   const finalHref = isEmail && !href.startsWith("mailto:") ? `mailto:${href}` : href;

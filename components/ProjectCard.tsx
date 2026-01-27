@@ -1,18 +1,12 @@
 import "./css/ProjectCard.css";
-
-interface ProjectCardProps {
-  title: string;
-  description: string;
-  link?: string;
-  tags?: string[];
-}
+import { Project } from "@/lib/config";
 
 export function ProjectCard({
   title,
   description,
   link,
   tags,
-}: ProjectCardProps) {
+}: Project) {
   return (
     <div className="project-card">
       <h3 className="project-card__title">{title}</h3>

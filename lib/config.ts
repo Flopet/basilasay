@@ -1,5 +1,42 @@
 // Site data - Update this file with your personal information
 
+/* ============================================
+   TYPE DEFINITIONS
+   ============================================ */
+
+export interface Experience {
+  title: string;
+  company: string;
+  dateRange: string;
+  description: string;
+  highlights?: string[];
+}
+
+export interface Project {
+  title: string;
+  description: string;
+  link?: string;
+  tags?: string[];
+}
+
+export interface Certificate {
+  certificate: string;
+  issuer: string;
+  year: string;
+  details?: string;
+  badge?: string;
+}
+
+export interface Contact {
+  label: string;
+  href: string;
+  external?: boolean;
+}
+
+/* ============================================
+   SITE DATA
+   ============================================ */
+
 export const siteMetadata = {
   title: "Basil Asay's Portfolio",
   description: "Personal portfolio with downloadable resume and showcasing projects, experience, and skills.",
@@ -15,7 +52,7 @@ export const personalInfo = {
     bio: "My journey into IT began at 14, building my first computer and discovering a passion that would define my career. After 10+ years working in retail, medicine, and warehouse environments, I made the leap into IT when Meta gave me my first opportunity in the field. Now I specialize in fiber optic troubleshooting and data center operations, backed by CompTIA A+ and Network+ certifications. I give 110% every day—I'm never late, I prioritize efficient and detailed work, I learn fast, I think outside the box, and I'm a strong leader who thrives on solving complex technical challenges.",
 };
 
-export const experience = [
+export const experience: Experience[] = [
   {
     title: "Data Center Technician",
     company: "TekSystems On-Site at Microsoft",
@@ -44,7 +81,7 @@ export const experience = [
   // Add more experience items here
 ];
 
-export const projects = [
+export const projects: Project[] = [
   {
     title: "My Portfolio Website",
     description: "Modern and easily accessible portfolio built with Next.js and React. It features a responsive design for desktop and mobile, and up-to-date information on my current skills and projects.",
@@ -72,7 +109,7 @@ export const projects = [
   // Add more projects here
 ];
 
-export const education = [
+export const education: Certificate[] = [
   {
     certificate: "CompTIA A+",
     issuer: "CompTIA",
@@ -90,7 +127,7 @@ export const education = [
   // Add more education items here
 ];
 
-export const contacts = [
+export const contacts: Contact[] = [
   {
     label: "Email",
     href: "basilrasay@gmail.com",

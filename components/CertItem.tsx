@@ -1,13 +1,6 @@
 import "./css/CertItem.css";
 import Image from "next/image";
-
-interface CertItemProps {
-  certificate: string;
-  issuer: string;
-  year: string;
-  details?: string;
-  badge?: string;
-}
+import { Certificate } from "@/lib/config";
 
 export function CertItem({
   certificate,
@@ -15,7 +8,7 @@ export function CertItem({
   year,
   details,
   badge,
-}: CertItemProps) {
+}: Certificate) {
   return (
     <div className="cert-item">
       <Image src={badge? badge : "no image"} alt={certificate + " Badge"} className="cert-item__badge" width={60} height={60} />

@@ -1,12 +1,5 @@
 import "./css/ExperienceItem.css";
-
-interface ExperienceItemProps {
-  title: string;
-  company: string;
-  dateRange: string;
-  description: string;
-  highlights?: string[];
-}
+import { Experience } from "@/lib/config";
 
 export function ExperienceItem({
   title,
@@ -14,7 +7,7 @@ export function ExperienceItem({
   dateRange,
   description,
   highlights = [],
-}: ExperienceItemProps) {
+}: Experience) {
   return (
     <div className="experience-item">
       <h3 className="experience-item__title"><u>{title}</u></h3>

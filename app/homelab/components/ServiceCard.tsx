@@ -2,8 +2,6 @@ import Image from "next/image";
 import "./ServiceCard.css";
 import { Service } from "@/lib/homelab-config";
 
-interface ServiceCardProps extends Service {}
-
 export function ServiceCard({
   title,
   description,
@@ -11,7 +9,7 @@ export function ServiceCard({
   status,
   icon,
   tags,
-}: ServiceCardProps) {
+}: Service) {
   return (
     <div className="service-card">
       <div className="service-card__header">
