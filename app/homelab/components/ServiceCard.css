@@ -99,9 +99,9 @@
 }
 
 .service-card__tag {
-  font-family: 'JetBrains Mono', 'Ubuntu Mono', monospace;
+  font-family:  var(--code-font);
   font-size: 0.75rem;
-  font-weight: 600;
+  font-weight: 400;
   padding: 4px 10px;
   background: rgba(139, 38, 53, 0.08);
   color: var(--accent-red);
@@ -121,7 +121,6 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  bottom: 1rem;
 }
 .service-card__link {
   font-family: var(--heading-font), 'Zalando Sans SemiExpanded', sans-serif;
@@ -132,7 +131,6 @@
   font-weight: 700;
   font-size: 0.9375rem;
   text-decoration: none;
-  margin-top: 0.5rem;
   letter-spacing: 0.01em;
   transition: all 0.2s ease;
   position: relative;
@@ -162,10 +160,11 @@
 .service-card__status {
   display: inline-flex;
   align-items: center;
+  margin-left: auto;
   gap: 6px;
-  font-family: 'JetBrains Mono', 'Ubuntu Mono', monospace;
+  font-family: var(--code-font);
   font-size: 0.75rem;
-  font-weight: 600;
+  font-weight: 700;
   padding: 4px 10px;
   border-radius: 4px;
   text-transform: uppercase;

@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import {siteMetadata} from "@/lib/config";
 import {Zalando_Sans_SemiExpanded} from "next/font/google";
 import {Zalando_Sans} from "next/font/google";
+import {Source_Code_Pro} from "next/font/google";
 import "./globals.css";
 
 // Zalando Sans SemiExpanded for headers
@@ -19,6 +20,12 @@ const bodyFont = Zalando_Sans({
   variable: "--body-font",
   weight: ["400", "700"],
   subsets: ["latin"]
+})
+
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+const codeFont = Source_Code_Pro({
+  variable: "--code-font",
+  weight: ["200", "400", "700"],
 })
 
 export const metadata: Metadata = {
