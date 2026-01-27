@@ -18,16 +18,9 @@ export function ServiceCard({
         <div className="service-card__icon">
           {icon && <Image src={icon} alt={title} width={32} height={32} />}
         </div>
-        <div style={{ flex: 1 }}>
           <h4 className="service-card__title">{title}</h4>
-          {status && (
-            <span className={`service-card__status service-card__status--${status}`}>
-              {status}
-            </span>
-          )}
-        </div>
       </div>
-
+      <div className="service-card__body">
       <p className="service-card__description">{description}</p>
 
       {tags && tags.length > 0 && (
@@ -39,7 +32,10 @@ export function ServiceCard({
           ))}
         </div>
       )}
+      </div>
 
+
+      <div className="service-card__footer">
       {url && (
         <a
           href={url}
@@ -50,6 +46,12 @@ export function ServiceCard({
           Access Service →
         </a>
       )}
+      {status && (
+          <span className={`service-card__status service-card__status--${status}`}>
+              {status}
+            </span>
+      )}
+      </div>
     </div>
   );
 }

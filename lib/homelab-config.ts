@@ -26,7 +26,7 @@ export interface Service {
   title: string;
   description: string;
   category: string;
-  url?: string;
+  url: string;
   status?: "running" | "planned" | "maintenance" | "offline";
   icon?: string;
   tags?: string[];
@@ -330,6 +330,15 @@ export const services: Service[] = [
     status: "running",
     icon: "/vaultwarden.svg",
     tags: ["Password Manager", "2FA", "Encryption"],
+  },
+  {
+    title: "Test Service",
+    description: "A test service for demonstration purposes.",
+    category: "Security & Access",
+    url: "2",
+    status: "offline",
+    icon: "/test-service.svg",
+    tags: ["Test", "Demo"],
   }
 ];
 

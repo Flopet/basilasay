@@ -1,5 +1,6 @@
-/* Service Card Component Styles - Aged Paper Technical Design */
-
+/*###################*/
+/*   SERVICE CARD    */
+/*###################*/
 .service-card {
   background: var(--bg-card-white);
   border: 2px solid var(--accent-red);
@@ -26,6 +27,10 @@
     4px 4px 0 var(--accent-red-dark);
 }
 
+
+/*###################*/
+/*SERVICE CARD HEADER*/
+/*###################*/
 .service-card__header {
   display: flex;
   align-items: flex-start;
@@ -46,20 +51,12 @@
   padding: 8px;
   box-shadow: 2px 2px 0 var(--accent-red-dark);
   transition: all 0.2s ease;
+  font-size: .5rem;
 }
 
 .service-card:hover .service-card__icon {
   transform: translate(-1px, -1px);
   box-shadow: 3px 3px 0 var(--accent-red-dark);
-}
-
-/* Placeholder when no icon is provided */
-.service-card__icon:empty::before {
-  content: '◆';
-  font-family: 'JetBrains Mono', monospace;
-  font-size: 1.25rem;
-  color: var(--bg-card-white);
-  font-weight: 700;
 }
 
 .service-card__title {
@@ -70,6 +67,86 @@
   margin: 0 0 0.5rem 0;
   letter-spacing: 0.01em;
 }
+
+
+/*###################*/
+/*SERVICE CARD BODY  */
+/*###################*/
+.service-card__description {
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin: 0;
+  font-size: 0.9375rem;
+  font-weight: 500;
+}
+
+.service-card__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 0.25rem;
+}
+
+.service-card__tag {
+  font-family: 'JetBrains Mono', 'Ubuntu Mono', monospace;
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 4px 10px;
+  background: rgba(139, 38, 53, 0.08);
+  color: var(--accent-red);
+  border: 1px solid var(--hl-border);
+  border-radius: 3px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+
+
+/*###################*/
+/*SERVICE CARD FOOTER*/
+/*###################*/
+
+.service-card__footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  bottom: 1rem;
+}
+.service-card__link {
+  font-family: var(--heading-font), 'Zalando Sans SemiExpanded', sans-serif;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--accent-red);
+  font-weight: 700;
+  font-size: 0.9375rem;
+  text-decoration: none;
+  margin-top: 0.5rem;
+  letter-spacing: 0.01em;
+  transition: all 0.2s ease;
+  position: relative;
+}
+
+.service-card__link::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--accent-red);
+  transition: width 0.3s ease;
+}
+
+.service-card__link:hover {
+  color: var(--accent-red-dark);
+  transform: translateX(4px);
+}
+
+.service-card__link:hover::after {
+  width: 100%;
+}
+
 
 .service-card__status {
   display: inline-flex;
@@ -115,67 +192,4 @@
 @keyframes pulse {
   0%, 100% { opacity: 1; }
   50% { opacity: 0.4; }
-}
-
-.service-card__description {
-  color: var(--text-secondary);
-  line-height: 1.6;
-  margin: 0;
-  font-size: 0.9375rem;
-  font-weight: 500;
-}
-
-.service-card__tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-  margin-top: 0.25rem;
-}
-
-.service-card__tag {
-  font-family: 'JetBrains Mono', 'Ubuntu Mono', monospace;
-  font-size: 0.75rem;
-  font-weight: 600;
-  padding: 4px 10px;
-  background: rgba(139, 38, 53, 0.08);
-  color: var(--accent-red);
-  border: 1px solid var(--hl-border);
-  border-radius: 3px;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-}
-
-.service-card__link {
-  font-family: var(--heading-font), 'Zalando Sans SemiExpanded', sans-serif;
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  color: var(--accent-red);
-  font-weight: 700;
-  font-size: 0.9375rem;
-  text-decoration: none;
-  margin-top: 0.5rem;
-  letter-spacing: 0.01em;
-  transition: all 0.2s ease;
-  position: relative;
-}
-
-.service-card__link::after {
-  content: '';
-  position: absolute;
-  bottom: -2px;
-  left: 0;
-  width: 0;
-  height: 2px;
-  background: var(--accent-red);
-  transition: width 0.3s ease;
-}
-
-.service-card__link:hover {
-  color: var(--accent-red-dark);
-  transform: translateX(4px);
-}
-
-.service-card__link:hover::after {
-  width: 100%;
 }
