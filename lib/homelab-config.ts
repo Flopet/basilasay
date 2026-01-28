@@ -265,8 +265,7 @@ export const services: Service[] = [
   {
     title: "Homarr",
     description:
-      "Customizable dashboard that serves as the central hub for all my services. Displays real-time container status with start/stop/restart controls, plus live server resource monitoring. " +
-        "Customizable dashboard that serves as the central hub for all my services. Displays real-time container status with start/stop/restart controls, plus live server resource monitoring.",
+      "Customizable dashboard that serves as the central hub for all my services. Displays real-time container status with start/stop/restart controls, plus live server resource monitoring.",
     category: "Infrastructure & Management",
     url: "https://homarr.dev/",
     status: "running",
@@ -331,15 +330,6 @@ export const services: Service[] = [
     status: "running",
     icon: "/vaultwarden.svg",
     tags: ["Password Manager", "2FA", "Encryption"],
-  },
-  {
-    title: "Test Service",
-    description: "A test service for demonstration purposes.",
-    category: "Security & Access",
-    url: "2",
-    status: "offline",
-    icon: "/test-service.svg",
-    tags: ["Test", "Demo"],
   }
 ];
 
