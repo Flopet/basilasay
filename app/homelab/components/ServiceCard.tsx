@@ -9,6 +9,7 @@ export function ServiceCard({
   status,
   icon,
   tags,
+  uptime_status_key
 }: Service) {
   return (
     <div className="service-card button">
@@ -44,10 +45,12 @@ export function ServiceCard({
           Learn More →
         </a>
       )}
-      {status && (
-          <span className={`service-card__status service-card__status--${status}`}>
-              {status}
-            </span>
+
+      {uptime_status_key && (
+          <img
+              src={"https://uptime.asay.dev/api/badge/" + String(uptime_status_key) + "/status?style=flat"}
+              alt="Service Status"
+          />
       )}
       </div>
     </div>

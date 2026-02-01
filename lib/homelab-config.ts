@@ -27,6 +27,7 @@ export interface Service {
   description: string;
   category: string;
   url: string;
+  uptime_status_key?: number;
   status?: "running" | "planned" | "maintenance" | "offline";
   icon: string;
   tags?: string[];
@@ -205,6 +206,7 @@ export const services: Service[] = [
       "Media streaming server for movies, TV shows, and music. Uses the GTX 1060 for hardware-accelerated transcoding to support multiple simultaneous streams.",
     category: "Media & Content",
     url: "https://jellyfin.org/",
+    uptime_status_key: 3,
     status: "running",
     icon: "/jellyfin.svg",
     tags: ["Media", "Streaming", "Transcoding"],
@@ -215,6 +217,7 @@ export const services: Service[] = [
       "Audiobook and podcast server with progress tracking and mobile app support.",
     category: "Media & Content",
     url: "https://www.audiobookshelf.org/",
+    uptime_status_key: 2,
     status: "running",
     icon: "/audiobookshelf.svg",
     tags: ["Media", "Audiobooks", "Podcasts"],
@@ -225,6 +228,7 @@ export const services: Service[] = [
       "Self-hosted photo and video backup solution. A Google Photos alternative that keeps my data under my control.",
     category: "Media & Content",
     url: "https://immich.app/",
+    uptime_status_key: 6,
     status: "running",
     icon: "/immich.svg",
     tags: ["Photos", "Backup", "Privacy"],
@@ -236,6 +240,7 @@ export const services: Service[] = [
     description: "Open-source workspace for notes, docs, and project planning.",
     category: "Productivity & Collaboration",
     url: "https://affine.pro/",
+    uptime_status_key: 10,
     status: "running",
     icon: "/affine.svg",
     tags: ["Productivity", "Notes", "Collaboration"],
@@ -246,6 +251,7 @@ export const services: Service[] = [
       "Personal cloud storage for file backup and sharing across devices.",
     category: "Productivity & Collaboration",
     url: "https://owncloud.dev/ocis/#owncloud-infinite-scale",
+    uptime_status_key: 7,
     status: "running",
     icon: "/owncloud.svg",
     tags: ["Cloud Storage", "File Sync"],
@@ -256,6 +262,7 @@ export const services: Service[] = [
       "IT ticketing and help desk system. I use this to track family tech support requests, log server maintenance tasks, and document solutions to problems I've solved. It includes a built-in knowledge base for storing guides and manuals.",
     category: "Productivity & Collaboration",
     url: "https://peppermint.sh/",
+    uptime_status_key: 4,
     status: "running",
     icon: "/peppermint.svg",
     tags: ["Help Desk", "Ticketing", "Documentation"],
@@ -268,6 +275,7 @@ export const services: Service[] = [
       "Customizable dashboard that serves as the central hub for all my services. Displays real-time container status with start/stop/restart controls, plus live server resource monitoring.",
     category: "Infrastructure & Management",
     url: "https://homarr.dev/",
+    uptime_status_key: 5,
     status: "running",
     icon: "/homarr.svg",
     tags: ["Dashboard", "Monitoring", "Management"],
@@ -277,6 +285,7 @@ export const services: Service[] = [
     description: "Manages and hosts game servers for friends.",
     category: "Infrastructure & Management",
     url: "https://cubecoders.com/AMP",
+    uptime_status_key: 8,
     status: "running",
     icon: "/cubecoders-amp.png",
     tags: ["Gaming", "Server Management"],
@@ -287,6 +296,7 @@ export const services: Service[] = [
       "Securely exposes public-facing services to the internet without opening ports on my router. Each service gets its own custom domain.",
     category: "Infrastructure & Management",
     url: "https://developers.cloudflare.com/cloudflare-one/networks/connectors/cloudflare-tunnel/",
+    uptime_status_key: 11,
     status: "running",
     icon: "/cloudflare.svg",
     tags: ["Security", "Networking", "Tunnel"],
@@ -305,6 +315,7 @@ export const services: Service[] = [
     description: "Automated backup solution for critical data and configurations.",
     category: "Infrastructure & Management",
     url: "https://duplicati.com/",
+    uptime_status_key: 12,
     status: "running",
     icon: "/duplicati.svg",
     tags: ["Backup", "Automation"],
@@ -327,6 +338,7 @@ export const services: Service[] = [
       "Password manager that stores encrypted credentials in a local database. Supports two-factor authentication and password generation.",
     category: "Security & Access",
     url: "https://github.com/dani-garcia/vaultwarden",
+    uptime_status_key: 9,
     status: "running",
     icon: "/vaultwarden.svg",
     tags: ["Password Manager", "2FA", "Encryption"],
