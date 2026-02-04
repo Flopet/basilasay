@@ -320,6 +320,26 @@ export const services: Service[] = [
     icon: "/duplicati.svg",
     tags: ["Backup", "Automation"],
   },
+  {
+    title: "Dockge",
+    description: "Organized and interactive management interface for Docker Compose.",
+    category: "Infrastructure & Management",
+    url: "https://dockge.kuma.pet/",
+    uptime_status_key: 13,
+    status: "running",
+    icon: "/dockge.svg",
+    tags: ["Container Management", "Docker", "Docker Compose"],
+  },
+  {
+    title: "Uptime Kuma",
+    description: "Real-time monitoring dashboard for all my services.",
+    category: "Infrastructure & Management",
+    url: "https://uptime.kuma.pet/",
+    uptime_status_key: 14,
+    status: "running",
+    icon: "/uptime-kuma.svg",
+    tags: ["Monitoring", "Dashboard"],
+  },
 
   // Security & Access
   {

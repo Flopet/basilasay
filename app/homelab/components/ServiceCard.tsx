@@ -19,6 +19,9 @@ export function ServiceCard({
         </div>
           <h4 className="service-card__title">{title}</h4>
       </div>
+
+
+
       <div className="service-card__body">
       <p className="service-card__description">{description}</p>
 
@@ -32,6 +35,7 @@ export function ServiceCard({
         </div>
       )}
       </div>
+
 
 
       <div className="service-card__footer">
