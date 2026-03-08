@@ -113,7 +113,7 @@ export const education: Certificate[] = [
   {
     certificate: "CompTIA A+",
     issuer: "CompTIA",
-    year: "2024",
+    year: "2023",
     details: "", // Optional: What skills or knowledge does this demonstrate?
     badge: "/comptia-a-badge.png"
   },
