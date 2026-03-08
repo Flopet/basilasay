@@ -15,7 +15,7 @@ import {
   experience,
   projects,
   education,
-  contacts,
+  contacts, siteMetadata,
 } from "@/lib/config";
 
 export default function Home() {
@@ -119,6 +119,7 @@ export default function Home() {
                   external={contact.external}
                 />
               ))}
+              <p id="last-updated">Last updated: {siteMetadata.updatedAt}</p>
             </div>
           </section>
         </main>
