@@ -187,11 +187,23 @@ hr {
    ======================================== */
 
 .contact-links {
+  position: relative;
   display: flex;
   flex-wrap: wrap;
   gap: 1rem;
   padding-left: 1rem;
   padding-top: 0.5rem;
+  width: 100%;
+}
+
+#last-updated{
+  text-align: right;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  font-family: 'ubuntu mono', monospace;
+  font-size: 0.85rem;
+  letter-spacing: -0.02rem;
 }
 
 /* ========================================
@@ -200,8 +212,6 @@ hr {
 
 .print-only-contact {
   display: none;
-
 }
-
 
 
