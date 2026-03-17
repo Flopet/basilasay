@@ -1,0 +1,15 @@
+services:
+  basilasay:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: basilasay
+    enf_file:
+      - .env
+    networks:
+      - caddy
+    restart: unless-stopped
+
+networks:
+  caddy:
+    external: true
