@@ -38,7 +38,7 @@ export interface Contact {
 export const siteMetadata = {
   title: "Basil Asay's Portfolio",
   description: "Personal portfolio with downloadable resume and showcasing projects, experience, and skills.",
-  updatedAt: "03.17.2026",
+  updatedAt: "03.18.2026",
 };
 
 export const personalInfo = {
