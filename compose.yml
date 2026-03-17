@@ -4,8 +4,8 @@ services:
       context: .
       dockerfile: Dockerfile
     container_name: basilasay
-    env_file:
-      - .env
+    environment:
+      - PORT=${PORT:-3000}
     networks:
       - caddy
     restart: unless-stopped
