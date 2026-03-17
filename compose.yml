@@ -4,7 +4,7 @@ services:
       context: .
       dockerfile: Dockerfile
     container_name: basilasay
-    enf_file:
+    env_file:
       - .env
     networks:
       - caddy
