@@ -14,6 +14,15 @@
     position: relative;
   }
 
+  /* Swap cover image to mobile version */
+  .cover-image--desktop {
+    display: none;
+  }
+
+  .cover-image--mobile {
+    display: block;
+  }
+
   /* Convert sidebar to circular avatar in top-right */
   .cover-aside {
     position: absolute;
@@ -112,7 +121,7 @@
    Mobile Styles (< 640px)
    ======================================== */
 
-@media (max-width: 640px) {
+@media (max-width: 860px) {
   /* Hide cover image on mobile */
   .cover-aside {
     display: none;

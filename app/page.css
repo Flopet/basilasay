@@ -30,6 +30,10 @@
   transition: transform 0.2s ease-in-out, filter 0.2s ease-in-out;
 }
 
+.cover-image--mobile {
+  display: none;
+}
+
 .shadow-overlay {
   position: absolute;
   inset: 0;

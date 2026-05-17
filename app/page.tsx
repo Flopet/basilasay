@@ -27,8 +27,15 @@ export default function Home() {
             <aside className="cover-aside">
                 <Image
                     src={personalInfo.coverImage}
-                    alt="Basil and Kaitlyn"
-                    className="cover-image"
+                    alt="Basil Asay"
+                    className="cover-image cover-image--desktop"
+                    fill
+                    priority
+                />
+                <Image
+                    src={personalInfo.coverImageMobile}
+                    alt="Basil Asay"
+                    className="cover-image cover-image--mobile"
                     fill
                     priority
                 />

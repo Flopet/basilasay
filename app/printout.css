@@ -61,6 +61,11 @@
     display: none;
   }
 
+  /* Ensure cover photo always shows on print regardless of screen breakpoints */
+  .cover-aside {
+    display: block;
+  }
+
   /* Show contact info */
   .print-only-contact {
     display: block;           /* Show on print */
