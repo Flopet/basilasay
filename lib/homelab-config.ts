@@ -28,7 +28,6 @@ export interface Service {
   category: string;
   url: string;
   uptime_status_key?: number;
-  status?: "running" | "planned" | "maintenance" | "offline";
   icon: string;
   tags?: string[];
 }
@@ -207,7 +206,7 @@ export const services: Service[] = [
     category: "Media & Content",
     url: "https://jellyfin.org/",
     uptime_status_key: 3,
-    status: "running",
+
     icon: "/jellyfin.svg",
     tags: ["Media", "Streaming", "Transcoding"],
   },
@@ -218,7 +217,7 @@ export const services: Service[] = [
     category: "Media & Content",
     url: "https://www.audiobookshelf.org/",
     uptime_status_key: 2,
-    status: "running",
+
     icon: "/audiobookshelf.svg",
     tags: ["Media", "Audiobooks", "Podcasts"],
   },
@@ -229,7 +228,7 @@ export const services: Service[] = [
     category: "Media & Content",
     url: "https://immich.app/",
     uptime_status_key: 6,
-    status: "running",
+
     icon: "/immich.svg",
     tags: ["Photos", "Backup", "Privacy"],
   },
@@ -241,7 +240,7 @@ export const services: Service[] = [
     category: "Productivity & Collaboration",
     url: "https://affine.pro/",
     uptime_status_key: 10,
-    status: "running",
+
     icon: "/affine.svg",
     tags: ["Productivity", "Notes", "Collaboration"],
   },
@@ -252,7 +251,7 @@ export const services: Service[] = [
     category: "Productivity & Collaboration",
     url: "https://owncloud.dev/ocis/#owncloud-infinite-scale",
     uptime_status_key: 7,
-    status: "running",
+
     icon: "/owncloud.svg",
     tags: ["Cloud Storage", "File Sync"],
   },
@@ -263,7 +262,7 @@ export const services: Service[] = [
     category: "Productivity & Collaboration",
     url: "https://peppermint.sh/",
     uptime_status_key: 4,
-    status: "running",
+
     icon: "/peppermint.svg",
     tags: ["Help Desk", "Ticketing", "Documentation"],
   },
@@ -276,7 +275,7 @@ export const services: Service[] = [
     category: "Infrastructure & Management",
     url: "https://homarr.dev/",
     uptime_status_key: 5,
-    status: "running",
+
     icon: "/homarr.svg",
     tags: ["Dashboard", "Monitoring", "Management"],
   },
@@ -286,7 +285,7 @@ export const services: Service[] = [
     category: "Infrastructure & Management",
     url: "https://cubecoders.com/AMP",
     uptime_status_key: 8,
-    status: "running",
+
     icon: "/cubecoders-amp.png",
     tags: ["Gaming", "Server Management"],
   },
@@ -297,7 +296,7 @@ export const services: Service[] = [
     category: "Infrastructure & Management",
     url: "https://developers.cloudflare.com/cloudflare-one/networks/connectors/cloudflare-tunnel/",
     uptime_status_key: 11,
-    status: "running",
+
     icon: "/cloudflare.svg",
     tags: ["Security", "Networking", "Tunnel"],
   },
@@ -306,7 +305,7 @@ export const services: Service[] = [
     description: "Database services that support multiple applications.",
     category: "Infrastructure & Management",
     url: "",
-    status: "running",
+
     icon: "/database-server-icon.svg",
     tags: ["Database", "Cache"],
   },
@@ -316,7 +315,7 @@ export const services: Service[] = [
     category: "Infrastructure & Management",
     url: "https://duplicati.com/",
     uptime_status_key: 12,
-    status: "running",
+
     icon: "/duplicati.svg",
     tags: ["Backup", "Automation"],
   },
@@ -326,7 +325,7 @@ export const services: Service[] = [
     category: "Infrastructure & Management",
     url: "https://dockge.kuma.pet/",
     uptime_status_key: 13,
-    status: "running",
+
     icon: "/dockge.svg",
     tags: ["Container Management", "Docker", "Docker Compose"],
   },
@@ -336,7 +335,7 @@ export const services: Service[] = [
     category: "Infrastructure & Management",
     url: "https://uptime.kuma.pet/",
     uptime_status_key: 14,
-    status: "running",
+
     icon: "/uptime-kuma.svg",
     tags: ["Monitoring", "Dashboard"],
   },
@@ -348,7 +347,7 @@ export const services: Service[] = [
       "Zero-trust mesh VPN for secure remote access to the server and admin panels. All sensitive services stay behind the VPN and aren't exposed publicly.",
     category: "Security & Access",
     url: "https://tailscale.com/",
-    status: "running",
+
     icon: "/tailscale.svg",
     tags: ["VPN", "Security", "Remote Access"],
   },
@@ -359,7 +358,7 @@ export const services: Service[] = [
     category: "Security & Access",
     url: "https://github.com/dani-garcia/vaultwarden",
     uptime_status_key: 9,
-    status: "running",
+
     icon: "/vaultwarden.svg",
     tags: ["Password Manager", "2FA", "Encryption"],
   }

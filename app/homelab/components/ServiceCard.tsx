@@ -6,7 +6,6 @@ export function ServiceCard({
   title,
   description,
   url,
-  status,
   icon,
   tags,
   uptime_status_key
