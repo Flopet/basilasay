@@ -97,7 +97,7 @@ export const hardwareComponents: HardwareComponent[] = [
     model: "TUF B360M-PLUS GAMING S",
     additionalDetails: "",
     icon: "/motherboard.svg",
-    link: "",
+    link: "https://www.amazon.com/Gaming-Motherboard-LGA1151-TUF-B360M-PLUS/dp/B07GRC63JM",
   },
   {
     componentType: "CPU",
@@ -105,7 +105,7 @@ export const hardwareComponents: HardwareComponent[] = [
     model: "Core i5-8400",
     additionalDetails: "6-Core @ 2.80GHz",
     icon: "/cpu.svg",
-    link: "",
+    link: "https://www.amazon.com/Intel-i5-8400-Desktop-Processor-Cores/dp/B0759FGJ3Q",
   },
   {
     componentType: "RAM",
@@ -121,7 +121,7 @@ export const hardwareComponents: HardwareComponent[] = [
     model: "Arc A380 6GB",
     additionalDetails: "",
     icon: "/gpu.svg",
-    link: "",
+    link: "https://a.co/d/00Xbps7U",
   },
   /*
   {
@@ -139,7 +139,7 @@ export const hardwareComponents: HardwareComponent[] = [
     model: "GS308EP",
     additionalDetails: "[8 port, 1000Mbps, PoE+]",
     icon: "/network-switch.svg",
-    link: "",
+    link: "https://www.amazon.com/NETGEAR-Gigabit-Ethernet-Switch-GS308EP/dp/B08MBFLMDC",
   },
   {
     componentType: "Router",
@@ -151,19 +151,19 @@ export const hardwareComponents: HardwareComponent[] = [
   },
   {
     componentType: "Remote Management",
-    brand: "",
-    model: "IP KVM",
-    additionalDetails: "",
+    brand: "GL.iNet",
+    model: "Comet",
+    additionalDetails: "IP KVM",
     icon: "/terminal.svg",
-    link: "",
+    link: "https://a.co/d/0ihn5zI4",
   },
   {
     componentType: "Power Protection",
-    brand: "",
-    model: "UPS Surge Protector",
-    additionalDetails: "",
+    brand: "APC",
+    model: "BE600M1",
+    additionalDetails: "UPS & Surge Protector",
     icon: "/electric.svg",
-    link: "",
+    link: "https://a.co/d/05MfwDN5",
   },
 ];
 
