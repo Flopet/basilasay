@@ -124,10 +124,10 @@ export default function HomelabPage() {
               </p>
             </div>
             <div className="homelab-card">
-              <h4 className="homelab-card-title">Appdata Drive (128GB SSD)</h4>
+              <h4 className="homelab-card-title">Appdata Pool (240GB + 1TB)</h4>
               <p>
-                Dedicated SSD for Docker container persistent storage (databases, configurations, app data).
-                Keeps container I/O fast and separate from the main array.
+                Two SSDs in a BTRFS RAID0 pool dedicated to Docker container persistent storage (databases, configurations, app data).
+                The striped configuration maximizes throughput and usable capacity while keeping container I/O fast and separate from the main array.
               </p>
             </div>
             <div className="homelab-card">
@@ -164,7 +164,7 @@ export default function HomelabPage() {
             <p>My network is relatively simple but effective:</p>
             <ul className="homelab-list">
               <li><span className="homelab-bold">ISP Router</span> - Handles basic routing and acts as the primary gateway</li>
-              <li><span className="homelab-bold">TP-Link EAP610 Access Point</span> - Provides WiFi 6 coverage with WPA3 encryption, seamless roaming, and PoE+ power</li>
+              <li><span className="homelab-bold">Netgear GS308EP Switch</span> - 8-port managed PoE+ gigabit switch connecting wired devices with VLAN support and traffic management</li>
               <li><span className="homelab-bold">Server</span> - Connects via ethernet to the main network</li>
             </ul>
           </div>
@@ -200,8 +200,9 @@ export default function HomelabPage() {
             <div className="homelab-card">
               <h4 className="homelab-card-title">Operating Systems</h4>
               <ul className="homelab-list">
-                <li>Linux administration (Unraid OS, Ubuntu)</li>
-                <li>Windows and macOS experience</li>
+                <li>Linux administration (Unraid OS, Ubuntu, Debian)</li>
+                <li>Windows 10/11 desktop and Windows Server 2024 (VM)</li>
+                <li>macOS</li>
               </ul>
             </div>
             <div className="homelab-card">
@@ -216,17 +217,19 @@ export default function HomelabPage() {
               <h4 className="homelab-card-title">Networking</h4>
               <ul className="homelab-list">
                 <li>Network configuration and troubleshooting</li>
+                <li>Managed switch configuration and VLANs (Netgear GS308EP)</li>
                 <li>VPN implementation (Tailscale)</li>
                 <li>Reverse proxy and tunnel configuration (Cloudflare)</li>
-                <li>Wireless network management (WiFi 6, WPA3)</li>
+                <li>DNS management and domain routing</li>
               </ul>
             </div>
             <div className="homelab-card">
               <h4 className="homelab-card-title">Storage Management</h4>
               <ul className="homelab-list">
                 <li>Unraid parity-protected arrays</li>
-                <li>Multi-tiered storage architecture</li>
-                <li>Backup strategies and automation</li>
+                <li>BTRFS RAID pools and filesystem management</li>
+                <li>Multi-tiered storage architecture (NVMe, SSD, HDD)</li>
+                <li>Backup strategies and automation (Duplicati, Syncthing)</li>
               </ul>
             </div>
             <div className="homelab-card">
@@ -239,16 +242,18 @@ export default function HomelabPage() {
             <div className="homelab-card">
               <h4 className="homelab-card-title">Scripting & Development</h4>
               <ul className="homelab-list">
-                <li>Bash scripting</li>
+                <li>Bash scripting and shell automation</li>
                 <li>Python</li>
-                <li>Web technologies (HTML, CSS, JavaScript, TypeScript)</li>
+                <li>Web technologies (HTML, CSS, JavaScript, TypeScript, React, Next.js)</li>
+                <li>Version control (Git, GitHub)</li>
               </ul>
             </div>
             <div className="homelab-card homelab-card-full">
               <h4 className="homelab-card-title">System Administration</h4>
               <ul className="homelab-list">
-                <li>Service monitoring and maintenance</li>
-                <li>Automated backup solutions</li>
+                <li>Service monitoring and uptime tracking (Uptime Kuma)</li>
+                <li>Automated backup solutions (Duplicati, Syncthing)</li>
+                <li>Virtual machine provisioning and management</li>
                 <li>Documentation and ticketing systems</li>
                 <li>Remote server management</li>
               </ul>

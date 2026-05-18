@@ -89,8 +89,8 @@ export const hardwareComponents: HardwareComponent[] = [
   },
   {
     componentType: "GPU",
-    brand: "Nvidia",
-    model: "GeForce GTX 1060 3GB",
+    brand: "Intel",
+    model: "Arc A380",
     additionalDetails: "For hardware transcoding",
     icon: "/gpu.svg",
     link: "",
@@ -181,7 +181,14 @@ export const storageArchitecture: StorageDevice[] = [
     usage: "other",
     brand: "",
     speed: "",
-    capacity: "128GB",
+    capacity: "240GB",
+    formFactor: "ssd",
+  },
+  {
+    usage: "other",
+    brand: "",
+    speed: "",
+    capacity: "1TB",
     formFactor: "ssd",
   },
   {
@@ -401,7 +408,7 @@ export const securityStrategies: SecurityStrategy[] = [
     name: "Cloudflare Tunnel",
     shortDescription: "Cloud Tunneling Service",
     longDescription:
-      "Public-facing services (like Jellyfin, Immich, AFFiNE) are accessible via custom domains that route through Cloudflare's infrastructure. This means no ports are opened on my router, and Cloudflare provides DDoS protection and SSL encryption automatically.",
+      "Public-facing services (like Plex, Immich, AFFiNE) are accessible via custom domains that route through Cloudflare's infrastructure. This means no ports are opened on my router, and Cloudflare provides DDoS protection and SSL encryption automatically.",
   },
   {
     icon: "",
