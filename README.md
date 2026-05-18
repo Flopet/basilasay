@@ -111,8 +111,11 @@ This file drives the `/homelab` page. Same pattern — typed interfaces at the t
 | `storageArchitecture` | Storage devices (usage type, capacity, form factor) |
 | `securityStrategies` | Security approach cards (name, short/long descriptions) |
 | `networkTopology` | Network flowchart diagram (nodes, connections, access paths) |
+| `uptimeConfig` | Uptime Kuma instance URL and status page path for live service badges |
 
 Helper functions like `getServicesByCategory()` and derived values like `serviceCategories` are computed automatically from your data.
+
+**Uptime monitoring:** Service cards can display live status badges from an [Uptime Kuma](https://github.com/louislam/uptime-kuma) instance. Set your instance URL and status page path in `uptimeConfig`, then give each service a `uptime_status_key` matching its monitor ID. Set `baseUrl` to an empty string to disable badges entirely.
 
 **Example — adding a new service:**
 

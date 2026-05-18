@@ -79,6 +79,17 @@ export interface NetworkTopology {
 }
 
 /* ============================================
+   UPTIME MONITORING
+   ============================================ */
+
+export const uptimeConfig = {
+  /** Base URL of your Uptime Kuma instance (no trailing slash) */
+  baseUrl: "https://uptime.asay.dev",
+  /** Path to the public status page */
+  statusPage: "/status/floptower",
+};
+
+/* ============================================
    HARDWARE COMPONENTS
    ============================================ */
 

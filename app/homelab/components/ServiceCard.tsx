@@ -1,6 +1,6 @@
 import Image from "next/image";
 import "./ServiceCard.css";
-import { Service } from "@/lib/homelab-config";
+import { Service, uptimeConfig } from "@/lib/homelab-config";
 
 export function ServiceCard({
   title,
@@ -49,9 +49,10 @@ export function ServiceCard({
         </a>
       )}
 
-      {uptime_status_key && (
+      {uptime_status_key && uptimeConfig.baseUrl && (
+          // eslint-disable-next-line @next/next/no-img-element
           <img
-              src={"https://uptime.asay.dev/api/badge/" + String(uptime_status_key) + "/status?style=flat"}
+              src={uptimeConfig.baseUrl + "/api/badge/" + String(uptime_status_key) + "/status?style=flat"}
               alt="Service Status"
           />
       )}
