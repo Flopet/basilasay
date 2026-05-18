@@ -74,7 +74,7 @@ export default function HomelabPage() {
             <p className="homelab-intro-text">
               All services run in Docker containers, managed through Docker Compose with automated backups via Duplicati.
               <br/>
-              Take a look at live uptime statistics for each of these services here!
+              Take a look at live uptime statistics for each of these services <a href="https://uptime.asay.dev/status/floptower" target="_blank" rel="noopener noreferrer">here</a>!
             </p>
           </div>
 
