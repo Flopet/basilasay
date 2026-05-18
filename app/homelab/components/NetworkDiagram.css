@@ -1,0 +1,254 @@
+/* ========================================
+   Network Diagram - Flowchart Style
+   ======================================== */
+
+.network-diagram {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0;
+  padding: var(--hl-spacing-md) 0;
+}
+
+/* --- Nodes --- */
+
+.network-node {
+  background: var(--bg-card-white);
+  border: 2px solid var(--accent-red);
+  border-radius: 6px;
+  padding: 0.75rem 1.25rem;
+  text-align: center;
+  position: relative;
+  box-shadow:
+    1px 1px 0 var(--accent-red-dark),
+    2px 2px 0 var(--accent-red-dark),
+    3px 3px 0 var(--accent-red-dark);
+  transition: all 0.2s ease;
+  min-width: 180px;
+}
+
+.network-node:hover {
+  transform: translate(-1px, -1px);
+  box-shadow:
+    1px 1px 0 var(--accent-red-dark),
+    2px 2px 0 var(--accent-red-dark),
+    3px 3px 0 var(--accent-red-dark),
+    4px 4px 0 var(--accent-red-dark);
+}
+
+.network-node__label {
+  font-family: var(--heading-font), 'Zalando Sans SemiExpanded', sans-serif;
+  font-weight: 700;
+  font-size: 0.95rem;
+  color: var(--text-primary);
+  letter-spacing: 0.02em;
+}
+
+.network-node__detail {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  font-weight: 500;
+  margin-top: 0.2rem;
+}
+
+/* Cloud/external node variant */
+.network-node--cloud {
+  border-radius: 24px;
+  background: var(--bg-paper-light);
+  border-style: dashed;
+}
+
+/* --- Connectors (vertical lines + arrows) --- */
+
+.network-connector {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0;
+  position: relative;
+  height: 40px;
+  justify-content: center;
+}
+
+.network-connector__line {
+  width: 2px;
+  height: 28px;
+  background: var(--accent-red);
+}
+
+.network-connector__arrow {
+  width: 0;
+  height: 0;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-top: 8px solid var(--accent-red);
+}
+
+.network-connector__label {
+  position: absolute;
+  left: calc(50% + 14px);
+  top: 50%;
+  transform: translateY(-50%);
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.7rem;
+  color: var(--text-secondary);
+  white-space: nowrap;
+  font-weight: 500;
+}
+
+/* --- Branch row (side-by-side paths from switch) --- */
+
+.network-branch {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: var(--hl-spacing-xl);
+  width: 100%;
+  position: relative;
+}
+
+.network-branch__path {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0;
+}
+
+/* Horizontal connector for branches */
+.network-branch__horizontal {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 500px;
+  position: relative;
+  height: 40px;
+}
+
+.network-branch__horizontal::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 2px;
+  height: 12px;
+  background: var(--accent-red);
+}
+
+.network-branch__horizontal::after {
+  content: '';
+  position: absolute;
+  top: 12px;
+  left: calc(50% - 200px);
+  width: 400px;
+  height: 2px;
+  background: var(--accent-red);
+}
+
+.network-branch__drop {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.network-branch__drop-line {
+  width: 2px;
+  height: 16px;
+  background: var(--accent-red);
+}
+
+.network-branch__drop-arrow {
+  width: 0;
+  height: 0;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-top: 8px solid var(--accent-red);
+}
+
+/* --- External access section --- */
+
+.network-external {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: var(--hl-spacing-xl);
+  width: 100%;
+  margin-top: var(--hl-spacing-md);
+  padding-top: var(--hl-spacing-md);
+  border-top: 1px dashed var(--hl-border);
+}
+
+.network-external__path {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0;
+}
+
+.network-external__label {
+  font-family: var(--heading-font), 'Zalando Sans SemiExpanded', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--accent-red);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: var(--hl-spacing-sm);
+}
+
+/* Bidirectional connector (up/down arrows) */
+.network-connector--bidirectional .network-connector__line {
+  height: 20px;
+}
+
+.network-connector--bidirectional {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 40px;
+  justify-content: center;
+  position: relative;
+}
+
+.network-connector__arrow-up {
+  width: 0;
+  height: 0;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-bottom: 8px solid var(--accent-red);
+}
+
+/* --- Responsive --- */
+
+@media (max-width: 768px) {
+  .network-branch,
+  .network-external {
+    flex-direction: column;
+    align-items: center;
+    gap: var(--hl-spacing-md);
+  }
+
+  .network-branch__horizontal::after {
+    left: calc(50% - 100px);
+    width: 200px;
+  }
+
+  .network-node {
+    min-width: 150px;
+  }
+}
+
+@media (max-width: 480px) {
+  .network-branch__horizontal::after {
+    left: calc(50% - 70px);
+    width: 140px;
+  }
+
+  .network-node {
+    min-width: 130px;
+    padding: 0.5rem 0.75rem;
+  }
+
+  .network-node__label {
+    font-size: 0.85rem;
+  }
+}

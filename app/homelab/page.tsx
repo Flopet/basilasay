@@ -1,6 +1,7 @@
 import "./homelab.css";
 import { HardwareItem } from "./components/HardwareItem";
 import { ServiceCard } from "./components/ServiceCard";
+import { NetworkDiagram } from "./components/NetworkDiagram";
 import { UnderConstructionRibbon } from "@/components/UnderConstructionRibbon";
 
 
@@ -9,6 +10,7 @@ import {
   getServicesByCategory,
   serviceCategories,
   securityStrategies,
+  networkTopology,
 } from "@/lib/homelab-config";
 
 export default function HomelabPage() {
@@ -160,14 +162,7 @@ export default function HomelabPage() {
           </div>
 
           <h3 className="homelab-subsection-heading">Network Setup</h3>
-          <div className="homelab-card">
-            <p>My network is relatively simple but effective:</p>
-            <ul className="homelab-list">
-              <li><span className="homelab-bold">ISP Router</span> - Handles basic routing and acts as the primary gateway</li>
-              <li><span className="homelab-bold">Netgear GS308EP Switch</span> - 8-port managed PoE+ gigabit switch connecting wired devices with VLAN support and traffic management</li>
-              <li><span className="homelab-bold">Server</span> - Connects via ethernet to the main network</li>
-            </ul>
-          </div>
+          <NetworkDiagram topology={networkTopology} />
 
           <h3 className="homelab-subsection-heading">Security Strategy</h3>
           <p className="homelab-intro-text">

@@ -50,6 +50,34 @@ export interface SecurityStrategy {
   longDescription: string;
 }
 
+export interface NetworkNode {
+  id: string;
+  label: string;
+  detail?: string;
+  cloud?: boolean;
+}
+
+export interface NetworkConnection {
+  from: string;
+  to: string;
+  label?: string;
+  bidirectional?: boolean;
+}
+
+export interface NetworkAccessPath {
+  title: string;
+  nodes: NetworkNode[];
+  connections: NetworkConnection[];
+}
+
+export interface NetworkTopology {
+  mainFlow: {
+    nodes: NetworkNode[];
+    connections: NetworkConnection[];
+  };
+  accessPaths: NetworkAccessPath[];
+}
+
 /* ============================================
    HARDWARE COMPONENTS
    ============================================ */
@@ -442,3 +470,45 @@ export const securityStrategies: SecurityStrategy[] = [
       "Services run in isolated Docker networks with only necessary ports exposed to the host.",
   },
 ];
+
+/* ============================================
+   NETWORK TOPOLOGY
+   ============================================ */
+
+export const networkTopology: NetworkTopology = {
+  mainFlow: {
+    nodes: [
+      { id: "internet", label: "Internet / ISP", cloud: true },
+      { id: "router", label: "ISP Router", detail: "Primary gateway" },
+      { id: "switch", label: "Netgear GS308EP", detail: "Managed PoE+ switch" },
+      { id: "server", label: "Homelab Server", detail: "Unraid OS • Docker" },
+    ],
+    connections: [
+      { from: "internet", to: "router" },
+      { from: "router", to: "switch", label: "Ethernet" },
+      { from: "switch", to: "server", label: "Ethernet" },
+    ],
+  },
+  accessPaths: [
+    {
+      title: "Remote Access",
+      nodes: [
+        { id: "tailscale", label: "Tailscale VPN", detail: "Mesh VPN overlay", cloud: true },
+        { id: "remote-devices", label: "Remote Devices", detail: "Phone, laptop, etc.", cloud: true },
+      ],
+      connections: [
+        { from: "tailscale", to: "remote-devices", label: "Encrypted tunnel", bidirectional: true },
+      ],
+    },
+    {
+      title: "Public Access",
+      nodes: [
+        { id: "cloudflare", label: "Cloudflare Tunnel", detail: "Zero-trust proxy", cloud: true },
+        { id: "public-users", label: "Public Users", detail: "Custom domains", cloud: true },
+      ],
+      connections: [
+        { from: "cloudflare", to: "public-users", label: "HTTPS", bidirectional: true },
+      ],
+    },
+  ],
+};
