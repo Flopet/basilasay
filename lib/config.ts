@@ -42,8 +42,8 @@ export const siteMetadata = {
 };
 
 export const personalInfo = {
-    coverImage: "/pro_headshot.jpeg",
-    coverImageMobile: "/pro_headshot_cropped.jpeg",
+    coverImage: "/pro_headshot.webp",
+    coverImageMobile: "/pro_headshot_cropped.webp",
     name: "Basil Asay",
     title: "DC Technician",
     company: "TekSystems On-Site at Microsoft",
