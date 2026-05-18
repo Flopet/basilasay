@@ -96,6 +96,26 @@
   border-radius: 2px;
 }
 
+.homelab-section-header {
+  border-left: 4px solid var(--accent-red);
+  padding-left: var(--hl-spacing-sm);
+  margin-bottom: var(--hl-spacing-lg);
+  margin-top: var(--hl-spacing-2xl);
+}
+
+.homelab-section-header .homelab-section-heading {
+  margin-top: 0;
+  margin-bottom: 0.25rem;
+}
+
+.homelab-section-header .homelab-section-heading::before {
+  display: none;
+}
+
+.homelab-section-header .homelab-intro-text {
+  margin-bottom: 0;
+}
+
 .homelab-section-heading {
   font-family: var(--heading-font), 'Zalando Sans SemiExpanded', sans-serif;
   font-size: 2rem;
@@ -161,6 +181,13 @@
 
 .homelab-section {
   margin-bottom: var(--hl-spacing-2xl);
+  padding-bottom: var(--hl-spacing-2xl);
+  border-bottom: 1px solid var(--hl-border);
+}
+
+.homelab-section:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
 }
 
 .homelab-subsection {

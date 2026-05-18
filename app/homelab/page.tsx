@@ -40,7 +40,12 @@ export default function HomelabPage() {
 
         {/* Hardware Specifications */}
         <section className="homelab-section">
-          <h2 className="homelab-section-heading">Hardware Specifications</h2>
+          <div className="homelab-section-header">
+            <h2 className="homelab-section-heading">Hardware Specifications</h2>
+            <p className="homelab-intro-text">
+              A repurposed desktop turned server, built from spare parts and a few targeted upgrades to handle everything from media streaming to container orchestration.
+            </p>
+          </div>
 
           <h3 className="homelab-subsection-heading">Server Components</h3>
           <div className="homelab-table-container">
@@ -58,24 +63,18 @@ export default function HomelabPage() {
               </tbody>
             </table>
           </div>
-
-          <div className="homelab-card">
-            <p>
-              <span className="homelab-bold">Build Notes:</span> This server was
-              built primarily from spare PC parts with a few key upgrades (more RAM, GPU, storage). The
-              GPU handles video transcoding for media services. The multi-tiered storage setup uses fast
-              NVMe/SSD storage for frequently accessed data and Docker containers, while HDDs provide bulk
-              storage protected by parity.
-            </p>
-          </div>
         </section>
 
         {/* Hosted Services */}
         <section className="homelab-section">
-          <h2 className="homelab-section-heading">Hosted Services</h2>
-          <p className="homelab-intro-text">
-            All services run in Docker containers, managed through Docker Compose with automated backups via Duplicati.
-          </p>
+          <div className="homelab-section-header">
+            <h2 className="homelab-section-heading">Hosted Services</h2>
+            <p className="homelab-intro-text">
+              All services run in Docker containers, managed through Docker Compose with automated backups via Duplicati.
+              <br/>
+              Take a look at live uptime statistics for each of these services here!
+            </p>
+          </div>
 
           {serviceCategories.map((category) => {
             const categoryServices = getServicesByCategory(category);
@@ -94,10 +93,12 @@ export default function HomelabPage() {
 
         {/* Storage Architecture */}
         <section className="homelab-section">
-          <h2 className="homelab-section-heading">Storage Architecture</h2>
-          <p className="homelab-intro-text">
-            My server uses Unraid's flexible storage system, which combines drives of different sizes into a single protected array.
-          </p>
+          <div className="homelab-section-header">
+            <h2 className="homelab-section-heading">Storage Architecture</h2>
+            <p className="homelab-intro-text">
+              My server uses Unraid&apos;s flexible storage system, which combines drives of different sizes into a single protected array.
+            </p>
+          </div>
 
           <h3 className="homelab-subsection-heading">How It Works</h3>
           <div className="homelab-card-group">
@@ -140,7 +141,7 @@ export default function HomelabPage() {
           <h3 className="homelab-subsection-heading">Benefits of This Setup</h3>
           <div className="homelab-card">
             <ul className="homelab-list">
-              <li>Mix and match drive sizes (don't need matching drives like traditional RAID)</li>
+              <li>Mix and match drive sizes (don&apos;t need matching drives like traditional RAID)</li>
               <li>Easy expansion - just add another drive to the array</li>
               <li>Single drive failure protection without losing data</li>
               <li>Fast performance for Docker apps and frequent file access</li>
@@ -151,7 +152,12 @@ export default function HomelabPage() {
 
         {/* Network & Security */}
         <section className="homelab-section">
-          <h2 className="homelab-section-heading">Network & Security</h2>
+          <div className="homelab-section-header">
+            <h2 className="homelab-section-heading">Network & Security</h2>
+            <p className="homelab-intro-text">
+              A straightforward network setup paired with a zero-trust security approach — services are accessed through secure tunnels and VPN rather than traditional port forwarding.
+            </p>
+          </div>
 
           <h3 className="homelab-subsection-heading">Network Setup</h3>
           <div className="homelab-card">
@@ -182,7 +188,12 @@ export default function HomelabPage() {
 
         {/* Skills Demonstrated */}
         <section className="homelab-section">
-          <h2 className="homelab-section-heading">Skills Demonstrated</h2>
+          <div className="homelab-section-header">
+            <h2 className="homelab-section-heading">Skills Demonstrated</h2>
+            <p className="homelab-intro-text">
+              Running a homelab is hands-on learning — here are the technical and soft skills I practice and develop through building and maintaining this infrastructure.
+            </p>
+          </div>
 
           <h3 className="homelab-subsection-heading">Technical Skills</h3>
           <div className="homelab-skills-grid">
@@ -257,7 +268,12 @@ export default function HomelabPage() {
 
         {/* Future Plans */}
         <section className="homelab-section">
-          <h2 className="homelab-section-heading">Future Plans</h2>
+          <div className="homelab-section-header">
+            <h2 className="homelab-section-heading">Future Plans</h2>
+            <p className="homelab-intro-text">
+              The homelab is always evolving — these are some of the upgrades and projects on the roadmap.
+            </p>
+          </div>
           <div className="homelab-card-group">
             <div className="homelab-card">
               <h4 className="homelab-card-title">Storage Upgrades</h4>

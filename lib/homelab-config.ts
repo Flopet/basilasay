@@ -200,14 +200,13 @@ export const storageArchitecture: StorageDevice[] = [
 export const services: Service[] = [
   // Media & Content
   {
-    title: "Jellyfin",
+    title: "Plex",
     description:
-      "Media streaming server for movies, TV shows, and music. Uses the GTX 1060 for hardware-accelerated transcoding to support multiple simultaneous streams.",
+      "Media streaming server for movies, TV shows, and music. Uses the dedicated GPU for hardware-accelerated transcoding to support multiple simultaneous streams.",
     category: "Media & Content",
-    url: "https://jellyfin.org/",
-    uptime_status_key: 3,
-
-    icon: "/jellyfin.svg",
+    url: "https://plex.tv/",
+    uptime_status_key: 20,
+    icon: "/plex.svg",
     tags: ["Media", "Streaming", "Transcoding"],
   },
   {
@@ -217,7 +216,6 @@ export const services: Service[] = [
     category: "Media & Content",
     url: "https://www.audiobookshelf.org/",
     uptime_status_key: 2,
-
     icon: "/audiobookshelf.svg",
     tags: ["Media", "Audiobooks", "Podcasts"],
   },
@@ -228,7 +226,6 @@ export const services: Service[] = [
     category: "Media & Content",
     url: "https://immich.app/",
     uptime_status_key: 6,
-
     icon: "/immich.svg",
     tags: ["Photos", "Backup", "Privacy"],
   },
@@ -240,31 +237,58 @@ export const services: Service[] = [
     category: "Productivity & Collaboration",
     url: "https://affine.pro/",
     uptime_status_key: 10,
-
     icon: "/affine.svg",
     tags: ["Productivity", "Notes", "Collaboration"],
   },
   {
     title: "OwnCloud",
     description:
-      "Personal cloud storage for file backup and sharing across devices.",
+      "Personal cloud storage for file sync and sharing across devices, serving as a self-hosted alternative to Google Drive or Dropbox.",
     category: "Productivity & Collaboration",
     url: "https://owncloud.dev/ocis/#owncloud-infinite-scale",
     uptime_status_key: 7,
-
     icon: "/owncloud.svg",
-    tags: ["Cloud Storage", "File Sync"],
+    tags: ["Cloud Storage", "File Sync", "Privacy"],
   },
   {
-    title: "Peppermint",
+    title: "Open WebUI",
     description:
-      "IT ticketing and help desk system. I use this to track family tech support requests, log server maintenance tasks, and document solutions to problems I've solved. It includes a built-in knowledge base for storing guides and manuals.",
+      "Open WebUI is a self-hosted web interface for interacting with local AI models via Ollama or OpenAI-compatible APIs, with support for chat history, model switching, and multimodal input.",
     category: "Productivity & Collaboration",
-    url: "https://peppermint.sh/",
-    uptime_status_key: 4,
-
-    icon: "/peppermint.svg",
-    tags: ["Help Desk", "Ticketing", "Documentation"],
+    url: "https://openwebui.com/",
+    uptime_status_key: 17,
+    icon: "/open-webui.svg",
+    tags: ["AI", "LLM", "Self-Hosted"],
+  },
+  {
+    title: "n8n",
+    description:
+      "Open-source workflow automation tool that connects APIs, databases, and other services. Supports custom workflows and integrations.",
+    category: "Productivity & Collaboration",
+    url: "https://n8n.io/",
+    uptime_status_key: 15,
+    icon: "/n8n.svg",
+    tags: ["Automation", "Workflows", "Integrations"],
+  },
+  {
+    title: "Omnitools",
+    description:
+      "OmniTools is a self-hosted collection of everyday utility tools — unit converters, text formatters, encoders, calculators, and more — accessible from a single web interface without sending data to third-party sites.",
+    category: "Productivity & Collaboration",
+    url: "https://omnitools.dev/",
+    uptime_status_key: 16,
+    icon: "/omnitools.webp",
+    tags: ["Utilities", "Privacy", "Self-Hosted"],
+  },
+  {
+    title: "Picoshare",
+    description:
+      "Self-hosted file sharing service that allows users to upload and share files with friends and family.",
+    category: "Productivity & Collaboration",
+    url: "https://picoshare.io/",
+    uptime_status_key: 18,
+    icon: "/picoshare.svg",
+    tags: ["File Sharing", "Privacy", "Self-Hosted"],
   },
 
   // Infrastructure & Management
@@ -275,7 +299,6 @@ export const services: Service[] = [
     category: "Infrastructure & Management",
     url: "https://homarr.dev/",
     uptime_status_key: 5,
-
     icon: "/homarr.svg",
     tags: ["Dashboard", "Monitoring", "Management"],
   },
@@ -285,7 +308,6 @@ export const services: Service[] = [
     category: "Infrastructure & Management",
     url: "https://cubecoders.com/AMP",
     uptime_status_key: 8,
-
     icon: "/cubecoders-amp.png",
     tags: ["Gaming", "Server Management"],
   },
@@ -296,18 +318,8 @@ export const services: Service[] = [
     category: "Infrastructure & Management",
     url: "https://developers.cloudflare.com/cloudflare-one/networks/connectors/cloudflare-tunnel/",
     uptime_status_key: 11,
-
     icon: "/cloudflare.svg",
     tags: ["Security", "Networking", "Tunnel"],
-  },
-  {
-    title: "PostgreSQL & Redis",
-    description: "Database services that support multiple applications.",
-    category: "Infrastructure & Management",
-    url: "",
-
-    icon: "/database-server-icon.svg",
-    tags: ["Database", "Cache"],
   },
   {
     title: "Duplicati",
@@ -315,18 +327,16 @@ export const services: Service[] = [
     category: "Infrastructure & Management",
     url: "https://duplicati.com/",
     uptime_status_key: 12,
-
     icon: "/duplicati.svg",
     tags: ["Backup", "Automation"],
   },
   {
-    title: "Dockge",
-    description: "Organized and interactive management interface for Docker Compose.",
+    title: "Dockhand",
+    description: "Organized and interactive management interface for Docker containers and Compose stacks.",
     category: "Infrastructure & Management",
-    url: "https://dockge.kuma.pet/",
-    uptime_status_key: 13,
-
-    icon: "/dockge.svg",
+    url: "https://dockhand.pro/",
+    uptime_status_key: 21,
+    icon: "/dockhand.webp",
     tags: ["Container Management", "Docker", "Docker Compose"],
   },
   {
@@ -335,9 +345,18 @@ export const services: Service[] = [
     category: "Infrastructure & Management",
     url: "https://uptime.kuma.pet/",
     uptime_status_key: 14,
-
     icon: "/uptime-kuma.svg",
     tags: ["Monitoring", "Dashboard"],
+  },
+  {
+    title: "Syncthing",
+    description:
+      "Self-hosted file synchronization and sharing tool that uses peer-to-peer technology to sync files across multiple devices.",
+    category: "Infrastructure & Management",
+    url: "https://syncthing.net/",
+    uptime_status_key: 19,
+    icon: "/syncthing.svg",
+    tags: ["File Sync", "Privacy"],
   },
 
   // Security & Access
@@ -347,7 +366,6 @@ export const services: Service[] = [
       "Zero-trust mesh VPN for secure remote access to the server and admin panels. All sensitive services stay behind the VPN and aren't exposed publicly.",
     category: "Security & Access",
     url: "https://tailscale.com/",
-
     icon: "/tailscale.svg",
     tags: ["VPN", "Security", "Remote Access"],
   },
@@ -358,7 +376,6 @@ export const services: Service[] = [
     category: "Security & Access",
     url: "https://github.com/dani-garcia/vaultwarden",
     uptime_status_key: 9,
-
     icon: "/vaultwarden.svg",
     tags: ["Password Manager", "2FA", "Encryption"],
   }
