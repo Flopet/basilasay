@@ -56,12 +56,12 @@ export interface SecurityStrategy {
 
 export const hardwareComponents: HardwareComponent[] = [
   {
-    componentType: "Case",
+    componentType: "Chassis",
     brand: "Rosewill",
-    model: "Helium Mid-Tower ATX",
-    additionalDetails: "10x 3.5\" + 3x 2.5\" drive bays",
-    icon: "/computer-case.svg",
-    link: "",
+    model: "4U Rackmount Server Chassis",
+    additionalDetails: "7x 3.5\" + 2x 5.25\" drive bays",
+    icon: "/server.svg",
+    link: "https://a.co/d/0bc0jFmv",
   },
   {
     componentType: "Motherboard",
@@ -90,17 +90,27 @@ export const hardwareComponents: HardwareComponent[] = [
   {
     componentType: "GPU",
     brand: "Intel",
-    model: "Arc A380",
-    additionalDetails: "For hardware transcoding",
+    model: "Arc A380 6GB",
+    additionalDetails: "",
     icon: "/gpu.svg",
     link: "",
   },
+  /*
   {
     componentType: "Wireless Access Point",
     brand: "TP-Link",
     model: "EAP610",
     additionalDetails: "WiFi 6, WPA3, PoE+",
     icon: "/wifi.svg",
+    link: "",
+  },
+  */
+  {
+    componentType: "Network Switch",
+    brand: "Netgear",
+    model: "GS308EP",
+    additionalDetails: "[8 port, 1000Mbps, PoE+]",
+    icon: "/network-switch.svg",
     link: "",
   },
   {
