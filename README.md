@@ -31,8 +31,8 @@ A modern, configurable portfolio and resume website built with Next.js 16 and Re
 ### Development
 
 ```bash
-git clone https://github.com/Flopet/basilasay.git
-cd basilasay
+git clone https://github.com/Flopet/resume-portfolio.git
+cd resume-portfolio
 npm install
 npm run dev
 ```

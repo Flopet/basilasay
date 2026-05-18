@@ -85,7 +85,7 @@ export const projects: Project[] = [
   {
     title: "My Portfolio Website",
     description: "Modern and easily accessible portfolio built with Next.js and React. It features a responsive design for desktop and mobile, and up-to-date information on my current skills and projects.",
-    link: "https://github.com/Flopet/basilasay",
+    link: "https://github.com/Flopet/resume-portfolio",
     tags: ["Next.JS", "React.JS", "JavaScript", "TypeScript", "HTML", "CSS"],
   },
   {
