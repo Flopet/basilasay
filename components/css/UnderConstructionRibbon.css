@@ -21,7 +21,7 @@
   background-color: var(--accent-red);
 
 
-  font-family: tahoma, serif;
+  font-family: var(--heading-font), sans-serif;
   font-weight: bold;
   text-transform: uppercase;
   text-align: center;
