@@ -13,11 +13,14 @@ import {
   networkTopology,
   uptimeConfig,
 } from "@/lib/homelab-config";
+import {GithubRibbon} from "@/components/GithubRibbon";
 
 export default function HomelabPage() {
   return (
     <div className="homelab-page">
-      <UnderConstructionRibbon />
+      {/* Uncomment the below line to show the "Under Construction" ribbon */}
+      {/* <UnderConstructionRibbon /> */}
+      <GithubRibbon/>
       <div className="homelab-container">
 
         {/* Header Section */}
