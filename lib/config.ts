@@ -8,6 +8,7 @@ export interface Experience {
   dateRange: string;
   description: string;
   highlights?: string[];
+  tag?: string;
 }
 
 export interface Project {
@@ -38,36 +39,52 @@ export interface Contact {
 export const siteMetadata = {
   title: "Basil Asay's Portfolio",
   description: "Personal portfolio with downloadable resume and showcasing projects, experience, and skills.",
-  updatedAt: "05.18.2026",
+  updatedAt: "07.09.2026",
 };
 
 export const personalInfo = {
     coverImage: "/pro_headshot.webp",
     coverImageMobile: "/pro_headshot_cropped.webp",
     name: "Basil Asay",
-    title: "DC Technician",
-    company: "TekSystems On-Site at Microsoft",
+    title: "Data Center Technician",
+    company: "Microsoft",
     email: "basilrasay@gmail.com",
     phone: "(804) 519-3329",
-    bio: "My journey into IT began at 14, building my first computer and discovering a passion that would define my career. After 10+ years working in retail, medicine, and warehouse environments, I made the leap into IT when Meta gave me my first opportunity in the field. Now I specialize in fiber optic troubleshooting and data center operations, backed by CompTIA A+ and Network+ certifications. I give 110% every day—I'm never late, I prioritize efficient and detailed work, I learn fast, I think outside the box, and I'm a strong leader who thrives on solving complex technical challenges.",
+    bio: "I built my first PC at 14 and have been tinkering with hardware ever since—these days I run a homelab as a hobby to keep learning. After 10+ years in retail and warehouse work, I made the jump into IT when Meta gave me my first shot in data center operations. From there I moved to Microsoft as a contractor, and recently converted to full-time. I specialize in hardware break/fix, fiber troubleshooting, and keeping production infrastructure running smoothly. I hold CompTIA A+ and Network+ certifications, and I bring the same hands-on curiosity to work that keeps me building things at home.",
 };
 
 export const experience: Experience[] = [
   {
     title: "Data Center Technician",
-    company: "TekSystems On-Site at Microsoft",
-    dateRange: "November 2025 - Current",
+    company: "Microsoft",
+    dateRange: "July 2026 - Present",
+    description: "Full-time technician supporting Microsoft's cloud infrastructure. I handle hardware break/fix, incident response, and component replacements to keep production systems running. Converted from contractor after demonstrating consistent performance.",
+    highlights: [
+      "Perform hardware break/fix and server maintenance on production infrastructure",
+      "Troubleshoot and resolve infrastructure issues to minimize customer impact",
+      "Replace faulty components including drives, NICs, PSUs, and GPUs",
+      "Validate fiber optic connectivity and troubleshoot cabling issues",
+      "Respond to critical incidents and support operational excellence",
+      "Document procedures and share knowledge with the team"
+    ]
+  },
+  {
+    title: "Data Center Technician",
+    tag: "Contractor",
+    company: "TekSystems at Microsoft",
+    dateRange: "November 2025 - July 2026",
     description: "BreakFix technician responsible for diagnosing and resolving hardware failures, fiber optic connectivity issues, and component replacements across Microsoft's data center infrastructure to ensure OLA compliance and minimize downtime.",
     highlights: [
       "Troubleshoot fiber optic connectivity issues",
-      "Replace faulty server components including PSU's, GPU's, drives, network interface cards and more",
+      "Replace faulty server components including PSUs, GPUs, drives, network interface cards and more",
       "Respond to critical incidents via ticketing system to maintain maximum uptime",
       "Document technical procedures and solutions in detail for knowledge sharing"
     ]
   },
   {
     title: "Data Center Technician",
-    company: "HCLTech On-Site at Meta",
+    tag: "Contractor",
+    company: "HCLTech at Meta",
     dateRange: "February 2025 - November 2025",
     description: "Layer 1 technician specializing in fiber optic troubleshooting and network infrastructure maintenance across Meta's Henrico, VA data center campus. Diagnose and resolve cabling and optical connectivity issues including long-distance fiber runs to ensure maximum uptime and SLA compliance.",
     highlights: [

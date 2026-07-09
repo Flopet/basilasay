@@ -76,6 +76,7 @@ export default function Home() {
                       dateRange={experience.dateRange}
                       description={experience.description}
                       highlights={experience.highlights}
+                      tag={experience.tag}
                     />
                   ))}
                 </div>

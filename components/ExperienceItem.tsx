@@ -7,10 +7,14 @@ export function ExperienceItem({
   dateRange,
   description,
   highlights = [],
+  tag,
 }: Experience) {
   return (
     <div className="experience-item">
-      <h3 className="experience-item__title"><u>{title}</u></h3>
+      <h3 className="experience-item__title">
+        <u>{title}</u>
+        {tag && <span className="experience-item__tag">({tag})</span>}
+      </h3>
       <p className="experience-item__meta">
         {company} • {dateRange}
       </p>

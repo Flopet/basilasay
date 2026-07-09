@@ -10,6 +10,14 @@
   color: var(--text-primary);
 }
 
+/* Tag Styling (e.g., "Contractor") */
+.experience-item__tag {
+  font-size: 0.85rem;
+  font-weight: 400;
+  color: var(--text-secondary);
+  margin-left: 0.5rem;
+}
+
 /* Metadata Styling */
 .experience-item__meta {
   color: var(--text-secondary);
